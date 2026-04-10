@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Actividades y experiencias en Camping Parque Ardales - Caminito del Rey, Cueva de Ardales, senderismo, kayak y mucho más.">
+  <title>Actividades · Camping Parque Ardales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --amber: #E4A851; --green: #415243; --teal: #00879A;
+      --green-deep: #2A3628; --green-mid: #516654; --green-light: #6B8470;
+      --green-pale: #D4DDD2; --green-subtle: #EEF2ED;
+      --amber-light: #F2CB85; --amber-pale: #FAF0D7; --amber-dark: #C4882E;
+      --teal-light: #4AAFC0; --teal-pale: #C8EAED; --teal-dark: #006878;
+      --cream: #FAF7F2; --cream-dark: #F0EBE2; --cream-deeper: #E5DDD0;
+      --ink: #1C2219; --ink-light: #5C6858; --ink-mid: #3A4438; --ink-faint: #8A9688;
+      --terra: #00879A; --terra-light: #4AAFC0;
+      --gold: #E4A851; --gold-light: #F2CB85;
+      --shadow-sm: rgba(42,54,40,0.08); --shadow-md: rgba(42,54,40,0.14);
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+    h1, h2, h3, h4, h5 { font-family: 'Libre Baskerville', Georgia, serif; font-weight: 700; }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    /* Language */
+    .en { display: none !important; }
+    body.lang-en .es { display: none !important; }
+    body.lang-en .en { display: revert !important; }
+    span.en { display: none !important; }
+    body.lang-en span.es { display: none !important; }
+    body.lang-en span.en { display: inline !important; }
+
+    /* Grain */
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+      opacity: 0.025; pointer-events: none; z-index: 9999;
+    }
+
+    /* Nav */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+      padding: 1.2rem 2.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(42, 54, 40, 0.97); backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.06), 0 4px 30px rgba(0,0,0,0.2);
+      transition: padding 0.3s;
+    }
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-logo img { height: 42px; width: auto; filter: brightness(0) invert(1); transition: opacity 0.2s; }
+    .nav-logo:hover img { opacity: 0.85; }
+    .nav-links { display: flex; gap: 0.25rem; list-style: none; align-items: center; }
+    .nav-links a {
+      color: rgba(255,255,255,0.82); text-decoration: none;
+      font-family: 'Montserrat', serif; font-size: 0.8rem;
+      letter-spacing: 0.07em; padding: 0.4rem 0.7rem; border-radius: 4px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold-light); background: rgba(255,255,255,0.07); }
+    .nav-links a.active { color: var(--gold-light); }
+    .nav-right { display: flex; align-items: center; gap: 0.75rem; }
+    .lang-btn {
+      background: none; border: 1px solid rgba(255,255,255,0.35); color: white;
+      padding: 0.3rem 0.8rem; border-radius: 20px; cursor: pointer;
+      font-family: 'Montserrat', serif; font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.12em; transition: all 0.2s;
+    }
+    .lang-btn:hover { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.7); }
+    .nav-cta {
+      background: var(--amber); color: var(--green-deep); text-decoration: none;
+      padding: 0.5rem 1.35rem; border-radius: 4px;
+      font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.04em; transition: background 0.2s, transform 0.15s;
+    }
+    .nav-cta:hover { background: var(--amber-light); transform: translateY(-1px); }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px; cursor: pointer;
+      background: none; border: none; padding: 4px; z-index: 901;
+    }
+    .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu {
+      display: none; position: fixed; inset: 0;
+      background: var(--green-deep); z-index: 899;
+      flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: white; text-decoration: none;
+      font-family: 'Libre Baskerville', serif; font-size: 1.6rem; transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--gold-light); }
+
+    /* Page hero */
+    .page-hero {
+      padding: 8rem 2.5rem 4rem;
+      background: var(--green-deep); position: relative; overflow: hidden;
+      text-align: center;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; top: -40%; right: -15%;
+      width: 55%; height: 130%;
+      background: radial-gradient(ellipse, rgba(78,143,168,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .page-hero::after {
+      content: ''; position: absolute; bottom: -30%; left: -10%;
+      width: 45%; height: 100%;
+      background: radial-gradient(ellipse, rgba(228,168,81,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .page-hero .section-sup {
+      color: var(--gold-light); justify-content: center;
+    }
+    .page-hero .section-sup::before { background: var(--gold-light); }
+    .page-hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.6rem); color: white;
+      line-height: 1.15; margin-bottom: 1rem; position: relative;
+    }
+    .page-hero h1 em { font-style: italic; color: var(--amber-light); }
+    .page-hero p {
+      font-size: 1rem; color: rgba(255,255,255,0.65);
+      max-width: 560px; margin: 0 auto; line-height: 1.8; position: relative;
+    }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      color: rgba(255,255,255,0.5); text-decoration: none;
+      font-size: 0.8rem; margin-bottom: 1.5rem; position: relative;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--gold-light); }
+
+    /* Section commons */
+    .section-sup {
+      font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--teal); font-family: 'Montserrat', sans-serif; font-weight: 700;
+      margin-bottom: 0.75rem;
+      display: flex; align-items: center; gap: 0.6rem;
+    }
+    .section-sup::before {
+      content: ''; display: inline-block; width: 24px; height: 1.5px; background: var(--teal);
+    }
+
+    /* Activities grid - light version */
+    .act-section {
+      padding: 5rem 2.5rem 6rem;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .act-grid-full {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .act-card-light {
+      background: white; border-radius: 12px; overflow: hidden;
+      box-shadow: 0 2px 16px var(--shadow-sm);
+      border: 1px solid rgba(65,82,67,0.06);
+      cursor: pointer;
+      transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s;
+      opacity: 0; transform: translateY(28px);
+      animation: cardReveal 0.7s ease forwards;
+    }
+    .act-card-light:nth-child(1) { animation-delay: 0.05s; }
+    .act-card-light:nth-child(2) { animation-delay: 0.12s; }
+    .act-card-light:nth-child(3) { animation-delay: 0.19s; }
+    .act-card-light:nth-child(4) { animation-delay: 0.26s; }
+    .act-card-light:nth-child(5) { animation-delay: 0.33s; }
+    .act-card-light:nth-child(6) { animation-delay: 0.40s; }
+    .act-card-light:nth-child(7) { animation-delay: 0.47s; }
+    .act-card-light:nth-child(8) { animation-delay: 0.54s; }
+    @keyframes cardReveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .act-card-light:hover { transform: translateY(-6px); box-shadow: 0 20px 55px var(--shadow-md); }
+    .act-card-light.featured {
+      grid-column: span 2;
+    }
+    .act-card-img {
+      height: 210px; position: relative; overflow: hidden;
+    }
+    .act-card-light.featured .act-card-img { height: 260px; }
+    .act-card-img img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
+    }
+    .act-card-light:hover .act-card-img img { transform: scale(1.05); }
+    .act-card-pill {
+      position: absolute; top: 0.85rem; left: 0.85rem;
+      background: var(--amber); color: var(--green-deep);
+      padding: 0.22rem 0.7rem; border-radius: 3px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.6rem; font-weight: 800;
+      letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    .act-card-dist {
+      position: absolute; bottom: 0.75rem; right: 0.75rem;
+      background: rgba(0,0,0,0.55); color: white;
+      padding: 0.18rem 0.55rem; border-radius: 4px;
+      font-size: 0.72rem; backdrop-filter: blur(4px);
+    }
+    .act-card-body { padding: 1.4rem 1.5rem; }
+    .act-card-body h3 {
+      font-size: 1.2rem; color: var(--green-deep); margin-bottom: 0.5rem;
+    }
+    .act-card-light.featured .act-card-body h3 { font-size: 1.5rem; }
+    .act-card-body p {
+      font-size: 0.85rem; color: var(--ink-light);
+      line-height: 1.7; margin-bottom: 0.85rem;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .act-card-light.featured .act-card-body p {
+      -webkit-line-clamp: 3;
+    }
+    .act-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .act-tag {
+      background: var(--green-subtle); color: var(--green);
+      padding: 0.18rem 0.55rem; border-radius: 3px;
+      font-size: 0.68rem; letter-spacing: 0.04em;
+      border: 1px solid var(--green-pale);
+    }
+
+    /* Modal */
+    .act-modal-overlay {
+      position: fixed; inset: 0; z-index: 1000;
+      background: rgba(26,34,25,0.65); backdrop-filter: blur(6px);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+    .act-modal-overlay.open { opacity: 1; pointer-events: auto; }
+    .act-modal {
+      background: white; border-radius: 14px; overflow: hidden;
+      max-width: 680px; width: 92%; max-height: 90vh;
+      box-shadow: 0 30px 90px rgba(0,0,0,0.35);
+      transform: translateY(30px) scale(0.96);
+      transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
+      overflow-y: auto;
+    }
+    .act-modal-overlay.open .act-modal { transform: translateY(0) scale(1); }
+    .act-modal-img { height: 300px; position: relative; overflow: hidden; }
+    .act-modal-img img { width: 100%; height: 100%; object-fit: cover; }
+    .act-modal-close {
+      position: absolute; top: 1rem; right: 1rem;
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(0,0,0,0.45); backdrop-filter: blur(4px);
+      border: none; color: white; font-size: 1.2rem;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+    }
+    .act-modal-close:hover { background: rgba(0,0,0,0.7); }
+    .act-modal-body { padding: 2rem; }
+    .act-modal-body h3 { font-size: 1.6rem; color: var(--green-deep); margin-bottom: 0.6rem; }
+    .act-modal-body p { font-size: 0.92rem; color: var(--ink-light); line-height: 1.85; margin-bottom: 1rem; }
+    .act-modal-body .act-tags { margin-bottom: 1.2rem; }
+    .act-modal-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      color: var(--teal); font-size: 0.85rem; font-weight: 600;
+      text-decoration: none; transition: gap 0.2s;
+    }
+    .act-modal-link:hover { gap: 0.65rem; }
+
+    /* Footer */
+    #contacto { background: var(--green-deep); padding: 5rem 2.5rem 3rem; }
+    .contact-grid {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 4rem; padding-bottom: 3.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 2.5rem;
+    }
+    .ct-brand h2 { font-size: 2.1rem; color: white; margin-bottom: 0.4rem; }
+    .ct-brand h2 em { color: var(--gold-light); font-style: italic; }
+    .ct-brand .ct-sub {
+      font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold-light); font-family: 'Montserrat', serif; margin-bottom: 1rem;
+    }
+    .ct-brand p { color: rgba(255,255,255,0.6); font-size: 0.875rem; line-height: 1.78; max-width: 320px; margin-bottom: 1.5rem; }
+    .ct-email {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--gold-light); font-size: 0.875rem; text-decoration: none;
+    }
+    .ct-col h4 { font-family: 'Libre Baskerville', serif; color: white; font-size: 1rem; margin-bottom: 1.2rem; }
+    .ct-col ul { list-style: none; }
+    .ct-col ul li { margin-bottom: 0.55rem; }
+    .ct-col ul li a { color: rgba(255,255,255,0.58); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .ct-col ul li a:hover { color: var(--gold-light); }
+    .footer-bottom {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;
+    }
+    .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.78rem; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .act-grid-full { grid-template-columns: 1fr 1fr; }
+      .act-card-light.featured { grid-column: span 2; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+    @media (max-width: 680px) {
+      #nav { padding: 1rem 1.25rem; }
+      .nav-links, .nav-right .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .page-hero { padding: 7rem 1.25rem 3rem; }
+      .act-section { padding: 3rem 1.25rem 4rem; }
+      .act-grid-full { grid-template-columns: 1fr; }
+      .act-card-light.featured { grid-column: span 1; }
+      .act-card-light.featured .act-card-img { height: 210px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.svg" alt="Camping Parque Ardales">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#alojamientos"><span class="es">Alojamientos</span><span class="en">Accommodation</span></a></li>
+    <li><a href="index.html#servicios"><span class="es">Servicios</span><span class="en">Services</span></a></li>
+    <li><a href="actividades.html" class="active"><span class="es">Actividades</span><span class="en">Activities</span></a></li>
+    <li><a href="galeria.html"><span class="es">Galería</span><span class="en">Gallery</span></a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+    <li><a href="index.html#contacto"><span class="es">Contacto</span><span class="en">Contact</span></a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-btn" id="langBtn">EN</button>
+    <a href="index.html#booking" class="nav-cta"><span class="es">Reservar</span><span class="en">Book Now</span></a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#alojamientos"><span class="es">Alojamientos</span><span class="en">Accommodation</span></a>
+  <a href="index.html#servicios"><span class="es">Servicios</span><span class="en">Services</span></a>
+  <a href="actividades.html"><span class="es">Actividades</span><span class="en">Activities</span></a>
+  <a href="galeria.html"><span class="es">Galería</span><span class="en">Gallery</span></a>
+  <a href="index.html#faq">FAQ</a>
+  <a href="index.html#contacto"><span class="es">Contacto</span><span class="en">Contact</span></a>
+</div>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <a href="index.html" class="back-link">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    <span class="es">Volver al inicio</span><span class="en">Back to home</span>
+  </a>
+  <p class="section-sup"><span class="es">Aventura y descubrimiento</span><span class="en">Adventure & discovery</span></p>
+  <h1><span class="es">Actividades y <em>experiencias</em></span><span class="en">Activities & <em>experiences</em></span></h1>
+  <p>
+    <span class="es">La comarca de Ardales es un paraíso de experiencias al aire libre. Desde rutas de senderismo hasta actividades náuticas, escalada y visitas culturales imprescindibles.</span>
+    <span class="en">The Ardales area is a paradise for outdoor experiences. From hiking routes to water activities, climbing and unmissable cultural visits.</span>
+  </p>
+</div>
+
+<!-- Activities Grid -->
+<div class="act-section">
+  <div class="act-grid-full">
+
+    <!-- 1. Caminito del Rey - FEATURED -->
+    <div class="act-card-light featured" data-act="0">
+      <div class="act-card-img">
+        <img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=800&q=80" alt="Caminito del Rey" loading="lazy">
+        <div class="act-card-pill">CAMINITO DEL REY</div>
+        <div class="act-card-dist"><span class="es">~5 km del camping</span><span class="en">~5 km from campsite</span></div>
+      </div>
+      <div class="act-card-body">
+        <h3>Caminito del Rey</h3>
+        <p><span class="es">Una de las rutas más espectaculares de España. Pasarelas sobre cortados verticales con vistas únicas a los embalses del Chorro. Gestionamos tus entradas si reservas con nosotros con al menos 3 días de antelación.</span><span class="en">One of the most spectacular routes in Spain. Walkways over vertical cliffs with unique views of the El Chorro reservoirs. We manage your tickets if you book with us at least 3 days in advance.</span></p>
+        <div class="act-tags">
+          <span class="act-tag"><span class="es">7,7 km</span><span class="en">7.7 km</span></span>
+          <span class="act-tag"><span class="es">3–4 horas</span><span class="en">3–4 hours</span></span>
+          <span class="act-tag"><span class="es">Dificultad media</span><span class="en">Moderate difficulty</span></span>
+          <span class="act-tag"><span class="es">Entradas gestionadas</span><span class="en">Managed tickets</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Cueva de Ardales -->
+    <div class="act-card-light" data-act="1">
+      <div class="act-card-img">
+        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80" alt="Cueva de Ardales" loading="lazy">
+        <div class="act-card-dist"><span class="es">Ardales pueblo</span><span class="en">Ardales village</span></div>
+      </div>
+      <div class="act-card-body">
+        <h3><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></h3>
+        <p><span class="es">Pinturas rupestres del Paleolítico declaradas Patrimonio de la Humanidad. Visitas guiadas 12:00–19:30 · 2€/persona.</span><span class="en">Palaeolithic cave paintings declared UNESCO World Heritage. Guided visits 12:00–19:30 · 2€/person.</span></p>
+        <div class="act-tags">
+          <span class="act-tag"><span class="es">Patrimonio UNESCO</span><span class="en">UNESCO Heritage</span></span>
+          <span class="act-tag"><span class="es">Visita guiada</span><span class="en">Guided tour</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Actividades Náuticas -->
+    <div class="act-card-light" data-act="2">
+      <div class="act-card-img">
+        <img src="https://images.unsplash.com/photo-1472745942893-4b9f730c7668?auto=format&fit=crop&w=800&q=80" alt="Actividades Náuticas" loading="lazy">
+        <div class="act-card-dist"><span class="es">En el embalse</span><span class="en">On the reservoir</span></div>
+      </div>
+      <div class="act-card-body">
+        <h3><span class="es">Actividades Náuticas</span><span class="en">Water Activities</span></h3>
+        <p><span class="es">Kayak, paddle surf y natación en las aguas cristalinas del embalse. El entorno perfecto para deportes acuáticos.</span><span class="en">Kayaking, paddle boarding and swimming in the crystal-clear reservoir waters. The perfect setting for water sports.</span></p>
+        <div class="act-tags">
+          <span class="act-tag">Kayak</span>
+          <span class="act-tag">Paddle Surf</span>
+          <span class="act-tag"><span class="es">Natación</span><span class="en">Swimming</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Senderismo -->
+    <div class="act-card-light" data-act="3">
+      <div class="act-card-img">
+        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80" alt="Senderismo" loading="lazy">
+        <div class="act-card-dist"><span class="es">Sierra de Ardales</span><span class="en">Sierra de Ardales</span></div>
+      </div>
+      <div class="act-card-body">
+        <h3><span class="es">Senderismo</span><span class="en">Hiking</span></h3>
+        <p><span class="es">Rutas señalizadas de todos los niveles en el entorno del embalse y la Sierra de Ardales. Descarga los tracks en Wikiloc.</span><span class="en">Waymarked routes for all levels around the reservoir and Sierra de Ardales. Download tracks on Wikiloc.</span></p>
+        <div class="act-tags">
+          <span class="act-tag"><span class="es">Todos los niveles</span><span class="en">All levels</span></span>
+          <span class="act-tag">GPS tracks</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Escalada -->
+    <div class="act-card-light" data-act="4">
+      <div class="act-card-img">
+        <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=800&q=80" alt="Escalada" loading="lazy">
+        <div class="act-card-dist">El Chorro</div>
+      </div>
+      <div class="act-card-body">
+        <h3><span class="es">Escalada</span><span class="en">Rock Climbing</span></h3>
+        <p><span class="es">El Chorro es uno de los destinos de escalada más reconocidos de Europa. Más de 800 vías de todos los niveles en las paredes del desfiladero.</span><span class="en">El Chorro is one of Europe's most renowned climbing destinations. Over 800 routes for all levels on the gorge walls.</span></p>
+        <div class="act-tags">
+          <span class="act-tag">800+ <span class="es">vías</span><span class="en">routes</span></span>
+          <span class="act-tag"><span class="es">Todos los niveles</span><span class="en">All levels</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Tajo de Ronda -->
+    <div class="act-card-light" data-act="5">
+      <div class="act-card-img">
+        <img src="https://images.unsplash.com/photo-1561632669-7f55f7975606?auto=format&fit=crop&w=800&q=80" alt="Tajo de Ronda" loading="lazy">
+        <div class="act-card-dist"><span class="es">~45 min en coche</span><span class="en">~45 min drive</span></div>
+      </div>
+      <div class="act-card-body">
+        <h3>Tajo de Ronda</h3>
+        <p><span class="es">Visita la emblemática ciudad de Ronda con su espectacular Puente Nuevo sobre el Tajo. Paseo por el casco antiguo, plaza de toros y jardines.</span><span class="en">Visit the iconic city of Ronda with its spectacular Puente Nuevo over the gorge. Stroll through the old town, bullring and gardens.</span></p>
+        <div class="act-tags">
+          <span class="act-tag"><span class="es">Excursión de día</span><span class="en">Day trip</span></span>
+          <span class="act-tag"><span class="es">Patrimonio</span><span class="en">Heritage</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. El Torcal -->
+    <div class="act-card-light" data-act="6">
+      <div class="act-card-img">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80" alt="El Torcal de Antequera" loading="lazy">
+        <div class="act-card-dist"><span class="es">~40 min en coche</span><span class="en">~40 min drive</span></div>
+      </div>
+      <div class="act-card-body">
+        <h3>El Torcal de Antequera</h3>
+        <p><span class="es">Paisaje kárstico de formaciones rocosas únicas declarado Patrimonio de la Humanidad por la UNESCO. Rutas señalizadas entre laberintos de piedra.</span><span class="en">Karst landscape with unique rock formations, declared a UNESCO World Heritage site. Waymarked routes through stone labyrinths.</span></p>
+        <div class="act-tags">
+          <span class="act-tag"><span class="es">Patrimonio UNESCO</span><span class="en">UNESCO Heritage</span></span>
+          <span class="act-tag"><span class="es">Rutas señalizadas</span><span class="en">Waymarked routes</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. Ciclismo -->
+    <div class="act-card-light" data-act="7">
+      <div class="act-card-img">
+        <img src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?auto=format&fit=crop&w=800&q=80" alt="Ciclismo" loading="lazy">
+        <div class="act-card-dist"><span class="es">Desde el camping</span><span class="en">From campsite</span></div>
+      </div>
+      <div class="act-card-body">
+        <h3><span class="es">Ciclismo y BTT</span><span class="en">Cycling & MTB</span></h3>
+        <p><span class="es">Rutas de carretera y montaña por la Sierra de Ardales y alrededores del embalse. Terreno variado ideal para todos los niveles.</span><span class="en">Road and mountain biking routes through Sierra de Ardales and around the reservoir. Varied terrain ideal for all levels.</span></p>
+        <div class="act-tags">
+          <span class="act-tag"><span class="es">Carretera y BTT</span><span class="en">Road & MTB</span></span>
+          <span class="act-tag"><span class="es">Todos los niveles</span><span class="en">All levels</span></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Activity Modal -->
+<div class="act-modal-overlay" id="actModalOverlay">
+  <div class="act-modal">
+    <div class="act-modal-img">
+      <img id="actModalImg" src="" alt="">
+      <button class="act-modal-close" id="actModalClose">&times;</button>
+    </div>
+    <div class="act-modal-body">
+      <h3 id="actModalTitle"></h3>
+      <p id="actModalDesc"></p>
+      <div class="act-tags" id="actModalTags"></div>
+      <a href="#" id="actModalLink" class="act-modal-link" target="_blank" rel="noopener" style="display:none">
+        <span class="es">Más información</span><span class="en">More information</span> <span style="font-style:normal">→</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer id="contacto">
+  <div class="contact-grid">
+    <div class="ct-brand">
+      <div class="ct-sub"><span class="es">Camping familiar · Embalse Conde de Guadalhorce</span><span class="en">Family camping · Conde de Guadalhorce Reservoir</span></div>
+      <img src="logo.svg" alt="Camping Parque Ardales" style="height:50px;width:auto;filter:brightness(0) invert(1);margin-bottom:0.6rem;">
+      <p>
+        <span class="es">Un rincón único en la naturaleza malagueña, a orillas del embalse y a las puertas del Caminito del Rey y la Cueva de Ardales.</span>
+        <span class="en">A unique corner of Málaga's natural landscape, on the shores of the reservoir and at the gateway to the Caminito del Rey and Ardales Cave.</span>
+      </p>
+      <a href="mailto:camping@parqueardales.com" class="ct-email">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> camping@parqueardales.com
+      </a>
+    </div>
+    <div class="ct-col">
+      <h4><span class="es">Alojamientos</span><span class="en">Accommodation</span></h4>
+      <ul>
+        <li><a href="index.html#alojamientos"><span class="es">Apartamentos</span><span class="en">Apartments</span></a></li>
+        <li><a href="index.html#alojamientos"><span class="es">Parcelas tiendas</span><span class="en">Tent pitches</span></a></li>
+        <li><a href="index.html#alojamientos"><span class="es">Parcelas caravanas</span><span class="en">Caravan pitches</span></a></li>
+        <li><a href="index.html#alojamientos"><span class="es">Cabaña Salón-Cocina</span><span class="en">Salon-Kitchen Cabin</span></a></li>
+      </ul>
+    </div>
+    <div class="ct-col">
+      <h4><span class="es">Actividades</span><span class="en">Activities</span></h4>
+      <ul>
+        <li><a href="#" onclick="document.querySelector('[data-act=&quot;0&quot;]').click();return false;">Caminito del Rey</a></li>
+        <li><a href="#" onclick="document.querySelector('[data-act=&quot;1&quot;]').click();return false;"><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></a></li>
+        <li><a href="#" onclick="document.querySelector('[data-act=&quot;3&quot;]').click();return false;"><span class="es">Senderismo</span><span class="en">Hiking</span></a></li>
+        <li><a href="#" onclick="document.querySelector('[data-act=&quot;2&quot;]').click();return false;"><span class="es">Actividades náuticas</span><span class="en">Water activities</span></a></li>
+        <li><a href="#" onclick="document.querySelector('[data-act=&quot;5&quot;]').click();return false;">Tajo de Ronda</a></li>
+        <li><a href="#" onclick="document.querySelector('[data-act=&quot;6&quot;]').click();return false;">El Torcal</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Camping Parque Ardales · Ardales, Málaga</p>
+    <p style="color:rgba(255,255,255,0.3);font-size:0.75rem;">
+      <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:none;"><span class="es">Política de privacidad</span><span class="en">Privacy policy</span></a>
+      &nbsp;·&nbsp;
+      <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:none;"><span class="es">Aviso legal</span><span class="en">Legal notice</span></a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  /* Language toggle */
+  let currentLang = 'es';
+  const langBtn = document.getElementById('langBtn');
+  langBtn.addEventListener('click', () => {
+    currentLang = currentLang === 'es' ? 'en' : 'es';
+    document.body.classList.toggle('lang-en', currentLang === 'en');
+    langBtn.textContent = currentLang === 'es' ? 'EN' : 'ES';
+    document.documentElement.lang = currentLang;
+  });
+
+  /* Hamburger */
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    });
+  });
+
+  /* Activity data */
+  const actData = [
+    { title: 'Caminito del Rey', titleEn: 'Caminito del Rey',
+      img: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=800&q=80',
+      desc: 'Una de las rutas más espectaculares de España. Pasarelas sobre cortados verticales con vistas únicas a los embalses del Chorro. Gestionamos tus entradas si reservas con nosotros con al menos 3 días de antelación.',
+      descEn: 'One of the most spectacular routes in Spain. Walkways over vertical cliffs with unique views of the El Chorro reservoirs. We manage your tickets if you book with us at least 3 days in advance.',
+      tags: ['7,7 km', '3–4 horas', 'Dificultad media', 'Entradas gestionadas'],
+      tagsEn: ['7.7 km', '3–4 hours', 'Moderate difficulty', 'Managed tickets'],
+      link: 'https://www.caminitodelrey.info' },
+    { title: 'Cueva de Ardales', titleEn: 'Ardales Cave',
+      img: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80',
+      desc: 'Pinturas rupestres del Paleolítico declaradas Patrimonio de la Humanidad por la UNESCO. Un viaje en el tiempo a través de miles de años de historia. Visitas guiadas disponibles de 12:00 a 19:30 · 2€/persona.',
+      descEn: 'Palaeolithic cave paintings declared a UNESCO World Heritage site. A journey back in time through thousands of years of history. Guided visits available 12:00–19:30 · 2€/person.',
+      tags: ['Patrimonio UNESCO', 'Visita guiada', '2€/persona'], tagsEn: ['UNESCO Heritage', 'Guided tour', '2€/person'], link: '' },
+    { title: 'Actividades Náuticas', titleEn: 'Water Activities',
+      img: 'https://images.unsplash.com/photo-1472745942893-4b9f730c7668?auto=format&fit=crop&w=800&q=80',
+      desc: 'Kayak, paddle surf y natación en las aguas cristalinas del Embalse Conde de Guadalhorce. El entorno perfecto para deportes acuáticos rodeado de un paisaje natural impresionante.',
+      descEn: 'Kayaking, paddle boarding and swimming in the crystal-clear waters of the Conde de Guadalhorce Reservoir. The perfect setting for water sports surrounded by stunning natural scenery.',
+      tags: ['Kayak', 'Paddle Surf', 'Natación'], tagsEn: ['Kayak', 'Paddle Surf', 'Swimming'], link: '' },
+    { title: 'Senderismo', titleEn: 'Hiking',
+      img: 'https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80',
+      desc: 'Rutas señalizadas de todos los niveles en el entorno del embalse y la Sierra de Ardales. Descarga los tracks en Wikiloc y disfruta de la naturaleza malagueña en su máxima expresión.',
+      descEn: 'Waymarked routes for all levels around the reservoir and Sierra de Ardales. Download tracks on Wikiloc and enjoy Málaga\'s nature at its finest.',
+      tags: ['Todos los niveles', 'GPS tracks', 'Wikiloc'], tagsEn: ['All levels', 'GPS tracks', 'Wikiloc'],
+      link: 'https://www.wikiloc.com/trails/hiking/spain/andalucia/malaga/ardales' },
+    { title: 'Escalada', titleEn: 'Rock Climbing',
+      img: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=800&q=80',
+      desc: 'El Chorro es uno de los destinos de escalada más reconocidos de Europa. Más de 800 vías de todos los niveles en las paredes del desfiladero del Guadalhorce.',
+      descEn: 'El Chorro is one of Europe\'s most renowned climbing destinations. Over 800 routes for all levels on the Guadalhorce gorge walls.',
+      tags: ['800+ vías', 'Todos los niveles', 'El Chorro'], tagsEn: ['800+ routes', 'All levels', 'El Chorro'], link: '' },
+    { title: 'Tajo de Ronda', titleEn: 'Tajo de Ronda',
+      img: 'https://images.unsplash.com/photo-1561632669-7f55f7975606?auto=format&fit=crop&w=800&q=80',
+      desc: 'Visita la emblemática ciudad de Ronda con su espectacular Puente Nuevo sobre el Tajo. Pasea por el casco antiguo, descubre la plaza de toros más antigua de España y disfruta de la gastronomía local.',
+      descEn: 'Visit the iconic city of Ronda with its spectacular Puente Nuevo over the gorge. Stroll through the old town, discover Spain\'s oldest bullring and enjoy the local cuisine.',
+      tags: ['Excursión de día', 'Patrimonio', '~45 min'], tagsEn: ['Day trip', 'Heritage', '~45 min'], link: '' },
+    { title: 'El Torcal de Antequera', titleEn: 'El Torcal de Antequera',
+      img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80',
+      desc: 'Paisaje kárstico de formaciones rocosas únicas declarado Patrimonio de la Humanidad por la UNESCO. Rutas señalizadas entre laberintos de piedra formados hace millones de años.',
+      descEn: 'Karst landscape with unique rock formations, declared a UNESCO World Heritage site. Waymarked routes through stone labyrinths formed millions of years ago.',
+      tags: ['Patrimonio UNESCO', 'Rutas señalizadas', '~40 min'], tagsEn: ['UNESCO Heritage', 'Waymarked routes', '~40 min'], link: '' },
+    { title: 'Ciclismo y BTT', titleEn: 'Cycling & MTB',
+      img: 'https://images.unsplash.com/photo-1541625602330-2277a4c46182?auto=format&fit=crop&w=800&q=80',
+      desc: 'Rutas de carretera y montaña por la Sierra de Ardales y alrededores del embalse. Terreno variado ideal para todos los niveles, con paisajes espectaculares en cada kilómetro.',
+      descEn: 'Road and mountain biking routes through Sierra de Ardales and around the reservoir. Varied terrain ideal for all levels, with spectacular scenery at every turn.',
+      tags: ['Carretera y BTT', 'Todos los niveles'], tagsEn: ['Road & MTB', 'All levels'], link: '' }
+  ];
+
+  /* Modal */
+  const overlay = document.getElementById('actModalOverlay');
+  const modalImg = document.getElementById('actModalImg');
+  const modalTitle = document.getElementById('actModalTitle');
+  const modalDesc = document.getElementById('actModalDesc');
+  const modalTags = document.getElementById('actModalTags');
+  const modalLink = document.getElementById('actModalLink');
+
+  document.querySelectorAll('[data-act]').forEach(card => {
+    card.addEventListener('click', () => {
+      const d = actData[card.dataset.act];
+      const en = currentLang === 'en';
+      modalImg.src = d.img;
+      modalImg.alt = en ? d.titleEn : d.title;
+      modalTitle.textContent = en ? d.titleEn : d.title;
+      modalDesc.textContent = en ? d.descEn : d.desc;
+      modalTags.innerHTML = (en ? d.tagsEn : d.tags).map(t => '<span class="act-tag">' + t + '</span>').join('');
+      if (d.link) { modalLink.href = d.link; modalLink.style.display = ''; }
+      else { modalLink.style.display = 'none'; }
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeActModal() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('actModalClose').addEventListener('click', closeActModal);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeActModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeActModal(); });
+</script>
+</body>
+</html>
