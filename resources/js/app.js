@@ -2,38 +2,26 @@
   function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
   requestAnimationFrame(raf);
 
-  /* ── Language dropdown ── */
-  let currentLang = 'es';
+  /* ── Language dropdown (only handles open/close; options are real <a> links) ── */
   const langDropdown = document.getElementById('langDropdown');
   const langBtn = document.getElementById('langBtn');
-  const langMenu = document.getElementById('langMenu');
-  const langLabels = { es: 'ES', en: 'EN', de: 'DE' };
 
-  langBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    langDropdown.classList.toggle('open');
-  });
-  document.addEventListener('click', () => langDropdown.classList.remove('open'));
-
-  function syncOptionLabels() {
-    document.querySelectorAll('select option[data-es]').forEach(o => {
-      const txt = (currentLang === 'en' && o.dataset.en) ? o.dataset.en : o.dataset.es;
-      if (txt) o.textContent = txt;
+  if (langBtn && langDropdown) {
+    langBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langDropdown.classList.toggle('open');
     });
+    document.addEventListener('click', () => langDropdown.classList.remove('open'));
   }
 
-  langMenu.querySelectorAll('.lang-option').forEach(opt => {
-    opt.addEventListener('click', () => {
-      currentLang = opt.dataset.lang;
-      document.body.classList.toggle('lang-en', currentLang === 'en');
-      document.documentElement.lang = currentLang;
-      langBtn.innerHTML = langLabels[currentLang] + ' <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg>';
-      langMenu.querySelectorAll('.lang-option').forEach(o => o.classList.remove('active'));
-      opt.classList.add('active');
-      langDropdown.classList.remove('open');
-      syncOptionLabels();
+  /* Translate <option data-es=".." data-en=".."> text for current locale. */
+  (function syncOptionLabels(){
+    const isEn = document.body.classList.contains('lang-en');
+    document.querySelectorAll('option[data-es]').forEach(o => {
+      const txt = (isEn && o.dataset.en) ? o.dataset.en : o.dataset.es;
+      if (txt) o.textContent = txt;
     });
-  });
+  })();
 
   /* ── Navbar scroll + height sync para submenu ── */
   const nav = document.getElementById('nav');

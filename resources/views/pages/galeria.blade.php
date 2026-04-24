@@ -1,59 +1,20 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#F4EFE6">
-  <meta name="description" content="Galería de fotos del Camping Parque Ardales: alojamientos, instalaciones, entorno natural y actividades.">
-  <title>Galería · Camping Parque Ardales</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,700;1,9..144,900&family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    :root { --page-hero-bg: url('images/Entorno 19.webp'); }
+@extends('layouts.app', [
+    'bodyClass' => 'subpage has-submenu',
+    'active' => 'galeria',
+])
+
+@section('title', 'Galería · Camping Parque Ardales')
+@section('meta_description', 'Galería de fotos del Camping Parque Ardales: alojamientos, instalaciones, entorno natural y actividades.')
+
+@push('head')
+<style>
+    :root { --page-hero-bg: url('/images/Entorno 19.webp'); }
   </style>
-</head>
-<body class="subpage">
+@endpush
 
+@section('content')
 <!-- ─────────────────────────── NAV ─────────────────────────── -->
-<nav id="nav">
-  <a href="index.html" class="nav-logo">
-    <img src="logo.svg" alt="Camping Parque Ardales">
-  </a>
-  <ul class="nav-links">
-    <li><a href="camping.html">Camping</a></li>
-    <li><a href="apartamentos.html"><span class="es">Apartamentos</span><span class="en">Apartments</span></a></li>
-    <li><a href="servicios.html"><span class="es">Servicios</span><span class="en">Services</span></a></li>
-    <li><a href="actividades.html"><span class="es">Actividades</span><span class="en">Activities</span></a></li>
-    <li><a href="galeria.html" class="active"><span class="es">Galería</span><span class="en">Gallery</span></a></li>
-    <li><a href="contacto.html"><span class="es">Contacto</span><span class="en">Contact</span></a></li>
-  </ul>
-  <div class="nav-right">
-    <div class="lang-dropdown" id="langDropdown">
-      <button class="lang-btn" id="langBtn">ES <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
-      <div class="lang-menu" id="langMenu">
-        <button class="lang-option active" data-lang="es">Español</button>
-        <button class="lang-option" data-lang="en">English</button>
-        <button class="lang-option" data-lang="de">Deutsch</button>
-      </div>
-    </div>
-  </div>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
 <!-- Mobile menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="camping.html" class="mob-link">Camping</a>
-  <a href="apartamentos.html" class="mob-link"><span class="es">Apartamentos</span><span class="en">Apartments</span></a>
-  <a href="servicios.html" class="mob-link"><span class="es">Servicios</span><span class="en">Services</span></a>
-  <a href="actividades.html" class="mob-link"><span class="es">Actividades</span><span class="en">Activities</span></a>
-  <a href="galeria.html" class="mob-link"><span class="es">Galería</span><span class="en">Gallery</span></a>
-  <a href="contacto.html" class="mob-link"><span class="es">Contacto</span><span class="en">Contact</span></a>
-</div>
-
 <!-- ─────────────────────────── PAGE HERO ─────────────────────────── -->
 <section class="page-hero">
   <p class="ph-sup"><span class="es">Imágenes del recinto</span><span class="en">Campsite imagery</span></p>
@@ -67,166 +28,168 @@
   </p>
 </section>
 
+<!-- ─── SUBMENÚ FILTRO STICKY ─── -->
+<nav class="page-submenu" aria-label="Filtro de galería">
+  <div class="psm-inner" id="psmInner">
+    <button type="button" class="psm-link active" data-filter="all"><span class="es">Todas</span><span class="en">All</span></button>
+    <button type="button" class="psm-link" data-filter="alojamiento"><span class="es">Alojamientos</span><span class="en">Accommodation</span></button>
+    <button type="button" class="psm-link" data-filter="instalaciones"><span class="es">Instalaciones</span><span class="en">Facilities</span></button>
+    <button type="button" class="psm-link" data-filter="entorno"><span class="es">Entorno</span><span class="en">Surroundings</span></button>
+    <button type="button" class="psm-link" data-filter="actividades"><span class="es">Actividades</span><span class="en">Activities</span></button>
+  </div>
+</nav>
+
 <!-- ─────────────────────────── GALLERY ─────────────────────────── -->
 <section class="section" style="padding-top: 4rem;">
   <div class="container">
 
-    <!-- Filters -->
-    <div class="gallery-filters">
-      <button class="gf active" data-filter="all"><span class="es">Todas</span><span class="en">All</span></button>
-      <button class="gf" data-filter="alojamiento"><span class="es">Alojamientos</span><span class="en">Accommodation</span></button>
-      <button class="gf" data-filter="instalaciones"><span class="es">Instalaciones</span><span class="en">Facilities</span></button>
-      <button class="gf" data-filter="entorno"><span class="es">Entorno</span><span class="en">Surroundings</span></button>
-      <button class="gf" data-filter="actividades"><span class="es">Actividades</span><span class="en">Activities</span></button>
-    </div>
-
     <!-- Grid -->
-    <div class="gallery-grid" id="galleryGrid" style="grid-template-columns: repeat(4, 1fr); grid-auto-rows: 220px;">
+    <div class="gallery-grid" id="galleryGrid">
       <!-- Alojamiento -->
       <div class="gi t2" data-cat="alojamiento" data-label-es="Apartamento · exterior" data-label-en="Apartment · exterior">
-        <div class="gi-bg"><img src="images/Bung-exterior1.webp" alt="Apartamento" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Bung-exterior1.webp" alt="Apartamento" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Apartamento · exterior</span><span class="en">Apartment · exterior</span></span></div>
       </div>
       <div class="gi" data-cat="alojamiento" data-label-es="Apartamento · salón" data-label-en="Apartment · living room">
-        <div class="gi-bg"><img src="images/Bung-salon1.webp" alt="Salón apartamento" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Bung-salon1.webp" alt="Salón apartamento" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Apartamento · salón</span><span class="en">Apartment · living room</span></span></div>
       </div>
       <div class="gi" data-cat="alojamiento" data-label-es="Apartamento · habitación" data-label-en="Apartment · bedroom">
-        <div class="gi-bg"><img src="images/Bung-habitacion1.webp" alt="Habitación apartamento" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Bung-habitacion1.webp" alt="Habitación apartamento" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Apartamento · habitación</span><span class="en">Apartment · bedroom</span></span></div>
       </div>
       <div class="gi" data-cat="alojamiento" data-label-es="Apartamento · terraza" data-label-en="Apartment · terrace">
-        <div class="gi-bg"><img src="images/Bung-terraza1.webp" alt="Terraza apartamento" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Bung-terraza1.webp" alt="Terraza apartamento" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Apartamento · terraza</span><span class="en">Apartment · terrace</span></span></div>
       </div>
       <div class="gi w2" data-cat="alojamiento" data-label-es="Zona de tiendas" data-label-en="Tent area">
-        <div class="gi-bg"><img src="images/TIENDAS 2.webp" alt="Zona de tiendas" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/TIENDAS 2.webp" alt="Zona de tiendas" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Zona de tiendas</span><span class="en">Tent area</span></span></div>
       </div>
       <div class="gi" data-cat="alojamiento" data-label-es="Parcela caravana" data-label-en="Caravan pitch">
-        <div class="gi-bg"><img src="images/Caravanas 1.webp" alt="Parcela caravana" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Caravanas 1.webp" alt="Parcela caravana" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Parcela caravana</span><span class="en">Caravan pitch</span></span></div>
       </div>
       <div class="gi" data-cat="alojamiento" data-label-es="Parcela caravana" data-label-en="Caravan pitch">
-        <div class="gi-bg"><img src="images/Caravanas 2.webp" alt="Parcela caravana" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Caravanas 2.webp" alt="Parcela caravana" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Parcela caravana</span><span class="en">Caravan pitch</span></span></div>
       </div>
       <div class="gi" data-cat="alojamiento" data-label-es="Cabaña salón-cocina" data-label-en="Salon-kitchen cabin">
-        <div class="gi-bg"><img src="images/Cabaña1.webp" alt="Cabaña" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Cabaña1.webp" alt="Cabaña" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Cabaña</span><span class="en">Cabin</span></span></div>
       </div>
       <div class="gi" data-cat="alojamiento" data-label-es="Apartamento · baño" data-label-en="Apartment · bathroom">
-        <div class="gi-bg"><img src="images/Bung-baño1.webp" alt="Baño apartamento" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Bung-baño1.webp" alt="Baño apartamento" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Apartamento · baño</span><span class="en">Apartment · bathroom</span></span></div>
       </div>
       <div class="gi" data-cat="alojamiento" data-label-es="Apartamento · salón" data-label-en="Apartment · living room">
-        <div class="gi-bg"><img src="images/Bung-salon3.webp" alt="Salón apartamento" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Bung-salon3.webp" alt="Salón apartamento" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Apartamento · salón</span><span class="en">Apartment · living room</span></span></div>
       </div>
 
       <!-- Instalaciones -->
       <div class="gi t2" data-cat="instalaciones" data-label-es="Piscina infinita" data-label-en="Infinity pool">
-        <div class="gi-bg"><img src="images/Entorno 20.webp" alt="Piscina infinita" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Entorno 20.webp" alt="Piscina infinita" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Piscina infinita</span><span class="en">Infinity pool</span></span></div>
       </div>
       <div class="gi" data-cat="instalaciones" data-label-es="Supermercado" data-label-en="Supermarket">
-        <div class="gi-bg"><img src="images/Supermercado 1.webp" alt="Supermercado" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Supermercado 1.webp" alt="Supermercado" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Supermercado</span><span class="en">Supermarket</span></span></div>
       </div>
       <div class="gi" data-cat="instalaciones" data-label-es="Supermercado" data-label-en="Supermarket">
-        <div class="gi-bg"><img src="images/Supermercado 3.webp" alt="Supermercado" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Supermercado 3.webp" alt="Supermercado" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Supermercado</span><span class="en">Supermarket</span></span></div>
       </div>
       <div class="gi" data-cat="instalaciones" data-label-es="Recepción" data-label-en="Reception">
-        <div class="gi-bg"><img src="images/Recepcion 1.webp" alt="Recepción" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Recepcion 1.webp" alt="Recepción" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Recepción</span><span class="en">Reception</span></span></div>
       </div>
       <div class="gi" data-cat="instalaciones" data-label-es="Recepción" data-label-en="Reception">
-        <div class="gi-bg"><img src="images/Recepcion 2.webp" alt="Recepción" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Recepcion 2.webp" alt="Recepción" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Recepción</span><span class="en">Reception</span></span></div>
       </div>
       <div class="gi" data-cat="instalaciones" data-label-es="Baños" data-label-en="Bathrooms">
-        <div class="gi-bg"><img src="images/baños1.webp" alt="Baños" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/baños1.webp" alt="Baños" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Baños</span><span class="en">Bathrooms</span></span></div>
       </div>
       <div class="gi" data-cat="instalaciones" data-label-es="Baños" data-label-en="Bathrooms">
-        <div class="gi-bg"><img src="images/baños3.webp" alt="Baños" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/baños3.webp" alt="Baños" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Baños</span><span class="en">Bathrooms</span></span></div>
       </div>
 
       <!-- Entorno -->
       <div class="gi w2" data-cat="entorno" data-label-es="Embalse Conde de Guadalhorce" data-label-en="Conde de Guadalhorce Reservoir">
-        <div class="gi-bg"><img src="images/Entorno 1.webp" alt="Embalse" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Entorno 1.webp" alt="Embalse" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Embalse Conde de Guadalhorce</span><span class="en">Conde de Guadalhorce Reservoir</span></span></div>
       </div>
       <div class="gi" data-cat="entorno" data-label-es="Naturaleza" data-label-en="Nature">
-        <div class="gi-bg"><img src="images/Entorno 5.webp" alt="Naturaleza" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Entorno 5.webp" alt="Naturaleza" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Naturaleza</span><span class="en">Nature</span></span></div>
       </div>
       <div class="gi" data-cat="entorno" data-label-es="Entorno natural" data-label-en="Natural setting">
-        <div class="gi-bg"><img src="images/Entorno 9.webp" alt="Entorno" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Entorno 9.webp" alt="Entorno" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Entorno</span><span class="en">Setting</span></span></div>
       </div>
       <div class="gi" data-cat="entorno" data-label-es="Vistas al embalse" data-label-en="Reservoir views">
-        <div class="gi-bg"><img src="images/Entorno 11.webp" alt="Vistas" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Entorno 11.webp" alt="Vistas" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Vistas al embalse</span><span class="en">Reservoir views</span></span></div>
       </div>
       <div class="gi t2" data-cat="entorno" data-label-es="Paraje natural" data-label-en="Natural landscape">
-        <div class="gi-bg"><img src="images/Entorno 13.webp" alt="Paraje" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Entorno 13.webp" alt="Paraje" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Paraje natural</span><span class="en">Natural landscape</span></span></div>
       </div>
       <div class="gi" data-cat="entorno" data-label-es="Vegetación mediterránea" data-label-en="Mediterranean vegetation">
-        <div class="gi-bg"><img src="images/Entorno 6.webp" alt="Vegetación" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Entorno 6.webp" alt="Vegetación" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Vegetación</span><span class="en">Vegetation</span></span></div>
       </div>
       <div class="gi" data-cat="entorno" data-label-es="Pinares" data-label-en="Pine forest">
-        <div class="gi-bg"><img src="images/Entorno 15.webp" alt="Pinares" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Entorno 15.webp" alt="Pinares" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Pinares</span><span class="en">Pine forest</span></span></div>
       </div>
       <div class="gi" data-cat="entorno" data-label-es="Vistas panorámicas" data-label-en="Panoramic views">
-        <div class="gi-bg"><img src="images/Entorno 22.webp" alt="Panorámica" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Entorno 22.webp" alt="Panorámica" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Vistas panorámicas</span><span class="en">Panoramic views</span></span></div>
       </div>
       <div class="gi" data-cat="entorno" data-label-es="Sierra de Ardales" data-label-en="Sierra de Ardales">
-        <div class="gi-bg"><img src="images/Entorno 24.webp" alt="Sierra" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Entorno 24.webp" alt="Sierra" loading="lazy"></div>
         <div class="gi-ov"><span>Sierra de Ardales</span></div>
       </div>
       <div class="gi w2" data-cat="entorno" data-label-es="Atardecer en el embalse" data-label-en="Sunset on the reservoir">
-        <div class="gi-bg"><img src="images/Entorno 19.webp" alt="Atardecer" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Entorno 19.webp" alt="Atardecer" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Atardecer en el embalse</span><span class="en">Sunset on the reservoir</span></span></div>
       </div>
 
       <!-- Actividades -->
       <div class="gi t2" data-cat="actividades" data-label-es="Caminito del Rey" data-label-en="Caminito del Rey">
-        <div class="gi-bg"><img src="images/caminito.webp" alt="Caminito del Rey" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/caminito.webp" alt="Caminito del Rey" loading="lazy"></div>
         <div class="gi-ov"><span>Caminito del Rey</span></div>
       </div>
       <div class="gi" data-cat="actividades" data-label-es="Puente colgante" data-label-en="Suspension bridge">
-        <div class="gi-bg"><img src="images/colgante1.webp" alt="Puente colgante" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/colgante1.webp" alt="Puente colgante" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Puente colgante</span><span class="en">Suspension bridge</span></span></div>
       </div>
       <div class="gi" data-cat="actividades" data-label-es="Cueva de Ardales" data-label-en="Ardales Cave">
-        <div class="gi-bg"><img src="images/cueva-ardales.jpg" alt="Cueva de Ardales" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/cueva-ardales.jpg" alt="Cueva de Ardales" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></span></div>
       </div>
       <div class="gi" data-cat="actividades" data-label-es="Kayak en el embalse" data-label-en="Kayaking on the reservoir">
-        <div class="gi-bg"><img src="images/KAYAKs.webp" alt="Kayak" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/KAYAKs.webp" alt="Kayak" loading="lazy"></div>
         <div class="gi-ov"><span>Kayak</span></div>
       </div>
       <div class="gi" data-cat="actividades" data-label-es="Paddle surf" data-label-en="Paddle boarding">
-        <div class="gi-bg"><img src="images/KAYAKs 2.webp" alt="Paddle surf" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/KAYAKs 2.webp" alt="Paddle surf" loading="lazy"></div>
         <div class="gi-ov"><span>Paddle Surf</span></div>
       </div>
       <div class="gi" data-cat="actividades" data-label-es="Escalada en El Chorro" data-label-en="Climbing at El Chorro">
-        <div class="gi-bg"><img src="images/escalada1.webp" alt="Escalada" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/escalada1.webp" alt="Escalada" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Escalada</span><span class="en">Climbing</span></span></div>
       </div>
       <div class="gi" data-cat="actividades" data-label-es="Escalada en El Chorro" data-label-en="Climbing at El Chorro">
-        <div class="gi-bg"><img src="images/escalada3.webp" alt="Escalada" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/escalada3.webp" alt="Escalada" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Escalada</span><span class="en">Climbing</span></span></div>
       </div>
       <div class="gi" data-cat="actividades" data-label-es="Senderismo" data-label-en="Hiking">
-        <div class="gi-bg"><img src="images/Entorno 17.webp" alt="Senderismo" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Entorno 17.webp" alt="Senderismo" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Senderismo</span><span class="en">Hiking</span></span></div>
       </div>
     </div>
@@ -250,71 +213,18 @@
 </div>
 
 <!-- ─────────────────────────── FOOTER ─────────────────────────── -->
-<footer id="contacto">
-  <div class="contact-grid">
-    <div class="ct-brand">
-      <div class="ct-sub"><span class="es">Camping familiar · Embalse Conde de Guadalhorce</span><span class="en">Family camping · Conde de Guadalhorce Reservoir</span></div>
-      <img src="logo-negativo.svg" alt="Camping Parque Ardales" style="height:70px;width:auto;margin-bottom:0.6rem;">
-      <p>
-        <span class="es">Un rincón único en la naturaleza malagueña, a orillas del embalse y a las puertas del Caminito del Rey y la Cueva de Ardales.</span>
-        <span class="en">A unique corner of Málaga's natural landscape, on the shores of the reservoir and at the gateway to the Caminito del Rey and Ardales Cave.</span>
-      </p>
-      <a href="mailto:info@parqueardales.com" class="ct-email">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> info@parqueardales.com
-      </a>
-      <a href="tel:+34951264924" class="ct-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> 951 264 924</a>
-    </div>
-
-    <div class="ct-col">
-      <h4><span class="es">Estancia</span><span class="en">Stay</span></h4>
-      <ul>
-        <li><a href="apartamentos.html"><span class="es">Apartamentos</span><span class="en">Apartments</span></a></li>
-        <li><a href="camping.html#tiendas"><span class="es">Parcelas tiendas</span><span class="en">Tent pitches</span></a></li>
-        <li><a href="camping.html#caravanas"><span class="es">Parcelas caravanas</span><span class="en">Caravan pitches</span></a></li>
-        <li><a href="servicios.html#cabana"><span class="es">Cabaña Salón-Cocina</span><span class="en">Salon-Kitchen Cabin</span></a></li>
-      </ul>
-    </div>
-
-    <div class="ct-col">
-      <h4><span class="es">Actividades</span><span class="en">Activities</span></h4>
-      <ul>
-        <li><a href="actividades.html#caminito">Caminito del Rey</a></li>
-        <li><a href="actividades.html#cueva"><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></a></li>
-        <li><a href="actividades.html#senderismo"><span class="es">Senderismo</span><span class="en">Hiking</span></a></li>
-        <li><a href="actividades.html#nauticas"><span class="es">Actividades náuticas</span><span class="en">Water activities</span></a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 Camping Parque Ardales · Ardales, Málaga</p>
-    <p style="color:rgba(255,255,255,0.3);font-size:0.75rem;">
-      <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:none;">
-        <span class="es">Política de privacidad</span><span class="en">Privacy policy</span>
-      </a>
-      &nbsp;·&nbsp;
-      <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:none;">
-        <span class="es">Aviso legal</span><span class="en">Legal notice</span>
-      </a>
-    </p>
-  </div>
-</footer>
-
 <!-- ── Custom cursor + scroll progress ── -->
-<div class="scroll-progress" id="scrollProgress"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-<div class="cursor-dot" id="cursorDot"></div>
-
 <!-- ─────────────────────────── JAVASCRIPT ─────────────────────────── -->
-<script src="https://unpkg.com/lenis@1/dist/lenis.min.js"></script>
-<script src="scripts.js"></script>
+@endsection
+
+@push('scripts')
 <script>
   /* Gallery filter + lightbox (page-specific) */
   (function(){
     const grid = document.getElementById('galleryGrid');
     if (!grid) return;
     const items = Array.from(grid.querySelectorAll('.gi'));
-    const filters = document.querySelectorAll('.gf');
+    const filters = document.querySelectorAll('.psm-link[data-filter]');
     const countEs = document.getElementById('gcNum');
     const countEn = document.getElementById('gcNumEn');
     let current = 'all';
@@ -400,5 +310,4 @@
     });
   })();
 </script>
-</body>
-</html>
+@endpush

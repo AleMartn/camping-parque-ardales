@@ -1,57 +1,18 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#F4EFE6">
-  <meta name="description" content="Parcelas de camping en Ardales: tiendas con y sin electricidad, caravanas, autocaravanas y campers pequeñas. A orillas del Embalse Conde de Guadalhorce.">
-  <title>Camping · Camping Parque Ardales</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,700;1,9..144,900&family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    :root { --page-hero-bg: url('images/TIENDAS 2.webp'); }
+@extends('layouts.app', [
+    'bodyClass' => 'subpage has-submenu',
+    'active' => 'camping',
+])
+
+@section('title', 'Camping · Camping Parque Ardales')
+@section('meta_description', 'Parcelas de camping en Ardales: tiendas con y sin electricidad, caravanas, autocaravanas y campers pequeñas. A orillas del Embalse Conde de Guadalhorce.')
+
+@push('head')
+<style>
+    :root { --page-hero-bg: url('/images/TIENDAS 2.webp'); }
   </style>
-</head>
-<body class="subpage has-submenu">
+@endpush
 
-<nav id="nav">
-  <a href="index.html" class="nav-logo">
-    <img src="logo.svg" alt="Camping Parque Ardales">
-  </a>
-  <ul class="nav-links">
-    <li><a href="camping.html" class="active">Camping</a></li>
-    <li><a href="apartamentos.html"><span class="es">Apartamentos</span><span class="en">Apartments</span></a></li>
-    <li><a href="servicios.html"><span class="es">Servicios</span><span class="en">Services</span></a></li>
-    <li><a href="actividades.html"><span class="es">Actividades</span><span class="en">Activities</span></a></li>
-    <li><a href="galeria.html"><span class="es">Galería</span><span class="en">Gallery</span></a></li>
-    <li><a href="contacto.html"><span class="es">Contacto</span><span class="en">Contact</span></a></li>
-  </ul>
-  <div class="nav-right">
-    <div class="lang-dropdown" id="langDropdown">
-      <button class="lang-btn" id="langBtn">ES <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
-      <div class="lang-menu" id="langMenu">
-        <button class="lang-option active" data-lang="es">Español</button>
-        <button class="lang-option" data-lang="en">English</button>
-        <button class="lang-option" data-lang="de">Deutsch</button>
-      </div>
-    </div>
-  </div>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="camping.html" class="mob-link">Camping</a>
-  <a href="apartamentos.html" class="mob-link"><span class="es">Apartamentos</span><span class="en">Apartments</span></a>
-  <a href="servicios.html" class="mob-link"><span class="es">Servicios</span><span class="en">Services</span></a>
-  <a href="actividades.html" class="mob-link"><span class="es">Actividades</span><span class="en">Activities</span></a>
-  <a href="galeria.html" class="mob-link"><span class="es">Galería</span><span class="en">Gallery</span></a>
-  <a href="contacto.html" class="mob-link"><span class="es">Contacto</span><span class="en">Contact</span></a>
-</div>
-
+@section('content')
 <section class="page-hero">
   <p class="ph-sup"><span class="es">Acampada en la naturaleza</span><span class="en">Camping in nature</span></p>
   <h1>
@@ -70,8 +31,8 @@
     <a href="#tiendas" class="psm-link" data-psm="tiendas"><span class="es">Tiendas</span><span class="en">Tents</span></a>
     <a href="#caravanas" class="psm-link" data-psm="caravanas"><span class="es">Caravanas</span><span class="en">Caravans</span></a>
     <a href="#campers" class="psm-link" data-psm="campers">Campers</a>
-    <a href="#fotos" class="psm-link" data-psm="fotos"><span class="es">Fotos</span><span class="en">Photos</span></a>
     <a href="#tarifas" class="psm-link" data-psm="tarifas"><span class="es">Tarifas</span><span class="en">Rates</span></a>
+    <a href="#fotos" class="psm-link" data-psm="fotos"><span class="es">Fotos</span><span class="en">Photos</span></a>
   </div>
 </nav>
 
@@ -80,7 +41,7 @@
   <div class="container">
     <div class="detail-block reveal">
       <div class="detail-media">
-        <img src="images/TIENDAS 2.webp" alt="Parcelas para tiendas" loading="lazy">
+        <img src="/images/TIENDAS 2.webp" alt="Parcelas para tiendas" loading="lazy">
         <div class="dm-badge">01 · <span class="es">Tiendas</span><span class="en">Tents</span></div>
       </div>
       <div class="detail-body">
@@ -102,7 +63,7 @@
           <li><span class="es">Pet friendly</span><span class="en">Pet friendly</span></li>
         </ul>
         <div class="detail-cta-row">
-          <a href="index.html#booking" class="detail-cta">
+          <a href="{{ route('home') }}#booking" class="detail-cta">
             <span class="es">Reservar parcela</span><span class="en">Book pitch</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
@@ -120,7 +81,7 @@
   <div class="container">
     <div class="detail-block reverse reveal">
       <div class="detail-media">
-        <img src="images/Caravanas 1.webp" alt="Parcelas para caravanas y autocaravanas" loading="lazy">
+        <img src="/images/Caravanas 1.webp" alt="Parcelas para caravanas y autocaravanas" loading="lazy">
         <div class="dm-badge">02 · <span class="es">Caravanas</span><span class="en">Caravans</span></div>
       </div>
       <div class="detail-body">
@@ -142,7 +103,7 @@
           <li><span class="es">WiFi en zona común</span><span class="en">WiFi in common area</span></li>
         </ul>
         <div class="detail-cta-row">
-          <a href="index.html#booking" class="detail-cta">
+          <a href="{{ route('home') }}#booking" class="detail-cta">
             <span class="es">Reservar plaza</span><span class="en">Book plot</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
@@ -160,7 +121,7 @@
   <div class="container">
     <div class="detail-block reveal">
       <div class="detail-media">
-        <img src="images/Caravanas 2.webp" alt="Parcelas para campers pequeñas" loading="lazy">
+        <img src="/images/Caravanas 2.webp" alt="Parcelas para campers pequeñas" loading="lazy">
         <div class="dm-badge">03 · <span class="es">Campers</span><span class="en">Campers</span></div>
       </div>
       <div class="detail-body">
@@ -180,63 +141,6 @@
           <li><span class="es">Vaciado químico</span><span class="en">Chemical disposal</span></li>
         </ul>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── FOTOS ─── -->
-<section class="section" id="fotos">
-  <div class="container">
-    <p class="section-sup reveal"><span class="es">El recinto en imágenes</span><span class="en">The grounds in photos</span></p>
-    <h2 class="section-h reveal">
-      <span class="es"><em>Fotos</em> del camping</span>
-      <span class="en">Campsite <em>photos</em></span>
-    </h2>
-
-    <div class="gallery-grid reveal" id="fotosGrid" style="grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; margin-top: 2rem;">
-      <div class="gi w2" data-label-es="Zona de tiendas" data-label-en="Tent area">
-        <div class="gi-bg"><img src="images/TIENDAS 2.webp" alt="Zona de tiendas" loading="lazy"></div>
-        <div class="gi-ov"><span><span class="es">Zona de tiendas</span><span class="en">Tent area</span></span></div>
-      </div>
-      <div class="gi" data-label-es="Tiendas entre pinos" data-label-en="Tents among pines">
-        <div class="gi-bg"><img src="images/TIENDAS.webp" alt="Tiendas" loading="lazy"></div>
-        <div class="gi-ov"><span><span class="es">Sombra natural</span><span class="en">Natural shade</span></span></div>
-      </div>
-      <div class="gi" data-label-es="Tiendas · vegetación" data-label-en="Tents · vegetation">
-        <div class="gi-bg"><img src="images/TIENDAS 3.webp" alt="Tiendas" loading="lazy"></div>
-        <div class="gi-ov"><span><span class="es">Vegetación</span><span class="en">Vegetation</span></span></div>
-      </div>
-      <div class="gi" data-label-es="Parcela caravana" data-label-en="Caravan pitch">
-        <div class="gi-bg"><img src="images/Caravanas 1.webp" alt="Parcela caravana" loading="lazy"></div>
-        <div class="gi-ov"><span><span class="es">Caravana</span><span class="en">Caravan</span></span></div>
-      </div>
-      <div class="gi" data-label-es="Parcela autocaravana" data-label-en="Motorhome pitch">
-        <div class="gi-bg"><img src="images/Caravanas 2.webp" alt="Autocaravana" loading="lazy"></div>
-        <div class="gi-ov"><span><span class="es">Autocaravana</span><span class="en">Motorhome</span></span></div>
-      </div>
-      <div class="gi t2" data-label-es="Piscina infinita" data-label-en="Infinity pool">
-        <div class="gi-bg"><img src="images/Entorno 20.webp" alt="Piscina" loading="lazy"></div>
-        <div class="gi-ov"><span><span class="es">Piscina</span><span class="en">Pool</span></span></div>
-      </div>
-      <div class="gi" data-label-es="Entorno natural" data-label-en="Natural setting">
-        <div class="gi-bg"><img src="images/Entorno 5.webp" alt="Entorno" loading="lazy"></div>
-        <div class="gi-ov"><span><span class="es">Entorno</span><span class="en">Setting</span></span></div>
-      </div>
-      <div class="gi" data-label-es="Vistas al embalse" data-label-en="Reservoir views">
-        <div class="gi-bg"><img src="images/Entorno 11.webp" alt="Embalse" loading="lazy"></div>
-        <div class="gi-ov"><span><span class="es">Embalse</span><span class="en">Reservoir</span></span></div>
-      </div>
-      <div class="gi" data-label-es="Pinares y sombra" data-label-en="Pine forest">
-        <div class="gi-bg"><img src="images/Entorno 9.webp" alt="Pinares" loading="lazy"></div>
-        <div class="gi-ov"><span><span class="es">Pinares</span><span class="en">Pine forest</span></span></div>
-      </div>
-    </div>
-
-    <div style="text-align:center; margin-top: 2rem;">
-      <a href="galeria.html" class="detail-cta-ghost">
-        <span class="es">Ver galería completa</span><span class="en">See full gallery</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
     </div>
   </div>
 </section>
@@ -406,6 +310,63 @@
   </div>
 </section>
 
+<!-- ─── FOTOS ─── -->
+<section class="section" id="fotos">
+  <div class="container">
+    <p class="section-sup reveal"><span class="es">El recinto en imágenes</span><span class="en">The grounds in photos</span></p>
+    <h2 class="section-h reveal">
+      <span class="es"><em>Fotos</em> del camping</span>
+      <span class="en">Campsite <em>photos</em></span>
+    </h2>
+
+    <div class="gallery-grid reveal" id="fotosGrid" style="margin-top: 2rem;">
+      <div class="gi w2" data-label-es="Zona de tiendas" data-label-en="Tent area">
+        <div class="gi-bg"><img src="/images/TIENDAS 2.webp" alt="Zona de tiendas" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Zona de tiendas</span><span class="en">Tent area</span></span></div>
+      </div>
+      <div class="gi" data-label-es="Tiendas entre pinos" data-label-en="Tents among pines">
+        <div class="gi-bg"><img src="/images/TIENDAS.webp" alt="Tiendas" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Sombra natural</span><span class="en">Natural shade</span></span></div>
+      </div>
+      <div class="gi" data-label-es="Tiendas · vegetación" data-label-en="Tents · vegetation">
+        <div class="gi-bg"><img src="/images/TIENDAS 3.webp" alt="Tiendas" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Vegetación</span><span class="en">Vegetation</span></span></div>
+      </div>
+      <div class="gi" data-label-es="Parcela caravana" data-label-en="Caravan pitch">
+        <div class="gi-bg"><img src="/images/Caravanas 1.webp" alt="Parcela caravana" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Caravana</span><span class="en">Caravan</span></span></div>
+      </div>
+      <div class="gi" data-label-es="Parcela autocaravana" data-label-en="Motorhome pitch">
+        <div class="gi-bg"><img src="/images/Caravanas 2.webp" alt="Autocaravana" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Autocaravana</span><span class="en">Motorhome</span></span></div>
+      </div>
+      <div class="gi t2" data-label-es="Piscina infinita" data-label-en="Infinity pool">
+        <div class="gi-bg"><img src="/images/Entorno 20.webp" alt="Piscina" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Piscina</span><span class="en">Pool</span></span></div>
+      </div>
+      <div class="gi" data-label-es="Entorno natural" data-label-en="Natural setting">
+        <div class="gi-bg"><img src="/images/Entorno 5.webp" alt="Entorno" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Entorno</span><span class="en">Setting</span></span></div>
+      </div>
+      <div class="gi" data-label-es="Vistas al embalse" data-label-en="Reservoir views">
+        <div class="gi-bg"><img src="/images/Entorno 11.webp" alt="Embalse" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Embalse</span><span class="en">Reservoir</span></span></div>
+      </div>
+      <div class="gi" data-label-es="Pinares y sombra" data-label-en="Pine forest">
+        <div class="gi-bg"><img src="/images/Entorno 9.webp" alt="Pinares" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Pinares</span><span class="en">Pine forest</span></span></div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 2rem;">
+      <a href="{{ route('galeria') }}" class="detail-cta-ghost">
+        <span class="es">Ver galería completa</span><span class="en">See full gallery</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- Cross CTA -->
 <div class="cross-cta">
   <p class="eyebrow"><span class="es">¿Buscas más comodidad?</span><span class="en">Prefer more comfort?</span></p>
@@ -414,66 +375,15 @@
     <span class="en">We also offer <em>apartments</em></span>
   </h3>
   <div class="cta-pair">
-    <a href="apartamentos.html" class="cc-btn">
+    <a href="{{ route('apartamentos') }}" class="cc-btn">
       <span class="es">Ver apartamentos</span><span class="en">See apartments</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
-    <a href="index.html#booking" class="cc-btn ghost">
+    <a href="{{ route('home') }}#booking" class="cc-btn ghost">
       <span class="es">Reservar estancia</span><span class="en">Book your stay</span>
     </a>
   </div>
 </div>
-
-<footer id="contacto">
-  <div class="contact-grid">
-    <div class="ct-brand">
-      <div class="ct-sub"><span class="es">Camping familiar · Embalse Conde de Guadalhorce</span><span class="en">Family camping · Conde de Guadalhorce Reservoir</span></div>
-      <img src="logo-negativo.svg" alt="Camping Parque Ardales" style="height:70px;width:auto;margin-bottom:0.6rem;">
-      <p>
-        <span class="es">Un rincón único en la naturaleza malagueña, a orillas del embalse y a las puertas del Caminito del Rey y la Cueva de Ardales.</span>
-        <span class="en">A unique corner of Málaga's natural landscape, on the shores of the reservoir and at the gateway to the Caminito del Rey and Ardales Cave.</span>
-      </p>
-      <a href="mailto:info@parqueardales.com" class="ct-email">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> info@parqueardales.com
-      </a>
-      <a href="tel:+34951264924" class="ct-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> 951 264 924</a>
-    </div>
-
-    <div class="ct-col">
-      <h4><span class="es">Estancia</span><span class="en">Stay</span></h4>
-      <ul>
-        <li><a href="apartamentos.html"><span class="es">Apartamentos</span><span class="en">Apartments</span></a></li>
-        <li><a href="camping.html#tiendas"><span class="es">Parcelas tiendas</span><span class="en">Tent pitches</span></a></li>
-        <li><a href="camping.html#caravanas"><span class="es">Parcelas caravanas</span><span class="en">Caravan pitches</span></a></li>
-        <li><a href="servicios.html#cabana"><span class="es">Cabaña Salón-Cocina</span><span class="en">Salon-Kitchen Cabin</span></a></li>
-      </ul>
-    </div>
-
-    <div class="ct-col">
-      <h4><span class="es">Actividades</span><span class="en">Activities</span></h4>
-      <ul>
-        <li><a href="actividades.html">Caminito del Rey</a></li>
-        <li><a href="actividades.html"><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></a></li>
-        <li><a href="actividades.html"><span class="es">Escalada</span><span class="en">Climbing</span></a></li>
-        <li><a href="actividades.html"><span class="es">Senderismo</span><span class="en">Hiking</span></a></li>
-        <li><a href="actividades.html"><span class="es">Actividades náuticas</span><span class="en">Water activities</span></a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 Camping Parque Ardales · Ardales, Málaga</p>
-    <p style="color:rgba(255,255,255,0.3);font-size:0.75rem;">
-      <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:none;">
-        <span class="es">Política de privacidad</span><span class="en">Privacy policy</span>
-      </a>
-      &nbsp;·&nbsp;
-      <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:none;">
-        <span class="es">Aviso legal</span><span class="en">Legal notice</span>
-      </a>
-    </p>
-  </div>
-</footer>
 
 <!-- Lightbox -->
 <div class="lightbox-overlay" id="lightboxOverlay">
@@ -485,13 +395,9 @@
   </div>
   <div class="lightbox-caption" id="lightboxCaption"></div>
 </div>
+@endsection
 
-<div class="scroll-progress" id="scrollProgress"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-<div class="cursor-dot" id="cursorDot"></div>
-
-<script src="https://unpkg.com/lenis@1/dist/lenis.min.js"></script>
-<script src="scripts.js"></script>
+@push('scripts')
 <script>
   /* Submenu active state */
   (function(){
@@ -571,5 +477,4 @@
     });
   })();
 </script>
-</body>
-</html>
+@endpush

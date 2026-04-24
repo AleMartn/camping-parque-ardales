@@ -1,64 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#F4EFE6">
-  <meta name="description" content="Camping Parque Ardales - Alojamiento familiar en plena naturaleza a orillas del Embalse Conde de Guadalhorce, Málaga. Gestión de entradas para el Caminito del Rey.">
-  <title>Camping Parque Ardales · Embalse Conde de Guadalhorce · Málaga</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,700;1,9..144,900&family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+@extends('layouts.app', [
+    'bodyClass' => '',
+    'active' => 'home',
+])
 
+@section('title', 'Camping Parque Ardales · Embalse Conde de Guadalhorce · Málaga')
+@section('meta_description', 'Camping Parque Ardales - Alojamiento familiar en plena naturaleza a orillas del Embalse Conde de Guadalhorce, Málaga. Gestión de entradas para el Caminito del Rey.')
+
+@section('content')
 <!-- ─────────────────────────── NAV ─────────────────────────── -->
-<nav id="nav">
-  <a href="#hero" class="nav-logo">
-    <img src="logo.svg" alt="Camping Parque Ardales">
-  </a>
-  <ul class="nav-links">
-    <li><a href="camping.html">Camping</a></li>
-    <li><a href="apartamentos.html"><span class="es">Apartamentos</span><span class="en">Apartments</span></a></li>
-    <li><a href="servicios.html"><span class="es">Servicios</span><span class="en">Services</span></a></li>
-    <li><a href="actividades.html"><span class="es">Actividades</span><span class="en">Activities</span></a></li>
-    <li><a href="galeria.html"><span class="es">Galería</span><span class="en">Gallery</span></a></li>
-    <li><a href="contacto.html"><span class="es">Contacto</span><span class="en">Contact</span></a></li>
-  </ul>
-  <div class="nav-right">
-    <div class="lang-dropdown" id="langDropdown">
-      <button class="lang-btn" id="langBtn">ES <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
-      <div class="lang-menu" id="langMenu">
-        <button class="lang-option active" data-lang="es">Español</button>
-        <button class="lang-option" data-lang="en">English</button>
-        <button class="lang-option" data-lang="de">Deutsch</button>
-      </div>
-    </div>
-  </div>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
 <!-- Mobile menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="camping.html" class="mob-link">Camping</a>
-  <a href="apartamentos.html" class="mob-link"><span class="es">Apartamentos</span><span class="en">Apartments</span></a>
-  <a href="servicios.html" class="mob-link"><span class="es">Servicios</span><span class="en">Services</span></a>
-  <a href="actividades.html" class="mob-link"><span class="es">Actividades</span><span class="en">Activities</span></a>
-  <a href="galeria.html" class="mob-link"><span class="es">Galería</span><span class="en">Gallery</span></a>
-  <a href="contacto.html" class="mob-link"><span class="es">Contacto</span><span class="en">Contact</span></a>
-</div>
-
 <!-- ─────────────────────────── HERO ─────────────────────────── -->
 <section id="hero">
   <div class="hero-photo">
-    <video src="hero.webm" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+    <video src="/hero.webm" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
   </div>
   <div class="hero-overlay"></div>
 
-  <div class="hero-meta"><span class="es">37.0628° N · 4.7872° W — Embalse Conde de Guadalhorce</span><span class="en">37.0628° N · 4.7872° W — Conde de Guadalhorce Reservoir</span></div>
+  <div class="hero-meta"><span class="es">36.9199° N · 4.8042° W — Embalse Conde de Guadalhorce</span><span class="en">36.9199° N · 4.8042° W — Conde de Guadalhorce Reservoir</span></div>
   <div class="hero-coords">Est. · Ardales, Málaga · Andalucía</div>
 
   <div class="hero-headline">
@@ -201,7 +159,7 @@
       <!-- Apartments -->
       <div class="acc-card reveal">
         <div class="acc-img">
-          <img src="images/Bung-exterior1.webp" alt="Apartamentos" loading="lazy">
+          <img src="/images/Bung-exterior1.webp" alt="Apartamentos" loading="lazy">
         </div>
         <div class="acc-body">
           <h3><span class="es">Apartamentos</span><span class="en">Apartments</span></h3>
@@ -212,14 +170,14 @@
             <span class="tag"><span class="es">Vistas al embalse</span><span class="en">Reservoir views</span></span>
             <span class="tag">A/C</span>
           </div>
-          <a href="apartamentos.html" class="acc-link"><span class="es">Ver detalles y tarifas</span><span class="en">Details &amp; rates</span> <span class="arrow">→</span></a>
+          <a href="{{ route('apartamentos') }}" class="acc-link"><span class="es">Ver detalles y tarifas</span><span class="en">Details &amp; rates</span> <span class="arrow">→</span></a>
         </div>
       </div>
 
       <!-- Tent pitches -->
       <div class="acc-card reveal reveal-d1">
         <div class="acc-img">
-          <img src="images/TIENDAS 2.webp" alt="Parcelas para tiendas" loading="lazy">
+          <img src="/images/TIENDAS 2.webp" alt="Parcelas para tiendas" loading="lazy">
         </div>
         <div class="acc-body">
           <h3><span class="es">Parcelas para tiendas</span><span class="en">Tent Pitches</span></h3>
@@ -229,14 +187,14 @@
             <span class="tag"><span class="es">Agua corriente</span><span class="en">Running water</span></span>
             <span class="tag"><span class="es">Zona sombreada</span><span class="en">Shaded area</span></span>
           </div>
-          <a href="camping.html#tiendas" class="acc-link"><span class="es">Ver detalles y tarifas</span><span class="en">Details &amp; rates</span> <span class="arrow">→</span></a>
+          <a href="{{ route('camping') }}#tiendas" class="acc-link"><span class="es">Ver detalles y tarifas</span><span class="en">Details &amp; rates</span> <span class="arrow">→</span></a>
         </div>
       </div>
 
       <!-- Caravan pitches -->
       <div class="acc-card reveal">
         <div class="acc-img">
-          <img src="images/Caravanas 1.webp" alt="Parcelas para caravanas" loading="lazy">
+          <img src="/images/Caravanas 1.webp" alt="Parcelas para caravanas" loading="lazy">
         </div>
         <div class="acc-body">
           <h3><span class="es">Parcelas para caravanas</span><span class="en">Caravan Pitches</span></h3>
@@ -247,19 +205,19 @@
             <span class="tag">WiFi</span>
             <span class="tag"><span class="es">Acceso autocaravana</span><span class="en">Motorhome access</span></span>
           </div>
-          <a href="camping.html#caravanas" class="acc-link"><span class="es">Ver detalles y tarifas</span><span class="en">Details &amp; rates</span> <span class="arrow">→</span></a>
+          <a href="{{ route('camping') }}#caravanas" class="acc-link"><span class="es">Ver detalles y tarifas</span><span class="en">Details &amp; rates</span> <span class="arrow">→</span></a>
         </div>
       </div>
 
       <!-- Actividades -->
       <div class="acc-card reveal reveal-d1">
         <div class="acc-img">
-          <img src="images/KAYAKs 2.webp" alt="Actividades" loading="lazy">
+          <img src="/images/KAYAKs 2.webp" alt="Actividades" loading="lazy">
         </div>
         <div class="acc-body">
           <h3><span class="es">Actividades</span><span class="en">Activities</span></h3>
           <p><span class="es">Senderismo, kayak, escalada, Caminito del Rey y mucho más. Un paraíso de experiencias al aire libre a tu alcance.</span><span class="en">Hiking, kayaking, climbing, Caminito del Rey and much more. A paradise of outdoor experiences at your fingertips.</span></p>
-          <a href="actividades.html" class="acc-link">
+          <a href="{{ route('actividades') }}" class="acc-link">
             <span class="es">Ver actividades</span><span class="en">See activities</span> <span class="arrow">→</span>
           </a>
         </div>
@@ -392,7 +350,7 @@
       <!-- Caminito del Rey - FEATURED -->
       <div class="act-card span2 reveal" style="cursor:pointer" data-act="0">
         <div class="act-img">
-          <img src="images/caminito.webp" alt="Caminito del Rey" loading="lazy">
+          <img src="/images/caminito.webp" alt="Caminito del Rey" loading="lazy">
           <div class="act-featured-pill">CAMINITO DEL REY</div>
           <div class="act-dist"><span class="es">~5 km del camping</span><span class="en">~5 km from campsite</span></div>
         </div>
@@ -409,7 +367,7 @@
       <!-- Cueva de Ardales -->
       <div class="act-card reveal reveal-d1" style="cursor:pointer" data-act="1">
         <div class="act-img">
-          <img src="images/cueva-ardales.jpg" alt="Cueva de Ardales" loading="lazy">
+          <img src="/images/cueva-ardales.jpg" alt="Cueva de Ardales" loading="lazy">
           <div class="act-dist"><span class="es">Ardales pueblo</span><span class="en">Ardales village</span></div>
         </div>
         <div class="act-body">
@@ -424,7 +382,7 @@
       <!-- Actividades náuticas -->
       <div class="act-card reveal" style="cursor:pointer" data-act="2">
         <div class="act-img">
-          <img src="images/KAYAKs.webp" alt="Actividades Náuticas" loading="lazy">
+          <img src="/images/KAYAKs.webp" alt="Actividades Náuticas" loading="lazy">
           <div class="act-dist"><span class="es">En el embalse</span><span class="en">On the reservoir</span></div>
         </div>
         <div class="act-body">
@@ -439,7 +397,7 @@
       <!-- Senderismo -->
       <div class="act-card reveal reveal-d1" style="cursor:pointer" data-act="3">
         <div class="act-img">
-          <img src="images/Entorno 17.webp" alt="Senderismo" loading="lazy">
+          <img src="/images/Entorno 17.webp" alt="Senderismo" loading="lazy">
         </div>
         <div class="act-body">
           <h3><span class="es">Senderismo</span><span class="en">Hiking</span></h3>
@@ -453,7 +411,7 @@
       <!-- Escalada -->
       <div class="act-card reveal" style="cursor:pointer" data-act="4">
         <div class="act-img">
-          <img src="images/escalada1.webp" alt="Escalada" loading="lazy">
+          <img src="/images/escalada1.webp" alt="Escalada" loading="lazy">
           <div class="act-dist">El Chorro</div>
         </div>
         <div class="act-body">
@@ -466,7 +424,7 @@
     </div>
 
     <div style="text-align:center">
-      <a href="actividades.html" class="section-more section-more-light reveal">
+      <a href="{{ route('actividades') }}" class="section-more section-more-light reveal">
         <span class="es">Ver todas las actividades</span><span class="en">View all activities</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
@@ -504,29 +462,29 @@
 
     <div class="gallery-grid reveal" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: 200px 200px;">
       <div class="gi t2">
-        <div class="gi-bg"><img src="images/Bung-salon1.webp" alt="Apartamento" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Bung-salon1.webp" alt="Apartamento" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Apartamento con vistas</span><span class="en">Apartment with views</span></span></div>
       </div>
       <div class="gi">
-        <div class="gi-bg"><img src="images/Entorno 5.webp" alt="Zona de tiendas" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Entorno 5.webp" alt="Zona de tiendas" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Zona de tiendas</span><span class="en">Tent area</span></span></div>
       </div>
       <div class="gi">
-        <div class="gi-bg"><img src="images/caminitodelrey2.jpg" alt="Caminito del Rey" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/caminitodelrey2.jpg" alt="Caminito del Rey" loading="lazy"></div>
         <div class="gi-ov"><span>Caminito del Rey</span></div>
       </div>
       <div class="gi">
-        <div class="gi-bg"><img src="images/Entorno 20.webp" alt="Piscina" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Entorno 20.webp" alt="Piscina" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Piscina</span><span class="en">Pool</span></span></div>
       </div>
       <div class="gi">
-        <div class="gi-bg"><img src="images/Cabaña1.webp" alt="Cabaña" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/Cabaña1.webp" alt="Cabaña" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Cabaña salón-cocina</span><span class="en">Salon-kitchen cabin</span></span></div>
       </div>
     </div>
 
     <div style="text-align:center">
-      <a href="galeria.html" class="section-more section-more-dark reveal">
+      <a href="{{ route('galeria') }}" class="section-more section-more-dark reveal">
         <span class="es">Ver galería completa</span><span class="en">View full gallery</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
@@ -661,65 +619,6 @@
 </section>
 
 <!-- ─────────────────────────── CONTACT / FOOTER ─────────────────────────── -->
-<footer id="contacto">
-  <div class="contact-grid">
-    <div class="ct-brand">
-      <div class="ct-sub"><span class="es">Camping familiar · Embalse Conde de Guadalhorce</span><span class="en">Family camping · Conde de Guadalhorce Reservoir</span></div>
-      <img src="logo-negativo.svg" alt="Camping Parque Ardales" style="height:70px;width:auto;margin-bottom:0.6rem;">
-      <p>
-        <span class="es">Un rincón único en la naturaleza malagueña, a orillas del embalse y a las puertas del Caminito del Rey y la Cueva de Ardales.</span>
-        <span class="en">A unique corner of Málaga's natural landscape, on the shores of the reservoir and at the gateway to the Caminito del Rey and Ardales Cave.</span>
-      </p>
-      <a href="mailto:info@parqueardales.com" class="ct-email">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> info@parqueardales.com
-      </a>
-      <a href="tel:+34951264924" class="ct-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> 951 264 924</a>
-    </div>
-
-    <div class="ct-col">
-      <h4><span class="es">Estancia</span><span class="en">Stay</span></h4>
-      <ul>
-        <li><a href="apartamentos.html"><span class="es">Apartamentos</span><span class="en">Apartments</span></a></li>
-        <li><a href="camping.html#tiendas"><span class="es">Parcelas tiendas</span><span class="en">Tent pitches</span></a></li>
-        <li><a href="camping.html#caravanas"><span class="es">Parcelas caravanas</span><span class="en">Caravan pitches</span></a></li>
-        <li><a href="servicios.html#cabana"><span class="es">Cabaña Salón-Cocina</span><span class="en">Salon-Kitchen Cabin</span></a></li>
-      </ul>
-    </div>
-
-    <div class="ct-col">
-      <h4><span class="es">Actividades</span><span class="en">Activities</span></h4>
-      <ul>
-        <li><a href="actividades.html#caminito">Caminito del Rey</a></li>
-        <li><a href="actividades.html#cueva"><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></a></li>
-        <li><a href="actividades.html#senderismo"><span class="es">Senderismo</span><span class="en">Hiking</span></a></li>
-        <li><a href="actividades.html#nauticas"><span class="es">Actividades náuticas</span><span class="en">Water activities</span></a></li>
-        <li><a href="actividades.html#ronda">Tajo de Ronda</a></li>
-        <li><a href="actividades.html#torcal">El Torcal</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 Camping Parque Ardales · Ardales, Málaga</p>
-    <p style="color:rgba(255,255,255,0.3);font-size:0.75rem;">
-      <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:none;">
-        <span class="es">Política de privacidad</span><span class="en">Privacy policy</span>
-      </a>
-      &nbsp;·&nbsp;
-      <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:none;">
-        <span class="es">Aviso legal</span><span class="en">Legal notice</span>
-      </a>
-    </p>
-  </div>
-</footer>
-
 <!-- ── Custom cursor + scroll progress ── -->
-<div class="scroll-progress" id="scrollProgress"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-<div class="cursor-dot" id="cursorDot"></div>
-
 <!-- ─────────────────────────── JAVASCRIPT ─────────────────────────── -->
-<script src="https://unpkg.com/lenis@1/dist/lenis.min.js"></script>
-<script src="scripts.js"></script>
-</body>
-</html>
+@endsection

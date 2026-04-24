@@ -1720,15 +1720,20 @@
 
 /* Location block */
 .location-block {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
   background: #fff; border: 1px solid rgba(20,24,15,0.08);
-  border-radius: 11px; overflow: hidden; margin-bottom: 4rem;
+  border-radius: 14px; overflow: hidden; margin-bottom: 4rem;
+  box-shadow: 0 22px 60px -32px rgba(20,24,15,0.18);
 }
 .location-map {
-  min-height: 420px; position: relative;
-  background: var(--green-subtle);
+  min-height: 460px; position: relative;
+  background: var(--bone);
+  isolation: isolate;
 }
-.location-map iframe { width: 100%; height: 100%; border: 0; display: block; }
+.location-map iframe {
+  width: 100%; height: 100%; border: 0; display: block;
+  filter: saturate(0.92) contrast(1.02);
+}
 .location-info { padding: 2.8rem 2.2rem; }
 .location-info h3 {
   font-family: var(--display); font-size: 2rem; font-weight: 300;
@@ -4674,11 +4679,12 @@ footer#contacto, footer#contacto-footer {
   margin: 0 0 0.85rem;
   grid-column: auto !important;
   grid-row: auto !important;
-  aspect-ratio: unset !important;
   height: auto !important;
   min-height: 0 !important;
   max-height: none !important;
   position: relative;
+  border-radius: 8px !important;
+  overflow: hidden;
 }
 
 /* Neutralizar span-classes antiguos */
@@ -4687,7 +4693,6 @@ footer#contacto, footer#contacto-footer {
 .acts-grid .act-tile.tall {
   grid-column: auto !important;
   grid-row: auto !important;
-  aspect-ratio: unset !important;
 }
 .gallery-grid .gi.w2,
 .gallery-grid .gi.t2 {
@@ -4695,37 +4700,39 @@ footer#contacto, footer#contacto-footer {
   grid-row: auto !important;
 }
 
-/* Aspect ratios variados para dinámica masonry */
-.acts-grid .act-tile:nth-child(6n+1) { aspect-ratio: 4 / 5; }
-.acts-grid .act-tile:nth-child(6n+2) { aspect-ratio: 1 / 1; }
-.acts-grid .act-tile:nth-child(6n+3) { aspect-ratio: 3 / 4; }
-.acts-grid .act-tile:nth-child(6n+4) { aspect-ratio: 5 / 6; }
-.acts-grid .act-tile:nth-child(6n+5) { aspect-ratio: 4 / 5; }
-.acts-grid .act-tile:nth-child(6n+6) { aspect-ratio: 3 / 4; }
+/* Aspect ratios variados aplicados directamente sobre .gi / .act-tile
+   para que el propio item dicte su altura dentro de la columna masonry. */
+.acts-grid .act-tile:nth-child(6n+1) { aspect-ratio: 4 / 5 !important; }
+.acts-grid .act-tile:nth-child(6n+2) { aspect-ratio: 1 / 1 !important; }
+.acts-grid .act-tile:nth-child(6n+3) { aspect-ratio: 3 / 4 !important; }
+.acts-grid .act-tile:nth-child(6n+4) { aspect-ratio: 5 / 6 !important; }
+.acts-grid .act-tile:nth-child(6n+5) { aspect-ratio: 4 / 5 !important; }
+.acts-grid .act-tile:nth-child(6n+6) { aspect-ratio: 3 / 4 !important; }
 
-.gallery-grid .gi:nth-child(6n+1) .gi-bg { aspect-ratio: 4 / 5; }
-.gallery-grid .gi:nth-child(6n+2) .gi-bg { aspect-ratio: 1 / 1; }
-.gallery-grid .gi:nth-child(6n+3) .gi-bg { aspect-ratio: 3 / 4; }
-.gallery-grid .gi:nth-child(6n+4) .gi-bg { aspect-ratio: 5 / 4; }
-.gallery-grid .gi:nth-child(6n+5) .gi-bg { aspect-ratio: 4 / 3; }
-.gallery-grid .gi:nth-child(6n+6) .gi-bg { aspect-ratio: 3 / 4; }
+.gallery-grid .gi:nth-child(7n+1) { aspect-ratio: 3 / 4 !important; }
+.gallery-grid .gi:nth-child(7n+2) { aspect-ratio: 1 / 1 !important; }
+.gallery-grid .gi:nth-child(7n+3) { aspect-ratio: 4 / 5 !important; }
+.gallery-grid .gi:nth-child(7n+4) { aspect-ratio: 5 / 4 !important; }
+.gallery-grid .gi:nth-child(7n+5) { aspect-ratio: 2 / 3 !important; }
+.gallery-grid .gi:nth-child(7n+6) { aspect-ratio: 4 / 3 !important; }
+.gallery-grid .gi:nth-child(7n+7) { aspect-ratio: 3 / 4 !important; }
 
-/* Imagen rellena el contenedor */
-.gallery-grid .gi .gi-bg {
-  height: auto !important;
+/* Wrappers internos rellenan completamente al .gi */
+.gallery-grid .gi .gi-bg,
+.acts-grid .act-tile .act-img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
   display: block;
-  width: 100%;
 }
-.gallery-grid .gi .gi-bg img {
+.gallery-grid .gi .gi-bg img,
+.acts-grid .act-tile .act-img img,
+.acts-grid .act-tile > img {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover;
   display: block;
-}
-.acts-grid .act-tile img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover;
 }
 
 /* Items ocultos por filtro siguen sin ocupar sitio */
@@ -4741,4 +4748,35 @@ footer#contacto, footer#contacto-footer {
 }
 @media (max-width: 360px) {
   .acts-grid, .gallery-grid { column-count: 1; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Botones que actúan como .psm-link (filtro de galería)
+   Neutraliza estilos nativos de <button> y alinea con el submenú.
+   ═══════════════════════════════════════════════════════════════════════════ */
+button.psm-link {
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font: inherit;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink-light);
+  padding: 0.5rem 0.95rem;
+  border-radius: 100px;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+button.psm-link:hover {
+  color: var(--noir);
+  background: rgba(20, 24, 15, 0.05);
+}
+button.psm-link.active {
+  color: var(--noir);
+  background: var(--amber);
+  font-weight: 600;
+  border-color: transparent;
 }

@@ -1,57 +1,18 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#F4EFE6">
-  <meta name="description" content="Apartamentos del Camping Parque Ardales: 2, 3 y 4 plazas totalmente equipados, con vistas al Embalse Conde de Guadalhorce. Tarifas 2026.">
-  <title>Apartamentos · Camping Parque Ardales</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,700;1,9..144,900&family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    :root { --page-hero-bg: url('images/Bung-exterior3.webp'); }
+@extends('layouts.app', [
+    'bodyClass' => 'subpage has-submenu',
+    'active' => 'apartamentos',
+])
+
+@section('title', 'Apartamentos · Camping Parque Ardales')
+@section('meta_description', 'Apartamentos del Camping Parque Ardales: 2, 3 y 4 plazas totalmente equipados, con vistas al Embalse Conde de Guadalhorce. Tarifas 2026.')
+
+@push('head')
+<style>
+    :root { --page-hero-bg: url('/images/Bung-exterior3.webp'); }
   </style>
-</head>
-<body class="subpage has-submenu">
+@endpush
 
-<nav id="nav">
-  <a href="index.html" class="nav-logo">
-    <img src="logo.svg" alt="Camping Parque Ardales">
-  </a>
-  <ul class="nav-links">
-    <li><a href="camping.html">Camping</a></li>
-    <li><a href="apartamentos.html" class="active"><span class="es">Apartamentos</span><span class="en">Apartments</span></a></li>
-    <li><a href="servicios.html"><span class="es">Servicios</span><span class="en">Services</span></a></li>
-    <li><a href="actividades.html"><span class="es">Actividades</span><span class="en">Activities</span></a></li>
-    <li><a href="galeria.html"><span class="es">Galería</span><span class="en">Gallery</span></a></li>
-    <li><a href="contacto.html"><span class="es">Contacto</span><span class="en">Contact</span></a></li>
-  </ul>
-  <div class="nav-right">
-    <div class="lang-dropdown" id="langDropdown">
-      <button class="lang-btn" id="langBtn">ES <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
-      <div class="lang-menu" id="langMenu">
-        <button class="lang-option active" data-lang="es">Español</button>
-        <button class="lang-option" data-lang="en">English</button>
-        <button class="lang-option" data-lang="de">Deutsch</button>
-      </div>
-    </div>
-  </div>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="camping.html" class="mob-link">Camping</a>
-  <a href="apartamentos.html" class="mob-link"><span class="es">Apartamentos</span><span class="en">Apartments</span></a>
-  <a href="servicios.html" class="mob-link"><span class="es">Servicios</span><span class="en">Services</span></a>
-  <a href="actividades.html" class="mob-link"><span class="es">Actividades</span><span class="en">Activities</span></a>
-  <a href="galeria.html" class="mob-link"><span class="es">Galería</span><span class="en">Gallery</span></a>
-  <a href="contacto.html" class="mob-link"><span class="es">Contacto</span><span class="en">Contact</span></a>
-</div>
-
+@section('content')
 <section class="page-hero">
   <p class="ph-sup"><span class="es">Máxima comodidad</span><span class="en">Maximum comfort</span></p>
   <h1>
@@ -68,8 +29,8 @@
 <nav class="page-submenu" aria-label="Secciones de apartamentos">
   <div class="psm-inner" id="psmInner">
     <a href="#detalles" class="psm-link" data-psm="detalles"><span class="es">Apartamento</span><span class="en">Apartment</span></a>
+    <a href="#tarifas" class="psm-link" data-psm="tarifas"><span class="es">Tarifas</span><span class="en">Rates &amp; seasons</span></a>
     <a href="#fotos" class="psm-link" data-psm="fotos"><span class="es">Fotos</span><span class="en">Photos</span></a>
-    <a href="#tarifas" class="psm-link" data-psm="tarifas"><span class="es">Tarifas y temporadas</span><span class="en">Rates &amp; seasons</span></a>
   </div>
 </nav>
 
@@ -78,7 +39,7 @@
   <div class="container">
     <div class="detail-block reveal">
       <div class="detail-media">
-        <img src="images/Bung-salon1.webp" alt="Salón del apartamento" loading="lazy">
+        <img src="/images/Bung-salon1.webp" alt="Salón del apartamento" loading="lazy">
         <div class="dm-badge"><span class="es">Totalmente equipados</span><span class="en">Fully equipped</span></div>
       </div>
       <div class="detail-body">
@@ -106,68 +67,15 @@
           <div class="fact"><span class="fact-num">12:00</span><span class="fact-label"><span class="es">Check-out</span><span class="en">Check-out</span></span></div>
         </div>
         <div class="detail-cta-row">
-          <a href="index.html#booking" class="detail-cta">
+          <a href="{{ route('home') }}#booking" class="detail-cta">
             <span class="es">Ver disponibilidad</span><span class="en">Check availability</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
-          <a href="galeria.html" class="detail-cta-ghost">
+          <a href="{{ route('galeria') }}" class="detail-cta-ghost">
             <span class="es">Ver todas las fotos</span><span class="en">See all photos</span>
           </a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── FOTOS ─── -->
-<section class="section" id="fotos">
-  <div class="container">
-    <p class="section-sup reveal"><span class="es">Cómo es por dentro</span><span class="en">What it looks like</span></p>
-    <h2 class="section-h reveal">
-      <span class="es"><em>Fotos</em> del apartamento</span>
-      <span class="en">Apartment <em>photos</em></span>
-    </h2>
-
-    <div class="gallery-grid reveal" id="fotosGrid" style="grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; margin-top: 2rem;">
-      <div class="gi t2" data-label-es="Exterior del apartamento" data-label-en="Apartment exterior">
-        <div class="gi-bg"><img src="images/Bung-exterior1.webp" alt="Exterior apartamento" loading="lazy"></div>
-        <div class="gi-ov"><span><span class="es">Exterior</span><span class="en">Exterior</span></span></div>
-      </div>
-      <div class="gi" data-label-es="Salón con cocina" data-label-en="Living room with kitchen">
-        <div class="gi-bg"><img src="images/Bung-salon1.webp" alt="Salón apartamento" loading="lazy"></div>
-        <div class="gi-ov"><span><span class="es">Salón</span><span class="en">Living room</span></span></div>
-      </div>
-      <div class="gi" data-label-es="Cocina equipada" data-label-en="Equipped kitchen">
-        <div class="gi-bg"><img src="images/Bung-salon3.webp" alt="Cocina apartamento" loading="lazy"></div>
-        <div class="gi-ov"><span><span class="es">Cocina</span><span class="en">Kitchen</span></span></div>
-      </div>
-      <div class="gi" data-label-es="Habitación con vistas" data-label-en="Bedroom with views">
-        <div class="gi-bg"><img src="images/Bung-habitacion1.webp" alt="Habitación apartamento" loading="lazy"></div>
-        <div class="gi-ov"><span><span class="es">Habitación</span><span class="en">Bedroom</span></span></div>
-      </div>
-      <div class="gi" data-label-es="Habitación doble" data-label-en="Double bedroom">
-        <div class="gi-bg"><img src="images/Bung-habitacion2.webp" alt="Habitación doble" loading="lazy"></div>
-        <div class="gi-ov"><span><span class="es">Habitación doble</span><span class="en">Double bedroom</span></span></div>
-      </div>
-      <div class="gi w2" data-label-es="Terraza con vistas al embalse" data-label-en="Terrace with reservoir views">
-        <div class="gi-bg"><img src="images/Bung-terraza1.webp" alt="Terraza apartamento" loading="lazy"></div>
-        <div class="gi-ov"><span><span class="es">Terraza</span><span class="en">Terrace</span></span></div>
-      </div>
-      <div class="gi" data-label-es="Baño privado" data-label-en="Private bathroom">
-        <div class="gi-bg"><img src="images/Bung-baño1.webp" alt="Baño apartamento" loading="lazy"></div>
-        <div class="gi-ov"><span><span class="es">Baño</span><span class="en">Bathroom</span></span></div>
-      </div>
-      <div class="gi" data-label-es="Apartamento exterior" data-label-en="Apartment exterior">
-        <div class="gi-bg"><img src="images/Bung-exterior4.webp" alt="Exterior apartamento" loading="lazy"></div>
-        <div class="gi-ov"><span><span class="es">Exterior</span><span class="en">Exterior</span></span></div>
-      </div>
-    </div>
-
-    <div style="text-align:center; margin-top: 2rem;">
-      <a href="galeria.html" class="detail-cta-ghost">
-        <span class="es">Ver galería completa</span><span class="en">See full gallery</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
     </div>
   </div>
 </section>
@@ -318,6 +226,59 @@
   </div>
 </section>
 
+<!-- ─── FOTOS ─── -->
+<section class="section" id="fotos">
+  <div class="container">
+    <p class="section-sup reveal"><span class="es">Cómo es por dentro</span><span class="en">What it looks like</span></p>
+    <h2 class="section-h reveal">
+      <span class="es"><em>Fotos</em> del apartamento</span>
+      <span class="en">Apartment <em>photos</em></span>
+    </h2>
+
+    <div class="gallery-grid reveal" id="fotosGrid" style="margin-top: 2rem;">
+      <div class="gi t2" data-label-es="Exterior del apartamento" data-label-en="Apartment exterior">
+        <div class="gi-bg"><img src="/images/Bung-exterior1.webp" alt="Exterior apartamento" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Exterior</span><span class="en">Exterior</span></span></div>
+      </div>
+      <div class="gi" data-label-es="Salón con cocina" data-label-en="Living room with kitchen">
+        <div class="gi-bg"><img src="/images/Bung-salon1.webp" alt="Salón apartamento" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Salón</span><span class="en">Living room</span></span></div>
+      </div>
+      <div class="gi" data-label-es="Cocina equipada" data-label-en="Equipped kitchen">
+        <div class="gi-bg"><img src="/images/Bung-salon3.webp" alt="Cocina apartamento" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Cocina</span><span class="en">Kitchen</span></span></div>
+      </div>
+      <div class="gi" data-label-es="Habitación con vistas" data-label-en="Bedroom with views">
+        <div class="gi-bg"><img src="/images/Bung-habitacion1.webp" alt="Habitación apartamento" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Habitación</span><span class="en">Bedroom</span></span></div>
+      </div>
+      <div class="gi" data-label-es="Habitación doble" data-label-en="Double bedroom">
+        <div class="gi-bg"><img src="/images/Bung-habitacion2.webp" alt="Habitación doble" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Habitación doble</span><span class="en">Double bedroom</span></span></div>
+      </div>
+      <div class="gi w2" data-label-es="Terraza con vistas al embalse" data-label-en="Terrace with reservoir views">
+        <div class="gi-bg"><img src="/images/Bung-terraza1.webp" alt="Terraza apartamento" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Terraza</span><span class="en">Terrace</span></span></div>
+      </div>
+      <div class="gi" data-label-es="Baño privado" data-label-en="Private bathroom">
+        <div class="gi-bg"><img src="/images/Bung-baño1.webp" alt="Baño apartamento" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Baño</span><span class="en">Bathroom</span></span></div>
+      </div>
+      <div class="gi" data-label-es="Apartamento exterior" data-label-en="Apartment exterior">
+        <div class="gi-bg"><img src="/images/Bung-exterior4.webp" alt="Exterior apartamento" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Exterior</span><span class="en">Exterior</span></span></div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 2rem;">
+      <a href="{{ route('galeria') }}" class="detail-cta-ghost">
+        <span class="es">Ver galería completa</span><span class="en">See full gallery</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- Cross CTA -->
 <div class="cross-cta">
   <p class="eyebrow"><span class="es">¿Vienes con tienda o caravana?</span><span class="en">Coming with a tent or caravan?</span></p>
@@ -326,66 +287,15 @@
     <span class="en">We also offer <em>camping pitches</em></span>
   </h3>
   <div class="cta-pair">
-    <a href="camping.html" class="cc-btn">
+    <a href="{{ route('camping') }}" class="cc-btn">
       <span class="es">Ver camping</span><span class="en">See camping</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
-    <a href="index.html#booking" class="cc-btn ghost">
+    <a href="{{ route('home') }}#booking" class="cc-btn ghost">
       <span class="es">Reservar estancia</span><span class="en">Book your stay</span>
     </a>
   </div>
 </div>
-
-<footer id="contacto">
-  <div class="contact-grid">
-    <div class="ct-brand">
-      <div class="ct-sub"><span class="es">Camping familiar · Embalse Conde de Guadalhorce</span><span class="en">Family camping · Conde de Guadalhorce Reservoir</span></div>
-      <img src="logo-negativo.svg" alt="Camping Parque Ardales" style="height:70px;width:auto;margin-bottom:0.6rem;">
-      <p>
-        <span class="es">Un rincón único en la naturaleza malagueña, a orillas del embalse y a las puertas del Caminito del Rey y la Cueva de Ardales.</span>
-        <span class="en">A unique corner of Málaga's natural landscape, on the shores of the reservoir and at the gateway to the Caminito del Rey and Ardales Cave.</span>
-      </p>
-      <a href="mailto:info@parqueardales.com" class="ct-email">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> info@parqueardales.com
-      </a>
-      <a href="tel:+34951264924" class="ct-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> 951 264 924</a>
-    </div>
-
-    <div class="ct-col">
-      <h4><span class="es">Estancia</span><span class="en">Stay</span></h4>
-      <ul>
-        <li><a href="apartamentos.html"><span class="es">Apartamentos</span><span class="en">Apartments</span></a></li>
-        <li><a href="camping.html#tiendas"><span class="es">Parcelas tiendas</span><span class="en">Tent pitches</span></a></li>
-        <li><a href="camping.html#caravanas"><span class="es">Parcelas caravanas</span><span class="en">Caravan pitches</span></a></li>
-        <li><a href="servicios.html#cabana"><span class="es">Cabaña Salón-Cocina</span><span class="en">Salon-Kitchen Cabin</span></a></li>
-      </ul>
-    </div>
-
-    <div class="ct-col">
-      <h4><span class="es">Actividades</span><span class="en">Activities</span></h4>
-      <ul>
-        <li><a href="actividades.html">Caminito del Rey</a></li>
-        <li><a href="actividades.html"><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></a></li>
-        <li><a href="actividades.html"><span class="es">Escalada</span><span class="en">Climbing</span></a></li>
-        <li><a href="actividades.html"><span class="es">Senderismo</span><span class="en">Hiking</span></a></li>
-        <li><a href="actividades.html"><span class="es">Actividades náuticas</span><span class="en">Water activities</span></a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 Camping Parque Ardales · Ardales, Málaga</p>
-    <p style="color:rgba(255,255,255,0.3);font-size:0.75rem;">
-      <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:none;">
-        <span class="es">Política de privacidad</span><span class="en">Privacy policy</span>
-      </a>
-      &nbsp;·&nbsp;
-      <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:none;">
-        <span class="es">Aviso legal</span><span class="en">Legal notice</span>
-      </a>
-    </p>
-  </div>
-</footer>
 
 <!-- Lightbox -->
 <div class="lightbox-overlay" id="lightboxOverlay">
@@ -397,13 +307,9 @@
   </div>
   <div class="lightbox-caption" id="lightboxCaption"></div>
 </div>
+@endsection
 
-<div class="scroll-progress" id="scrollProgress"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-<div class="cursor-dot" id="cursorDot"></div>
-
-<script src="https://unpkg.com/lenis@1/dist/lenis.min.js"></script>
-<script src="scripts.js"></script>
+@push('scripts')
 <script>
   /* Submenu active state */
   (function(){
@@ -483,5 +389,4 @@
     });
   })();
 </script>
-</body>
-</html>
+@endpush
