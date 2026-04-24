@@ -14,6 +14,8 @@
 </head>
 <body class="{{ trim(($bodyClass ?? '').' lang-'.app()->getLocale()) }}">
 
+  <div class="safe-area-cover" aria-hidden="true"></div>
+
   <x-nav :active="$active ?? null" />
 
   @yield('content')

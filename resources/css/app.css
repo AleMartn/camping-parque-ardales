@@ -68,6 +68,17 @@
       z-index: 9999;
     }
 
+    /* Tira sólida crema en la zona del notch / safe-area-inset-top.
+       Siempre visible por encima del nav (z-index > 900) para que, se scrollee
+       o no, el notch y la status bar nunca se queden transparentes. */
+    .safe-area-cover {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: env(safe-area-inset-top, 0px);
+      background: var(--bone);
+      z-index: 1000;
+      pointer-events: none;
+    }
+
     /* ─── NAVIGATION ─── */
     #nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 900;
@@ -76,7 +87,7 @@
       transition: background 0.6s ease, box-shadow 0.6s ease, padding 0.5s ease, padding-bottom 0.5s ease;
     }
     #nav.scrolled {
-      padding: 0.8rem 2.5rem;
+      padding: calc(0.8rem + env(safe-area-inset-top, 0px)) 2.5rem;
     }
     .nav-logo {
       text-decoration: none; display: flex; align-items: center;
@@ -859,10 +870,9 @@
 
     /* ─── NAV refinement ─── */
     #nav {
-      padding: 1.1rem 2.5rem;
-      background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.92) 30%, rgba(255,255,255,0.6) 60%, rgba(255,255,255,0.15) 85%, rgba(255,255,255,0) 100%);
+      padding: calc(1.1rem + env(safe-area-inset-top, 0px)) 2.5rem 4rem;
+      background: linear-gradient(180deg, rgba(244,239,230,1) 0%, rgba(244,239,230,0.97) 30%, rgba(244,239,230,0.6) 60%, rgba(244,239,230,0.15) 85%, rgba(244,239,230,0) 100%);
       border-bottom: none;
-      padding-bottom: 4rem;
     }
     #nav .nav-logo img { filter: none; height: 72px; transition: height .5s ease; }
     #nav.scrolled .nav-logo img { height: 58px; }
@@ -1416,7 +1426,7 @@
       .hero-bottom .center-mark, .hero-bottom .scroll-cue { display: none; }
       .booking-card { width: calc(100% - 2.5rem); padding: 1.2rem 1.4rem; }
       .marquee { margin-top: 100px; }
-      #nav { padding: 1rem 1.5rem; }
+      #nav { padding: calc(1rem + env(safe-area-inset-top, 0px)) 1.5rem 1rem; }
       .section { padding: 6rem 1.5rem; }
       .svc-grid { grid-template-columns: 1fr; }
       .svc-card { border-right: none; }
@@ -1893,8 +1903,8 @@ img, svg, video, iframe { max-width: 100%; height: auto; }
 
 /* ─── TABLET (≤ 1024px) ─────────────────────────────────────────────── */
 @media (max-width: 1024px) {
-  #nav { padding: 1rem 1.5rem; }
-  #nav.scrolled { padding: 0.7rem 1.5rem; padding-bottom: 1.2rem; }
+  #nav { padding: calc(1rem + env(safe-area-inset-top, 0px)) 1.5rem 1rem; }
+  #nav.scrolled { padding: calc(0.7rem + env(safe-area-inset-top, 0px)) 1.5rem 1.2rem; }
   #nav .nav-logo img { height: 56px; }
   #nav.scrolled .nav-logo img { height: 46px; }
   .nav-links { display: none; }
@@ -1923,8 +1933,8 @@ img, svg, video, iframe { max-width: 100%; height: auto; }
   .section { padding: 4rem 1.25rem; }
   .container { padding: 0; }
 
-  #nav { padding: 0.85rem 1rem; padding-bottom: 3rem; background: linear-gradient(180deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.85) 40%, rgba(255,255,255,0.35) 75%, rgba(255,255,255,0) 100%); }
-  #nav.scrolled { padding: 0.6rem 1rem; padding-bottom: 0.9rem; background: rgba(244,239,230,0.97); backdrop-filter: blur(12px); }
+  #nav { padding: calc(0.85rem + env(safe-area-inset-top, 0px)) 1rem 3rem; background: linear-gradient(180deg, rgba(244,239,230,1) 0%, rgba(244,239,230,0.92) 40%, rgba(244,239,230,0.4) 75%, rgba(244,239,230,0) 100%); }
+  #nav.scrolled { padding: calc(0.6rem + env(safe-area-inset-top, 0px)) 1rem 0.9rem; background: rgba(244,239,230,0.97); backdrop-filter: blur(12px); }
   #nav .nav-logo img { height: 48px; }
   #nav.scrolled .nav-logo img { height: 40px; }
   .lang-btn { padding: 0.4rem 0.75rem; font-size: 0.78rem; letter-spacing: 0.08em; }
@@ -2044,8 +2054,8 @@ img, svg, video, iframe { max-width: 100%; height: auto; }
 /* ─── MÓVIL PEQUEÑO (≤ 480px) ─────────────────────────────────────── */
 @media (max-width: 480px) {
   .section { padding: 3rem 1rem; }
-  #nav { padding: 0.8rem 0.9rem; padding-bottom: 2.2rem; }
-  #nav.scrolled { padding: 0.55rem 0.9rem; padding-bottom: 0.8rem; }
+  #nav { padding: calc(0.8rem + env(safe-area-inset-top, 0px)) 0.9rem 2.2rem; }
+  #nav.scrolled { padding: calc(0.55rem + env(safe-area-inset-top, 0px)) 0.9rem 0.8rem; }
   #nav .nav-logo img { height: 42px; }
   #nav.scrolled .nav-logo img { height: 36px; }
   .lang-btn { padding: 0.35rem 0.65rem; font-size: 0.72rem; }
