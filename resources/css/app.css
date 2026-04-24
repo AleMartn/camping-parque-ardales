@@ -100,7 +100,10 @@
     }
     #nav.scrolled {
       padding: calc(0.8rem + env(safe-area-inset-top, 0px)) 2.5rem;
-      background: var(--bone);
+      background-color: var(--bone);
+      background-image: none;
+      -webkit-mask-image: none;
+              mask-image: none;
       -webkit-backdrop-filter: none;
               backdrop-filter: none;
     }
@@ -884,10 +887,33 @@
     }
 
     /* ─── NAV refinement ─── */
+    /* Nav: background-color sólido (Safari iOS 26+ muestrea el bg-color para
+       tintar la status bar). El fade visual se consigue con mask-image, que
+       recorta visualmente la salida sin cambiar el background-color computado.
+       Resultado: Safari ve crema sólido; el usuario ve el gradiente original,
+       con el logo fundiéndose en el fade como en el diseño inicial. */
     #nav {
       padding: calc(1.1rem + env(safe-area-inset-top, 0px)) 2.5rem 4rem;
-      background: linear-gradient(180deg, rgba(244,239,230,1) 0%, rgba(244,239,230,1) 55%, rgba(244,239,230,0.6) 75%, rgba(244,239,230,0.15) 90%, rgba(244,239,230,0) 100%);
+      background-color: var(--bone);
+      background-image: none;
       border-bottom: none;
+      -webkit-mask-image: linear-gradient(180deg,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.97) 30%,
+        rgba(0,0,0,0.6) 60%,
+        rgba(0,0,0,0.15) 85%,
+        rgba(0,0,0,0) 100%);
+              mask-image: linear-gradient(180deg,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.97) 30%,
+        rgba(0,0,0,0.6) 60%,
+        rgba(0,0,0,0.15) 85%,
+        rgba(0,0,0,0) 100%);
+      -webkit-mask-size: 100% 100%;
+              mask-size: 100% 100%;
+      -webkit-mask-repeat: no-repeat;
+              mask-repeat: no-repeat;
+      transition: background 0.6s ease, -webkit-mask-image 0.4s ease, mask-image 0.4s ease, padding 0.5s ease;
     }
     #nav .nav-logo img { filter: none; height: 72px; transition: height .5s ease; }
     #nav.scrolled .nav-logo img { height: 58px; }
@@ -1947,8 +1973,31 @@ img, svg, video, iframe { max-width: 100%; height: auto; }
   .section { padding: 4rem 1.25rem; }
   .container { padding: 0; }
 
-  #nav { padding: calc(0.85rem + env(safe-area-inset-top, 0px)) 1rem 3rem; background: linear-gradient(180deg, rgba(244,239,230,1) 0%, rgba(244,239,230,1) 60%, rgba(244,239,230,0.3) 90%, rgba(244,239,230,0) 100%); }
-  #nav.scrolled { padding: calc(0.6rem + env(safe-area-inset-top, 0px)) 1rem 0.6rem; background: var(--bone); -webkit-backdrop-filter: none; backdrop-filter: none; border-bottom: 1px solid rgba(20,24,15,0.06); }
+  #nav {
+    padding: calc(0.85rem + env(safe-area-inset-top, 0px)) 1rem 3rem;
+    background-color: var(--bone);
+    background-image: none;
+    -webkit-mask-image: linear-gradient(180deg,
+      rgba(0,0,0,1) 0%,
+      rgba(0,0,0,0.92) 40%,
+      rgba(0,0,0,0.4) 75%,
+      rgba(0,0,0,0) 100%);
+            mask-image: linear-gradient(180deg,
+      rgba(0,0,0,1) 0%,
+      rgba(0,0,0,0.92) 40%,
+      rgba(0,0,0,0.4) 75%,
+      rgba(0,0,0,0) 100%);
+  }
+  #nav.scrolled {
+    padding: calc(0.6rem + env(safe-area-inset-top, 0px)) 1rem 0.6rem;
+    background-color: var(--bone);
+    background-image: none;
+    -webkit-mask-image: none;
+            mask-image: none;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    border-bottom: 1px solid rgba(20,24,15,0.06);
+  }
   #nav .nav-logo img { height: 48px; }
   #nav.scrolled .nav-logo img { height: 40px; }
   .lang-btn { padding: 0.4rem 0.75rem; font-size: 0.78rem; letter-spacing: 0.08em; }

@@ -25,9 +25,15 @@
 
   /* ── Navbar scroll + height sync para submenu ── */
   const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 8);
-  });
+  function updateNavScrolled() {
+    const y = window.scrollY || document.documentElement.scrollTop || 0;
+    nav.classList.toggle('scrolled', y > 60);
+  }
+  updateNavScrolled();
+  window.addEventListener('scroll', updateNavScrolled, { passive: true });
+  if (typeof lenis !== 'undefined' && lenis && typeof lenis.on === 'function') {
+    lenis.on('scroll', updateNavScrolled);
+  }
   function syncNavHeight() {
     document.documentElement.style.setProperty('--nav-height', nav.offsetHeight + 'px');
   }
