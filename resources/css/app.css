@@ -37,7 +37,12 @@
     }
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; font-size: 16px; }
+    html {
+      scroll-behavior: smooth; font-size: 16px;
+      /* Crema en la raíz: si iOS Safari deja un hueco arriba al retraer la URL bar
+         (fixed elements se anclan al layout viewport, no al visual), este bg se ve. */
+      background: var(--bone);
+    }
     body {
       font-family: 'Montserrat', sans-serif;
       background: var(--cream);
@@ -75,8 +80,14 @@
       position: fixed; top: 0; left: 0; right: 0;
       height: env(safe-area-inset-top, 0px);
       background: var(--bone);
-      z-index: 1000;
+      z-index: 9997;
       pointer-events: none;
+      /* Fuerza compositing en iOS Safari para que no se pierda al retraerse la URL bar */
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      will-change: transform;
     }
 
     /* ─── NAVIGATION ─── */
