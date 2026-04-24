@@ -39,13 +39,14 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html {
       scroll-behavior: smooth; font-size: 16px;
-      /* Crema en la raíz: si iOS Safari deja un hueco arriba al retraer la URL bar
-         (fixed elements se anclan al layout viewport, no al visual), este bg se ve. */
       background: var(--bone);
     }
     body {
       font-family: 'Montserrat', sans-serif;
-      background: var(--cream);
+      /* Crema en el body (no --cream): iOS Safari toma el bg del body para teñir
+         la zona de la status bar / safe-area cuando hay viewport-fit=cover.
+         Con esto coincide con el nav y el theme-color. */
+      background-color: var(--bone);
       color: var(--ink);
       overflow-x: hidden;
     }
