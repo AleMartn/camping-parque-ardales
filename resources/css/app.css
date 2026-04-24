@@ -74,21 +74,15 @@
       z-index: 9999;
     }
 
-    /* Tira sólida crema en la zona del notch / safe-area-inset-top.
-       Siempre visible por encima del nav (z-index > 900) para que, se scrollee
-       o no, el notch y la status bar nunca se queden transparentes. */
+    /* DIAGNÓSTICO TEMPORAL: rojo brillante, altura forzada 60px.
+       Si ves la tira roja arriba → la cover renderiza, el problema es otro.
+       Si NO ves nada rojo → la cover no llega a dibujarse y el problema es ese. */
     .safe-area-cover {
       position: fixed; top: 0; left: 0; right: 0;
-      height: env(safe-area-inset-top, 0px);
-      background: var(--bone);
-      z-index: 9997;
+      height: calc(env(safe-area-inset-top, 0px) + 60px);
+      background: #FF0000 !important;
+      z-index: 9999;
       pointer-events: none;
-      /* Fuerza compositing en iOS Safari para que no se pierda al retraerse la URL bar */
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-      -webkit-backface-visibility: hidden;
-              backface-visibility: hidden;
-      will-change: transform;
     }
 
     /* ─── NAVIGATION ─── */
