@@ -2,673 +2,640 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Actividades y experiencias en Camping Parque Ardales - Caminito del Rey, Cueva de Ardales, senderismo, kayak y mucho más.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#F4EFE6">
+  <meta name="description" content="Actividades y experiencias en Camping Parque Ardales: Caminito del Rey, Cueva de Ardales, kayak, senderismo, escalada, Ronda y El Torcal.">
   <title>Actividades · Camping Parque Ardales</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,700;1,9..144,900&family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <style>
-    :root {
-      --amber: #E4A851; --green: #415243; --teal: #00879A;
-      --green-deep: #2A3628; --green-mid: #516654; --green-light: #6B8470;
-      --green-pale: #D4DDD2; --green-subtle: #EEF2ED;
-      --amber-light: #F2CB85; --amber-pale: #FAF0D7; --amber-dark: #C4882E;
-      --teal-light: #4AAFC0; --teal-pale: #C8EAED; --teal-dark: #006878;
-      --cream: #FAF7F2; --cream-dark: #F0EBE2; --cream-deeper: #E5DDD0;
-      --ink: #1C2219; --ink-light: #5C6858; --ink-mid: #3A4438; --ink-faint: #8A9688;
-      --terra: #00879A; --terra-light: #4AAFC0;
-      --gold: #E4A851; --gold-light: #F2CB85;
-      --shadow-sm: rgba(42,54,40,0.08); --shadow-md: rgba(42,54,40,0.14);
-    }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; font-size: 16px; }
-    body { font-family: 'Montserrat', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
-    h1, h2, h3, h4, h5 { font-family: 'Libre Baskerville', Georgia, serif; font-weight: 700; }
-    a { color: inherit; }
-    img { display: block; max-width: 100%; }
-
-    /* Language */
-    .en { display: none !important; }
-    body.lang-en .es { display: none !important; }
-    body.lang-en .en { display: revert !important; }
-    span.en { display: none !important; }
-    body.lang-en span.es { display: none !important; }
-    body.lang-en span.en { display: inline !important; }
-
-    /* Grain */
-    body::before {
-      content: ''; position: fixed; inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
-      opacity: 0.025; pointer-events: none; z-index: 9999;
-    }
-
-    /* Nav */
-    #nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 900;
-      padding: 1.2rem 2.5rem;
-      display: flex; align-items: center; justify-content: space-between;
-      background: rgba(42, 54, 40, 0.97); backdrop-filter: blur(12px);
-      box-shadow: 0 1px 0 rgba(255,255,255,0.06), 0 4px 30px rgba(0,0,0,0.2);
-      transition: padding 0.3s;
-    }
-    .nav-logo { text-decoration: none; display: flex; align-items: center; }
-    .nav-logo img { height: 42px; width: auto; filter: brightness(0) invert(1); transition: opacity 0.2s; }
-    .nav-logo:hover img { opacity: 0.85; }
-    .nav-links { display: flex; gap: 0.25rem; list-style: none; align-items: center; }
-    .nav-links a {
-      color: rgba(255,255,255,0.82); text-decoration: none;
-      font-family: 'Montserrat', serif; font-size: 0.8rem;
-      letter-spacing: 0.07em; padding: 0.4rem 0.7rem; border-radius: 4px;
-      transition: color 0.2s, background 0.2s;
-    }
-    .nav-links a:hover { color: var(--gold-light); background: rgba(255,255,255,0.07); }
-    .nav-links a.active { color: var(--gold-light); }
-    .nav-right { display: flex; align-items: center; gap: 0.75rem; }
-    .lang-btn {
-      background: none; border: 1px solid rgba(255,255,255,0.35); color: white;
-      padding: 0.3rem 0.8rem; border-radius: 20px; cursor: pointer;
-      font-family: 'Montserrat', serif; font-size: 0.75rem; font-weight: 600;
-      letter-spacing: 0.12em; transition: all 0.2s;
-    }
-    .lang-btn:hover { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.7); }
-    .nav-cta {
-      background: var(--amber); color: var(--green-deep); text-decoration: none;
-      padding: 0.5rem 1.35rem; border-radius: 4px;
-      font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 700;
-      letter-spacing: 0.04em; transition: background 0.2s, transform 0.15s;
-    }
-    .nav-cta:hover { background: var(--amber-light); transform: translateY(-1px); }
-    .hamburger {
-      display: none; flex-direction: column; gap: 5px; cursor: pointer;
-      background: none; border: none; padding: 4px; z-index: 901;
-    }
-    .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .mobile-menu {
-      display: none; position: fixed; inset: 0;
-      background: var(--green-deep); z-index: 899;
-      flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
-    }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      color: white; text-decoration: none;
-      font-family: 'Libre Baskerville', serif; font-size: 1.6rem; transition: color 0.2s;
-    }
-    .mobile-menu a:hover { color: var(--gold-light); }
-
-    /* Page hero */
-    .page-hero {
-      padding: 8rem 2.5rem 4rem;
-      background: var(--green-deep); position: relative; overflow: hidden;
-      text-align: center;
-    }
-    .page-hero::before {
-      content: ''; position: absolute; top: -40%; right: -15%;
-      width: 55%; height: 130%;
-      background: radial-gradient(ellipse, rgba(78,143,168,0.12) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .page-hero::after {
-      content: ''; position: absolute; bottom: -30%; left: -10%;
-      width: 45%; height: 100%;
-      background: radial-gradient(ellipse, rgba(228,168,81,0.08) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .page-hero .section-sup {
-      color: var(--gold-light); justify-content: center;
-    }
-    .page-hero .section-sup::before { background: var(--gold-light); }
-    .page-hero h1 {
-      font-size: clamp(2.2rem, 5vw, 3.6rem); color: white;
-      line-height: 1.15; margin-bottom: 1rem; position: relative;
-    }
-    .page-hero h1 em { font-style: italic; color: var(--amber-light); }
-    .page-hero p {
-      font-size: 1rem; color: rgba(255,255,255,0.65);
-      max-width: 560px; margin: 0 auto; line-height: 1.8; position: relative;
-    }
-    .back-link {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      color: rgba(255,255,255,0.5); text-decoration: none;
-      font-size: 0.8rem; margin-bottom: 1.5rem; position: relative;
-      transition: color 0.2s;
-    }
-    .back-link:hover { color: var(--gold-light); }
-
-    /* Section commons */
-    .section-sup {
-      font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase;
-      color: var(--teal); font-family: 'Montserrat', sans-serif; font-weight: 700;
-      margin-bottom: 0.75rem;
-      display: flex; align-items: center; gap: 0.6rem;
-    }
-    .section-sup::before {
-      content: ''; display: inline-block; width: 24px; height: 1.5px; background: var(--teal);
-    }
-
-    /* Activities grid - light version */
-    .act-section {
-      padding: 5rem 2.5rem 6rem;
-      max-width: 1200px; margin: 0 auto;
-    }
-    .act-grid-full {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    .act-card-light {
-      background: white; border-radius: 12px; overflow: hidden;
-      box-shadow: 0 2px 16px var(--shadow-sm);
-      border: 1px solid rgba(65,82,67,0.06);
-      cursor: pointer;
-      transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s;
-      opacity: 0; transform: translateY(28px);
-      animation: cardReveal 0.7s ease forwards;
-    }
-    .act-card-light:nth-child(1) { animation-delay: 0.05s; }
-    .act-card-light:nth-child(2) { animation-delay: 0.12s; }
-    .act-card-light:nth-child(3) { animation-delay: 0.19s; }
-    .act-card-light:nth-child(4) { animation-delay: 0.26s; }
-    .act-card-light:nth-child(5) { animation-delay: 0.33s; }
-    .act-card-light:nth-child(6) { animation-delay: 0.40s; }
-    .act-card-light:nth-child(7) { animation-delay: 0.47s; }
-    .act-card-light:nth-child(8) { animation-delay: 0.54s; }
-    @keyframes cardReveal {
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .act-card-light:hover { transform: translateY(-6px); box-shadow: 0 20px 55px var(--shadow-md); }
-    .act-card-light.featured {
-      grid-column: span 2;
-    }
-    .act-card-img {
-      height: 210px; position: relative; overflow: hidden;
-    }
-    .act-card-light.featured .act-card-img { height: 260px; }
-    .act-card-img img {
-      width: 100%; height: 100%; object-fit: cover;
-      transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
-    }
-    .act-card-light:hover .act-card-img img { transform: scale(1.05); }
-    .act-card-pill {
-      position: absolute; top: 0.85rem; left: 0.85rem;
-      background: var(--amber); color: var(--green-deep);
-      padding: 0.22rem 0.7rem; border-radius: 3px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.6rem; font-weight: 800;
-      letter-spacing: 0.14em; text-transform: uppercase;
-    }
-    .act-card-dist {
-      position: absolute; bottom: 0.75rem; right: 0.75rem;
-      background: rgba(0,0,0,0.55); color: white;
-      padding: 0.18rem 0.55rem; border-radius: 4px;
-      font-size: 0.72rem; backdrop-filter: blur(4px);
-    }
-    .act-card-body { padding: 1.4rem 1.5rem; }
-    .act-card-body h3 {
-      font-size: 1.2rem; color: var(--green-deep); margin-bottom: 0.5rem;
-    }
-    .act-card-light.featured .act-card-body h3 { font-size: 1.5rem; }
-    .act-card-body p {
-      font-size: 0.85rem; color: var(--ink-light);
-      line-height: 1.7; margin-bottom: 0.85rem;
-      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-    }
-    .act-card-light.featured .act-card-body p {
-      -webkit-line-clamp: 3;
-    }
-    .act-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-    .act-tag {
-      background: var(--green-subtle); color: var(--green);
-      padding: 0.18rem 0.55rem; border-radius: 3px;
-      font-size: 0.68rem; letter-spacing: 0.04em;
-      border: 1px solid var(--green-pale);
-    }
-
-    /* Modal */
-    .act-modal-overlay {
-      position: fixed; inset: 0; z-index: 1000;
-      background: rgba(26,34,25,0.65); backdrop-filter: blur(6px);
-      display: flex; align-items: center; justify-content: center;
-      opacity: 0; pointer-events: none;
-      transition: opacity 0.35s ease;
-    }
-    .act-modal-overlay.open { opacity: 1; pointer-events: auto; }
-    .act-modal {
-      background: white; border-radius: 14px; overflow: hidden;
-      max-width: 680px; width: 92%; max-height: 90vh;
-      box-shadow: 0 30px 90px rgba(0,0,0,0.35);
-      transform: translateY(30px) scale(0.96);
-      transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
-      overflow-y: auto;
-    }
-    .act-modal-overlay.open .act-modal { transform: translateY(0) scale(1); }
-    .act-modal-img { height: 300px; position: relative; overflow: hidden; }
-    .act-modal-img img { width: 100%; height: 100%; object-fit: cover; }
-    .act-modal-close {
-      position: absolute; top: 1rem; right: 1rem;
-      width: 36px; height: 36px; border-radius: 50%;
-      background: rgba(0,0,0,0.45); backdrop-filter: blur(4px);
-      border: none; color: white; font-size: 1.2rem;
-      cursor: pointer; display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s;
-    }
-    .act-modal-close:hover { background: rgba(0,0,0,0.7); }
-    .act-modal-body { padding: 2rem; }
-    .act-modal-body h3 { font-size: 1.6rem; color: var(--green-deep); margin-bottom: 0.6rem; }
-    .act-modal-body p { font-size: 0.92rem; color: var(--ink-light); line-height: 1.85; margin-bottom: 1rem; }
-    .act-modal-body .act-tags { margin-bottom: 1.2rem; }
-    .act-modal-link {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      color: var(--teal); font-size: 0.85rem; font-weight: 600;
-      text-decoration: none; transition: gap 0.2s;
-    }
-    .act-modal-link:hover { gap: 0.65rem; }
-
-    /* Footer */
-    #contacto { background: var(--green-deep); padding: 5rem 2.5rem 3rem; }
-    .contact-grid {
-      max-width: 1200px; margin: 0 auto;
-      display: grid; grid-template-columns: 1.6fr 1fr 1fr;
-      gap: 4rem; padding-bottom: 3.5rem;
-      border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 2.5rem;
-    }
-    .ct-brand h2 { font-size: 2.1rem; color: white; margin-bottom: 0.4rem; }
-    .ct-brand h2 em { color: var(--gold-light); font-style: italic; }
-    .ct-brand .ct-sub {
-      font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--gold-light); font-family: 'Montserrat', serif; margin-bottom: 1rem;
-    }
-    .ct-brand p { color: rgba(255,255,255,0.6); font-size: 0.875rem; line-height: 1.78; max-width: 320px; margin-bottom: 1.5rem; }
-    .ct-email {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      color: var(--gold-light); font-size: 0.875rem; text-decoration: none;
-    }
-    .ct-col h4 { font-family: 'Libre Baskerville', serif; color: white; font-size: 1rem; margin-bottom: 1.2rem; }
-    .ct-col ul { list-style: none; }
-    .ct-col ul li { margin-bottom: 0.55rem; }
-    .ct-col ul li a { color: rgba(255,255,255,0.58); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
-    .ct-col ul li a:hover { color: var(--gold-light); }
-    .footer-bottom {
-      max-width: 1200px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;
-    }
-    .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.78rem; }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .act-grid-full { grid-template-columns: 1fr 1fr; }
-      .act-card-light.featured { grid-column: span 2; }
-      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    }
-    @media (max-width: 680px) {
-      #nav { padding: 1rem 1.25rem; }
-      .nav-links, .nav-right .nav-cta { display: none; }
-      .hamburger { display: flex; }
-      .page-hero { padding: 7rem 1.25rem 3rem; }
-      .act-section { padding: 3rem 1.25rem 4rem; }
-      .act-grid-full { grid-template-columns: 1fr; }
-      .act-card-light.featured { grid-column: span 1; }
-      .act-card-light.featured .act-card-img { height: 210px; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    }
+    :root { --page-hero-bg: url('images/caminito.webp'); }
   </style>
 </head>
-<body>
+<body class="subpage">
 
-<!-- Nav -->
 <nav id="nav">
   <a href="index.html" class="nav-logo">
     <img src="logo.svg" alt="Camping Parque Ardales">
   </a>
   <ul class="nav-links">
-    <li><a href="index.html#alojamientos"><span class="es">Alojamientos</span><span class="en">Accommodation</span></a></li>
-    <li><a href="index.html#servicios"><span class="es">Servicios</span><span class="en">Services</span></a></li>
+    <li><a href="camping.html">Camping</a></li>
+    <li><a href="apartamentos.html"><span class="es">Apartamentos</span><span class="en">Apartments</span></a></li>
+    <li><a href="servicios.html"><span class="es">Servicios</span><span class="en">Services</span></a></li>
     <li><a href="actividades.html" class="active"><span class="es">Actividades</span><span class="en">Activities</span></a></li>
     <li><a href="galeria.html"><span class="es">Galería</span><span class="en">Gallery</span></a></li>
-    <li><a href="index.html#faq">FAQ</a></li>
-    <li><a href="index.html#contacto"><span class="es">Contacto</span><span class="en">Contact</span></a></li>
+    <li><a href="contacto.html"><span class="es">Contacto</span><span class="en">Contact</span></a></li>
   </ul>
   <div class="nav-right">
-    <button class="lang-btn" id="langBtn">EN</button>
-    <a href="index.html#booking" class="nav-cta"><span class="es">Reservar</span><span class="en">Book Now</span></a>
+    <div class="lang-dropdown" id="langDropdown">
+      <button class="lang-btn" id="langBtn">ES <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
+      <div class="lang-menu" id="langMenu">
+        <button class="lang-option active" data-lang="es">Español</button>
+        <button class="lang-option" data-lang="en">English</button>
+        <button class="lang-option" data-lang="de">Deutsch</button>
+      </div>
+    </div>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-<!-- Mobile menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="index.html#alojamientos"><span class="es">Alojamientos</span><span class="en">Accommodation</span></a>
-  <a href="index.html#servicios"><span class="es">Servicios</span><span class="en">Services</span></a>
-  <a href="actividades.html"><span class="es">Actividades</span><span class="en">Activities</span></a>
-  <a href="galeria.html"><span class="es">Galería</span><span class="en">Gallery</span></a>
-  <a href="index.html#faq">FAQ</a>
-  <a href="index.html#contacto"><span class="es">Contacto</span><span class="en">Contact</span></a>
+  <a href="camping.html" class="mob-link">Camping</a>
+  <a href="apartamentos.html" class="mob-link"><span class="es">Apartamentos</span><span class="en">Apartments</span></a>
+  <a href="servicios.html" class="mob-link"><span class="es">Servicios</span><span class="en">Services</span></a>
+  <a href="actividades.html" class="mob-link"><span class="es">Actividades</span><span class="en">Activities</span></a>
+  <a href="galeria.html" class="mob-link"><span class="es">Galería</span><span class="en">Gallery</span></a>
+  <a href="contacto.html" class="mob-link"><span class="es">Contacto</span><span class="en">Contact</span></a>
 </div>
 
-<!-- Page Hero -->
-<div class="page-hero">
-  <a href="index.html" class="back-link">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-    <span class="es">Volver al inicio</span><span class="en">Back to home</span>
-  </a>
-  <p class="section-sup"><span class="es">Aventura y descubrimiento</span><span class="en">Adventure & discovery</span></p>
-  <h1><span class="es">Actividades y <em>experiencias</em></span><span class="en">Activities & <em>experiences</em></span></h1>
-  <p>
-    <span class="es">La comarca de Ardales es un paraíso de experiencias al aire libre. Desde rutas de senderismo hasta actividades náuticas, escalada y visitas culturales imprescindibles.</span>
-    <span class="en">The Ardales area is a paradise for outdoor experiences. From hiking routes to water activities, climbing and unmissable cultural visits.</span>
+<section class="page-hero">
+  <p class="ph-sup"><span class="es">Aventura y descubrimiento</span><span class="en">Adventure &amp; discovery</span></p>
+  <h1>
+    <span class="es">Actividades y <em>experiencias</em></span>
+    <span class="en">Activities &amp; <em>experiences</em></span>
+  </h1>
+  <p class="ph-lead">
+    <span class="es">Caminito del Rey, cuevas prehistóricas, kayak en el embalse, escalada de referencia mundial y escapadas a Ronda o El Torcal — todo a pocos minutos del camping.</span>
+    <span class="en">Caminito del Rey, prehistoric caves, reservoir kayaking, world-class climbing and day trips to Ronda or El Torcal — all minutes from camp.</span>
   </p>
-</div>
+</section>
 
-<!-- Activities Grid -->
-<div class="act-section">
-  <div class="act-grid-full">
+<section class="section" style="padding-top: 3.5rem;">
+  <div class="container">
+    <div class="acts-grid reveal" id="actsGrid">
 
-    <!-- 1. Caminito del Rey - FEATURED -->
-    <div class="act-card-light featured" data-act="0">
-      <div class="act-card-img">
-        <img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=800&q=80" alt="Caminito del Rey" loading="lazy">
-        <div class="act-card-pill">CAMINITO DEL REY</div>
-        <div class="act-card-dist"><span class="es">~5 km del camping</span><span class="en">~5 km from campsite</span></div>
-      </div>
-      <div class="act-card-body">
-        <h3>Caminito del Rey</h3>
-        <p><span class="es">Una de las rutas más espectaculares de España. Pasarelas sobre cortados verticales con vistas únicas a los embalses del Chorro. Gestionamos tus entradas si reservas con nosotros con al menos 3 días de antelación.</span><span class="en">One of the most spectacular routes in Spain. Walkways over vertical cliffs with unique views of the El Chorro reservoirs. We manage your tickets if you book with us at least 3 days in advance.</span></p>
-        <div class="act-tags">
-          <span class="act-tag"><span class="es">7,7 km</span><span class="en">7.7 km</span></span>
-          <span class="act-tag"><span class="es">3–4 horas</span><span class="en">3–4 hours</span></span>
-          <span class="act-tag"><span class="es">Dificultad media</span><span class="en">Moderate difficulty</span></span>
-          <span class="act-tag"><span class="es">Entradas gestionadas</span><span class="en">Managed tickets</span></span>
+      <!-- 0 · Caminito del Rey (featured) -->
+      <div class="act-tile featured" data-act="0">
+        <img src="images/caminito.webp" alt="Caminito del Rey" loading="lazy">
+        <div class="at-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="at-ov">
+          <span class="at-tag"><span class="es">Destacado · 5 km</span><span class="en">Featured · 5 km</span></span>
+          <h3>Caminito del Rey</h3>
+          <p class="at-sub"><span class="es">Pasarelas sobre el desfiladero de los Gaitanes</span><span class="en">Walkways over the Gaitanes gorge</span></p>
         </div>
       </div>
-    </div>
 
-    <!-- 2. Cueva de Ardales -->
-    <div class="act-card-light" data-act="1">
-      <div class="act-card-img">
-        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80" alt="Cueva de Ardales" loading="lazy">
-        <div class="act-card-dist"><span class="es">Ardales pueblo</span><span class="en">Ardales village</span></div>
-      </div>
-      <div class="act-card-body">
-        <h3><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></h3>
-        <p><span class="es">Pinturas rupestres del Paleolítico declaradas Patrimonio de la Humanidad. Visitas guiadas 12:00–19:30 · 2€/persona.</span><span class="en">Palaeolithic cave paintings declared UNESCO World Heritage. Guided visits 12:00–19:30 · 2€/person.</span></p>
-        <div class="act-tags">
-          <span class="act-tag"><span class="es">Patrimonio UNESCO</span><span class="en">UNESCO Heritage</span></span>
-          <span class="act-tag"><span class="es">Visita guiada</span><span class="en">Guided tour</span></span>
+      <!-- 1 · Cueva de Ardales -->
+      <div class="act-tile" data-act="1">
+        <img src="images/cueva-ardales.jpg" alt="Cueva de Ardales" loading="lazy">
+        <div class="at-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="at-ov">
+          <span class="at-tag"><span class="es">Patrimonio UNESCO</span><span class="en">UNESCO</span></span>
+          <h3><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></h3>
         </div>
       </div>
-    </div>
 
-    <!-- 3. Actividades Náuticas -->
-    <div class="act-card-light" data-act="2">
-      <div class="act-card-img">
-        <img src="https://images.unsplash.com/photo-1472745942893-4b9f730c7668?auto=format&fit=crop&w=800&q=80" alt="Actividades Náuticas" loading="lazy">
-        <div class="act-card-dist"><span class="es">En el embalse</span><span class="en">On the reservoir</span></div>
-      </div>
-      <div class="act-card-body">
-        <h3><span class="es">Actividades Náuticas</span><span class="en">Water Activities</span></h3>
-        <p><span class="es">Kayak, paddle surf y natación en las aguas cristalinas del embalse. El entorno perfecto para deportes acuáticos.</span><span class="en">Kayaking, paddle boarding and swimming in the crystal-clear reservoir waters. The perfect setting for water sports.</span></p>
-        <div class="act-tags">
-          <span class="act-tag">Kayak</span>
-          <span class="act-tag">Paddle Surf</span>
-          <span class="act-tag"><span class="es">Natación</span><span class="en">Swimming</span></span>
+      <!-- 2 · Náuticas -->
+      <div class="act-tile" data-act="2">
+        <img src="images/KAYAKs.webp" alt="Actividades náuticas" loading="lazy">
+        <div class="at-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="at-ov">
+          <span class="at-tag"><span class="es">En el embalse</span><span class="en">On the reservoir</span></span>
+          <h3><span class="es">Náuticas</span><span class="en">Water sports</span></h3>
         </div>
       </div>
-    </div>
 
-    <!-- 4. Senderismo -->
-    <div class="act-card-light" data-act="3">
-      <div class="act-card-img">
-        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80" alt="Senderismo" loading="lazy">
-        <div class="act-card-dist"><span class="es">Sierra de Ardales</span><span class="en">Sierra de Ardales</span></div>
-      </div>
-      <div class="act-card-body">
-        <h3><span class="es">Senderismo</span><span class="en">Hiking</span></h3>
-        <p><span class="es">Rutas señalizadas de todos los niveles en el entorno del embalse y la Sierra de Ardales. Descarga los tracks en Wikiloc.</span><span class="en">Waymarked routes for all levels around the reservoir and Sierra de Ardales. Download tracks on Wikiloc.</span></p>
-        <div class="act-tags">
-          <span class="act-tag"><span class="es">Todos los niveles</span><span class="en">All levels</span></span>
-          <span class="act-tag">GPS tracks</span>
+      <!-- 3 · Escalada (wide · abre modal dedicado) -->
+      <div class="act-tile wide" data-act="escalada">
+        <img src="images/escalada1.webp" alt="Escalada" loading="lazy">
+        <div class="at-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="at-ov">
+          <span class="at-tag"><span class="es">Referente europeo · El Chorro</span><span class="en">European reference · El Chorro</span></span>
+          <h3><span class="es">Escalada &amp; vía ferrata</span><span class="en">Climbing &amp; via ferrata</span></h3>
+          <p class="at-sub"><span class="es">4 zonas principales + rocódromo en el camping</span><span class="en">4 main areas + on-site climbing wall</span></p>
         </div>
       </div>
-    </div>
 
-    <!-- 5. Escalada -->
-    <div class="act-card-light" data-act="4">
-      <div class="act-card-img">
-        <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=800&q=80" alt="Escalada" loading="lazy">
-        <div class="act-card-dist">El Chorro</div>
-      </div>
-      <div class="act-card-body">
-        <h3><span class="es">Escalada</span><span class="en">Rock Climbing</span></h3>
-        <p><span class="es">El Chorro es uno de los destinos de escalada más reconocidos de Europa. Más de 800 vías de todos los niveles en las paredes del desfiladero.</span><span class="en">El Chorro is one of Europe's most renowned climbing destinations. Over 800 routes for all levels on the gorge walls.</span></p>
-        <div class="act-tags">
-          <span class="act-tag">800+ <span class="es">vías</span><span class="en">routes</span></span>
-          <span class="act-tag"><span class="es">Todos los niveles</span><span class="en">All levels</span></span>
+      <!-- 4 · Senderismo -->
+      <div class="act-tile" data-act="3">
+        <img src="images/Entorno 17.webp" alt="Senderismo" loading="lazy">
+        <div class="at-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="at-ov">
+          <span class="at-tag"><span class="es">Todos los niveles</span><span class="en">All levels</span></span>
+          <h3><span class="es">Senderismo</span><span class="en">Hiking</span></h3>
         </div>
       </div>
-    </div>
 
-    <!-- 6. Tajo de Ronda -->
-    <div class="act-card-light" data-act="5">
-      <div class="act-card-img">
-        <img src="https://images.unsplash.com/photo-1561632669-7f55f7975606?auto=format&fit=crop&w=800&q=80" alt="Tajo de Ronda" loading="lazy">
-        <div class="act-card-dist"><span class="es">~45 min en coche</span><span class="en">~45 min drive</span></div>
-      </div>
-      <div class="act-card-body">
-        <h3>Tajo de Ronda</h3>
-        <p><span class="es">Visita la emblemática ciudad de Ronda con su espectacular Puente Nuevo sobre el Tajo. Paseo por el casco antiguo, plaza de toros y jardines.</span><span class="en">Visit the iconic city of Ronda with its spectacular Puente Nuevo over the gorge. Stroll through the old town, bullring and gardens.</span></p>
-        <div class="act-tags">
-          <span class="act-tag"><span class="es">Excursión de día</span><span class="en">Day trip</span></span>
-          <span class="act-tag"><span class="es">Patrimonio</span><span class="en">Heritage</span></span>
+      <!-- 5 · Ronda -->
+      <div class="act-tile" data-act="4">
+        <img src="images/Entorno 18.webp" alt="Tajo de Ronda" loading="lazy">
+        <div class="at-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="at-ov">
+          <span class="at-tag"><span class="es">~45 min · coche</span><span class="en">~45 min · car</span></span>
+          <h3>Tajo de Ronda</h3>
         </div>
       </div>
-    </div>
 
-    <!-- 7. El Torcal -->
-    <div class="act-card-light" data-act="6">
-      <div class="act-card-img">
-        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80" alt="El Torcal de Antequera" loading="lazy">
-        <div class="act-card-dist"><span class="es">~40 min en coche</span><span class="en">~40 min drive</span></div>
-      </div>
-      <div class="act-card-body">
-        <h3>El Torcal de Antequera</h3>
-        <p><span class="es">Paisaje kárstico de formaciones rocosas únicas declarado Patrimonio de la Humanidad por la UNESCO. Rutas señalizadas entre laberintos de piedra.</span><span class="en">Karst landscape with unique rock formations, declared a UNESCO World Heritage site. Waymarked routes through stone labyrinths.</span></p>
-        <div class="act-tags">
-          <span class="act-tag"><span class="es">Patrimonio UNESCO</span><span class="en">UNESCO Heritage</span></span>
-          <span class="act-tag"><span class="es">Rutas señalizadas</span><span class="en">Waymarked routes</span></span>
+      <!-- 6 · Torcal -->
+      <div class="act-tile wide" data-act="5">
+        <img src="images/Entorno 22.webp" alt="El Torcal de Antequera" loading="lazy">
+        <div class="at-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="at-ov">
+          <span class="at-tag"><span class="es">~1 h · Patrimonio UNESCO</span><span class="en">~1 h · UNESCO</span></span>
+          <h3><span class="es">El Torcal de Antequera</span><span class="en">El Torcal de Antequera</span></h3>
+          <p class="at-sub"><span class="es">Formaciones kársticas únicas en Europa</span><span class="en">Karst formations unique in Europe</span></p>
         </div>
       </div>
-    </div>
 
-    <!-- 8. Ciclismo -->
-    <div class="act-card-light" data-act="7">
-      <div class="act-card-img">
-        <img src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?auto=format&fit=crop&w=800&q=80" alt="Ciclismo" loading="lazy">
-        <div class="act-card-dist"><span class="es">Desde el camping</span><span class="en">From campsite</span></div>
-      </div>
-      <div class="act-card-body">
-        <h3><span class="es">Ciclismo y BTT</span><span class="en">Cycling & MTB</span></h3>
-        <p><span class="es">Rutas de carretera y montaña por la Sierra de Ardales y alrededores del embalse. Terreno variado ideal para todos los niveles.</span><span class="en">Road and mountain biking routes through Sierra de Ardales and around the reservoir. Varied terrain ideal for all levels.</span></p>
-        <div class="act-tags">
-          <span class="act-tag"><span class="es">Carretera y BTT</span><span class="en">Road & MTB</span></span>
-          <span class="act-tag"><span class="es">Todos los niveles</span><span class="en">All levels</span></span>
-        </div>
-      </div>
     </div>
-
   </div>
-</div>
+</section>
 
-<!-- Activity Modal -->
-<div class="act-modal-overlay" id="actModalOverlay">
-  <div class="act-modal">
-    <div class="act-modal-img">
-      <img id="actModalImg" src="" alt="">
-      <button class="act-modal-close" id="actModalClose">&times;</button>
+<!-- ─── RICH ACTIVITY MODAL ─── -->
+<div class="ax-modal-overlay" id="axOverlay" role="dialog" aria-modal="true">
+  <div class="ax-modal">
+    <button class="ax-modal-close" id="axClose" aria-label="Close">✕</button>
+    <div class="ax-modal-img">
+      <img id="axImg" src="" alt="">
+      <div class="am-tag" id="axTag"></div>
     </div>
-    <div class="act-modal-body">
-      <h3 id="actModalTitle"></h3>
-      <p id="actModalDesc"></p>
-      <div class="act-tags" id="actModalTags"></div>
-      <a href="#" id="actModalLink" class="act-modal-link" target="_blank" rel="noopener" style="display:none">
-        <span class="es">Más información</span><span class="en">More information</span> <span style="font-style:normal">→</span>
-      </a>
+    <div class="ax-modal-body" data-lenis-prevent>
+      <p class="am-sup" id="axSup"></p>
+      <h3 id="axTitle"></h3>
+      <p id="axDesc"></p>
+      <div class="am-facts" id="axFacts"></div>
+      <ul class="am-list" id="axList"></ul>
+      <div class="am-ctas" id="axCtas"></div>
     </div>
   </div>
 </div>
 
-<!-- Footer -->
+<!-- ─── CLIMB MODAL ─── -->
+<div class="climb-modal-overlay" id="climbOverlay" role="dialog" aria-modal="true">
+  <div class="climb-modal">
+    <button class="climb-modal-close" id="climbClose" aria-label="Close">✕</button>
+    <div class="climb-modal-body" data-lenis-prevent>
+      <header class="cm-head">
+        <p class="cm-sup"><span class="es">Referente europeo · El Chorro</span><span class="en">European reference · El Chorro</span></p>
+        <h2>
+          <span class="es"><em>Escalada</em> y vía ferrata</span>
+          <span class="en"><em>Climbing</em> &amp; via ferrata</span>
+        </h2>
+        <p>
+          <span class="es">Estás en el corazón de uno de los destinos de escalada más reconocidos de Europa. El Chorro, Desplomilandia, Teba y Ardales ofrecen cientos de vías equipadas para todos los niveles, con clima óptimo en invierno y verano según la zona.</span>
+          <span class="en">You're at the heart of one of Europe's most renowned climbing destinations. El Chorro, Desplomilandia, Teba and Ardales offer hundreds of bolted routes for all levels, with optimal climate in winter and summer depending on the area.</span>
+        </p>
+        <p>
+          <span class="es">Desde el camping, la aproximación a cualquier sector es de entre 5 y 30 minutos en coche. En recepción te orientamos con mapas, guías y recomendaciones según tu nivel y la época del año.</span>
+          <span class="en">From the campsite, any sector is 5 to 30 minutes away by car. At reception we advise on maps, guidebooks and picks based on your level and the season.</span>
+        </p>
+      </header>
+
+      <!-- Rocódromo: tarjeta con imagen -->
+      <div class="cm-rocodromo">
+        <div class="cm-rocodromo-img">
+          <img src="images/escalada2.webp" alt="Rocódromo en el camping" loading="lazy">
+        </div>
+        <div class="cm-rocodromo-body">
+          <p class="cr-sup"><span class="es">En el recinto</span><span class="en">On site</span></p>
+          <h3>
+            <span class="es">Rocódromo en el <em>camping</em></span>
+            <span class="en">Climbing wall at the <em>campsite</em></span>
+          </h3>
+          <p>
+            <span class="es">Disponemos de rocódromo en el propio camping, gestionado a través de Indian Sport. Perfecto para calentar, entrenar días de lluvia o iniciarse antes de salir a las zonas exteriores.</span>
+            <span class="en">We have an on-site climbing wall operated by Indian Sport. Ideal for warming up, training on rainy days, or getting started before heading out to the crags.</span>
+          </p>
+          <div class="cr-partner">
+            <strong><span class="es">Operado por:</span><span class="en">Operated by:</span></strong> Indian Sport · <span style="color:var(--ink-light)"><span class="es">horarios y tarifas en recepción</span><span class="en">hours and rates at reception</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cm-zones-head">
+        <h3><span class="es">Zonas <em>exteriores</em></span><span class="en"><em>Outdoor</em> areas</span></h3>
+        <span class="cm-zones-count"><span class="es">4 zonas principales</span><span class="en">4 main areas</span></span>
+      </div>
+
+      <div class="cm-zones">
+        <!-- El Chorro -->
+        <article class="climb-zone">
+          <div class="cz-media">
+            <span class="cz-season cold"><span class="es">Invierno</span><span class="en">Winter</span></span>
+            <img src="images/colgante1.webp" alt="El Chorro" loading="lazy">
+          </div>
+          <div class="cz-body">
+            <p class="cz-type"><span class="es">Deportiva · Multilargos · Vía ferrata K3</span><span class="en">Sport · Multi-pitch · K3 via ferrata</span></p>
+            <h3><em>El Chorro</em></h3>
+            <dl>
+              <dt><span class="es">Zonas</span><span class="en">Sectors</span></dt>
+              <dd>Frontales, Encantadas, Escalera Árabe, Cañón</dd>
+              <dt><span class="es">Nivel</span><span class="en">Level</span></dt>
+              <dd><span class="es">Todos los niveles. Desde 4º (Serena, Rocabella) hasta Makinódromo.</span><span class="en">All levels. From grade 4 (Serena, Rocabella) to Makinódromo.</span></dd>
+            </dl>
+            <p class="cz-parking-label" style="margin-bottom:0.4rem;"><span class="es">Aproximaciones</span><span class="en">Approach times</span></p>
+            <div class="cz-approach">
+              <span class="cz-appr-pill"><strong>10 min</strong>Frontales · ferrata</span>
+              <span class="cz-appr-pill"><strong>3 min</strong>Encantadas</span>
+              <span class="cz-appr-pill"><strong>15 min</strong>Escalera Árabe</span>
+              <span class="cz-appr-pill"><strong>30 min</strong>Cañón</span>
+            </div>
+            <div class="cz-parking">
+              <p class="cz-parking-label"><span class="es">Parkings</span><span class="en">Parkings</span></p>
+              <a href="https://maps.app.goo.gl/NovAxs8tsiMK2Rs18" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Frontales y Cañón</a>
+              <a href="https://maps.app.goo.gl/4WAsJEM591Ch1oLh6" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Zonas de la Encantada</a>
+              <a href="https://maps.app.goo.gl/24arVToc7kTbqpHB6" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Escalera Árabe</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Desplomilandia -->
+        <article class="climb-zone">
+          <div class="cz-media">
+            <span class="cz-season warm"><span class="es">Verano</span><span class="en">Summer</span></span>
+            <img src="images/escalada2.webp" alt="Desplomilandia" loading="lazy">
+          </div>
+          <div class="cz-body">
+            <p class="cz-type"><span class="es">Deportiva</span><span class="en">Sport climbing</span></p>
+            <h3><em>Desplomilandia</em></h3>
+            <dl>
+              <dt><span class="es">Sectores</span><span class="en">Sectors</span></dt>
+              <dd>La Boda, Buena Sombra, Tajo Acebuche, Next Level, Como la Vida Misma, El Cable, Poza de la Mona</dd>
+              <dt><span class="es">Nivel</span><span class="en">Level</span></dt>
+              <dd><span class="es">5º grado (Como la Vida Misma) hasta 8b+ (Buena Sombra).</span><span class="en">Grade 5 (Como la Vida Misma) to 8b+ (Buena Sombra).</span></dd>
+            </dl>
+            <p class="cz-parking-label" style="margin-bottom:0.4rem;"><span class="es">Aproximación</span><span class="en">Approach</span></p>
+            <div class="cz-approach">
+              <span class="cz-appr-pill"><strong>~10 min</strong><span class="es">Media</span><span class="en">Average</span></span>
+            </div>
+            <div class="cz-parking">
+              <p class="cz-parking-label"><span class="es">Parkings</span><span class="en">Parkings</span></p>
+              <a href="https://maps.app.goo.gl/i18Ncs7A1Uq7Jgj37" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Desplomilandia</a>
+              <a href="https://maps.app.goo.gl/Egw7EdEj72TjhPEw5" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Poza de la Mona</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Teba -->
+        <article class="climb-zone">
+          <div class="cz-media">
+            <span class="cz-season cold"><span class="es">Invierno</span><span class="en">Winter</span></span>
+            <img src="images/escalada3.webp" alt="Zonas de Teba" loading="lazy">
+          </div>
+          <div class="cz-body">
+            <p class="cz-type"><span class="es">Deportiva</span><span class="en">Sport climbing</span></p>
+            <h3><span class="es">Zonas de <em>Teba</em></span><span class="en"><em>Teba</em> areas</span></h3>
+            <dl>
+              <dt><span class="es">Sectores</span><span class="en">Sectors</span></dt>
+              <dd>Tajo de los Rojos, Tajo del Molino, Tajo de la Lentejuela, Bufones, Castillo de Teba</dd>
+              <dt><span class="es">Nivel</span><span class="en">Level</span></dt>
+              <dd><span class="es">De 5º grado hasta 8b en el Tajo de los Rojos.</span><span class="en">From grade 5 to 8b at Tajo de los Rojos.</span></dd>
+            </dl>
+            <p class="cz-parking-label" style="margin-bottom:0.4rem;"><span class="es">Aproximación</span><span class="en">Approach</span></p>
+            <div class="cz-approach">
+              <span class="cz-appr-pill"><strong>~10 min</strong><span class="es">Media</span><span class="en">Average</span></span>
+            </div>
+            <div class="cz-warning">
+              <strong><span class="es">Restricciones:</span><span class="en">Restrictions:</span></strong>
+              <span class="es"> Tajo de la Lentejuela y Tajo del Molino solo abiertos de septiembre a diciembre por anidación de aves.</span>
+              <span class="en"> Tajo de la Lentejuela and Tajo del Molino only open September to December due to bird nesting.</span>
+            </div>
+            <div class="cz-parking">
+              <p class="cz-parking-label"><span class="es">Parkings</span><span class="en">Parkings</span></p>
+              <a href="https://maps.app.goo.gl/GSWih9XurKBCWQxv8" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Tajo de los Rojos</a>
+              <a href="https://maps.app.goo.gl/1wozTqLTh3QCKVhh9" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Tajo del Molino</a>
+              <a href="https://maps.app.goo.gl/rzxjamvqAN2pZkys5" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Tajo de la Lentejuela</a>
+              <a href="https://maps.app.goo.gl/HC8kXHm2XcuKX1vXA" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Bufones</a>
+              <a href="https://maps.app.goo.gl/xvqouvA6bRF1zZLG9" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Castillo de Teba</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ardales -->
+        <article class="climb-zone">
+          <div class="cz-media">
+            <span class="cz-season all"><span class="es">Invierno y verano</span><span class="en">Winter &amp; summer</span></span>
+            <img src="images/Entorno 13.webp" alt="Zonas de Ardales" loading="lazy">
+          </div>
+          <div class="cz-body">
+            <p class="cz-type"><span class="es">Deportiva</span><span class="en">Sport climbing</span></p>
+            <h3><span class="es">Zonas de <em>Ardales</em></span><span class="en"><em>Ardales</em> areas</span></h3>
+            <dl>
+              <dt><span class="es">Sectores</span><span class="en">Sectors</span></dt>
+              <dd>Tajo de la Laja, Turón</dd>
+              <dt><span class="es">Nivel</span><span class="en">Level</span></dt>
+              <dd><span class="es">De 5º hasta 8c con predominio del 7º grado.</span><span class="en">From grade 5 to 8c, mostly 7th grade.</span></dd>
+            </dl>
+            <p class="cz-parking-label" style="margin-bottom:0.4rem;"><span class="es">Aproximación</span><span class="en">Approach</span></p>
+            <div class="cz-approach">
+              <span class="cz-appr-pill"><strong>~10 min</strong><span class="es">Media</span><span class="en">Average</span></span>
+            </div>
+            <div class="cz-parking">
+              <p class="cz-parking-label"><span class="es">Parkings</span><span class="en">Parkings</span></p>
+              <a href="https://maps.app.goo.gl/8xrKvSadppFG1ndG9" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Turón</a>
+              <a href="https://maps.app.goo.gl/QQfDNYDGZePkR3B66" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Tajo de la Laja</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cross CTA -->
+<div class="cross-cta">
+  <p class="eyebrow"><span class="es">Una base única</span><span class="en">A unique base</span></p>
+  <h3>
+    <span class="es">Todas estas experiencias, <em>a pocos minutos</em> del camping</span>
+    <span class="en">All these experiences, <em>minutes away</em> from camp</span>
+  </h3>
+  <div class="cta-pair">
+    <a href="index.html#booking" class="cc-btn">
+      <span class="es">Reservar estancia</span><span class="en">Book your stay</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+    <a href="camping.html" class="cc-btn ghost">
+      <span class="es">Ver alojamientos</span><span class="en">See accommodation</span>
+    </a>
+  </div>
+</div>
+
 <footer id="contacto">
   <div class="contact-grid">
     <div class="ct-brand">
       <div class="ct-sub"><span class="es">Camping familiar · Embalse Conde de Guadalhorce</span><span class="en">Family camping · Conde de Guadalhorce Reservoir</span></div>
-      <img src="logo.svg" alt="Camping Parque Ardales" style="height:50px;width:auto;filter:brightness(0) invert(1);margin-bottom:0.6rem;">
+      <img src="logo-negativo.svg" alt="Camping Parque Ardales" style="height:70px;width:auto;margin-bottom:0.6rem;">
       <p>
         <span class="es">Un rincón único en la naturaleza malagueña, a orillas del embalse y a las puertas del Caminito del Rey y la Cueva de Ardales.</span>
         <span class="en">A unique corner of Málaga's natural landscape, on the shores of the reservoir and at the gateway to the Caminito del Rey and Ardales Cave.</span>
       </p>
-      <a href="mailto:camping@parqueardales.com" class="ct-email">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> camping@parqueardales.com
+      <a href="mailto:info@parqueardales.com" class="ct-email">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> info@parqueardales.com
       </a>
+      <a href="tel:+34951264924" class="ct-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> 951 264 924</a>
     </div>
+
     <div class="ct-col">
-      <h4><span class="es">Alojamientos</span><span class="en">Accommodation</span></h4>
+      <h4><span class="es">Estancia</span><span class="en">Stay</span></h4>
       <ul>
-        <li><a href="index.html#alojamientos"><span class="es">Apartamentos</span><span class="en">Apartments</span></a></li>
-        <li><a href="index.html#alojamientos"><span class="es">Parcelas tiendas</span><span class="en">Tent pitches</span></a></li>
-        <li><a href="index.html#alojamientos"><span class="es">Parcelas caravanas</span><span class="en">Caravan pitches</span></a></li>
-        <li><a href="index.html#alojamientos"><span class="es">Cabaña Salón-Cocina</span><span class="en">Salon-Kitchen Cabin</span></a></li>
+        <li><a href="apartamentos.html"><span class="es">Apartamentos</span><span class="en">Apartments</span></a></li>
+        <li><a href="camping.html#tiendas"><span class="es">Parcelas tiendas</span><span class="en">Tent pitches</span></a></li>
+        <li><a href="camping.html#caravanas"><span class="es">Parcelas caravanas</span><span class="en">Caravan pitches</span></a></li>
+        <li><a href="servicios.html#cabana"><span class="es">Cabaña Salón-Cocina</span><span class="en">Salon-Kitchen Cabin</span></a></li>
       </ul>
     </div>
+
     <div class="ct-col">
       <h4><span class="es">Actividades</span><span class="en">Activities</span></h4>
       <ul>
-        <li><a href="#" onclick="document.querySelector('[data-act=&quot;0&quot;]').click();return false;">Caminito del Rey</a></li>
-        <li><a href="#" onclick="document.querySelector('[data-act=&quot;1&quot;]').click();return false;"><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></a></li>
-        <li><a href="#" onclick="document.querySelector('[data-act=&quot;3&quot;]').click();return false;"><span class="es">Senderismo</span><span class="en">Hiking</span></a></li>
-        <li><a href="#" onclick="document.querySelector('[data-act=&quot;2&quot;]').click();return false;"><span class="es">Actividades náuticas</span><span class="en">Water activities</span></a></li>
-        <li><a href="#" onclick="document.querySelector('[data-act=&quot;5&quot;]').click();return false;">Tajo de Ronda</a></li>
-        <li><a href="#" onclick="document.querySelector('[data-act=&quot;6&quot;]').click();return false;">El Torcal</a></li>
+        <li><a href="actividades.html">Caminito del Rey</a></li>
+        <li><a href="actividades.html"><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></a></li>
+        <li><a href="actividades.html"><span class="es">Senderismo</span><span class="en">Hiking</span></a></li>
+        <li><a href="actividades.html"><span class="es">Actividades náuticas</span><span class="en">Water activities</span></a></li>
+        <li><a href="actividades.html"><span class="es">Escalada</span><span class="en">Climbing</span></a></li>
       </ul>
     </div>
   </div>
+
   <div class="footer-bottom">
     <p>© 2025 Camping Parque Ardales · Ardales, Málaga</p>
     <p style="color:rgba(255,255,255,0.3);font-size:0.75rem;">
-      <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:none;"><span class="es">Política de privacidad</span><span class="en">Privacy policy</span></a>
+      <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:none;">
+        <span class="es">Política de privacidad</span><span class="en">Privacy policy</span>
+      </a>
       &nbsp;·&nbsp;
-      <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:none;"><span class="es">Aviso legal</span><span class="en">Legal notice</span></a>
+      <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:none;">
+        <span class="es">Aviso legal</span><span class="en">Legal notice</span>
+      </a>
     </p>
   </div>
 </footer>
 
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<script src="https://unpkg.com/lenis@1/dist/lenis.min.js"></script>
+<script src="scripts.js"></script>
 <script>
-  /* Language toggle */
-  let currentLang = 'es';
-  const langBtn = document.getElementById('langBtn');
-  langBtn.addEventListener('click', () => {
-    currentLang = currentLang === 'es' ? 'en' : 'es';
-    document.body.classList.toggle('lang-en', currentLang === 'en');
-    langBtn.textContent = currentLang === 'es' ? 'EN' : 'ES';
-    document.documentElement.lang = currentLang;
-  });
+  /* Page-specific rich activity modal */
+  (function(){
+    const data = [
+      {
+        tag: { es: 'Destacado · 5 km del camping', en: 'Featured · 5 km from camp' },
+        sup: { es: 'El hito imprescindible', en: 'The must-see' },
+        title: { es: 'Caminito <em>del Rey</em>', en: 'Caminito <em>del Rey</em>' },
+        img: 'images/caminito.webp',
+        desc: {
+          es: 'Una de las rutas más espectaculares de España. Pasarelas sobre cortados verticales con vistas únicas al desfiladero de los Gaitanes y los embalses del Chorro. Si reservas con nosotros con al menos 3 días de antelación, gestionamos tus entradas.',
+          en: 'One of the most spectacular routes in Spain. Walkways over vertical cliffs with unique views of the Gaitanes gorge and El Chorro reservoirs. Book with us at least 3 days in advance and we handle your tickets.'
+        },
+        facts: [
+          { num: '7,7 km', label: { es:'Recorrido', en:'Distance' } },
+          { num: '3–4 h',  label: { es:'Duración', en:'Duration' } },
+          { num: 'Media',  label: { es:'Dificultad', en:'Difficulty' } }
+        ],
+        list: {
+          es: ['Pasarelas colgantes sobre el desfiladero', 'Puente colgante final', 'Acceso recomendado en coche o bici (~5 km)', 'Las entradas deben comprarse con antelación'],
+          en: ['Hanging walkways over the gorge', 'Final suspension bridge', 'Access by car or bike recommended (~5 km)', 'Tickets must be purchased in advance']
+        },
+        ctas: [
+          { label: { es:'Web oficial', en:'Official site' }, href: 'https://www.caminitodelrey.info', external: true },
+          { label: { es:'Reservar con entradas', en:'Book stay with tickets' }, href: 'index.html#booking', ghost: true }
+        ]
+      },
+      {
+        tag: { es: 'Patrimonio UNESCO · ~8 km', en: 'UNESCO Heritage · ~8 km' },
+        sup: { es: 'Prehistoria viva', en: 'Living prehistory' },
+        title: { es: 'Cueva de <em>Ardales</em>', en: 'Ardales <em>Cave</em>' },
+        img: 'images/cueva-ardales.jpg',
+        desc: {
+          es: 'Una de las cuevas prehistóricas más importantes de Andalucía, con pinturas rupestres del Paleolítico declaradas Patrimonio de la Humanidad. Visitas guiadas disponibles con reserva previa.',
+          en: 'One of the most important prehistoric caves in Andalusia, with Palaeolithic rock paintings declared UNESCO World Heritage. Guided visits available with prior booking.'
+        },
+        facts: [
+          { num: '12:00', label: { es:'Apertura', en:'Opens' } },
+          { num: '19:30', label: { es:'Cierre', en:'Closes' } },
+          { num: '2 €',   label: { es:'Entrada', en:'Ticket' } }
+        ],
+        list: {
+          es: ['Pinturas rupestres del Paleolítico', 'Visitas guiadas en español', 'Reserva previa recomendada', 'Formaciones kársticas únicas'],
+          en: ['Palaeolithic rock paintings', 'Guided tours in Spanish', 'Advance booking recommended', 'Unique karst formations']
+        },
+        ctas: [
+          { label: { es:'Consultar visita', en:'Ask about visits' }, href: 'mailto:info@parqueardales.com?subject=Visita%20Cueva%20de%20Ardales' }
+        ]
+      },
+      {
+        tag: { es: 'En el embalse', en: 'On the reservoir' },
+        sup: { es: 'Aguas cristalinas', en: 'Crystal-clear waters' },
+        title: { es: 'Actividades <em>náuticas</em>', en: 'Water <em>activities</em>' },
+        img: 'images/KAYAKs.webp',
+        desc: {
+          es: 'Kayak, paddle surf y natación en las aguas del Embalse Conde de Guadalhorce. Un escenario espectacular rodeado de pinares y paredes rocosas que se reflejan en el agua.',
+          en: 'Kayaking, paddle boarding and swimming in the Conde de Guadalhorce Reservoir. A spectacular setting surrounded by pine forest and rocky walls mirrored in the water.'
+        },
+        facts: [
+          { num: '✓', label: { es:'Kayak', en:'Kayak' } },
+          { num: '✓', label: { es:'Paddle surf', en:'Paddle surf' } },
+          { num: '✓', label: { es:'Baño', en:'Swimming' } }
+        ],
+        list: {
+          es: ['Alquiler de equipo en proveedores locales', 'Aguas tranquilas aptas para iniciación', 'Embarcadero cercano al camping'],
+          en: ['Gear rental from local providers', 'Calm waters suitable for beginners', 'Pier close to the campsite']
+        },
+        ctas: [
+          { label: { es:'Consultar proveedores', en:'Ask about providers' }, href: 'contacto.html' }
+        ]
+      },
+      {
+        tag: { es: 'Todos los niveles', en: 'All levels' },
+        sup: { es: 'Sierra de Ardales', en: 'Sierra de Ardales' },
+        title: { es: '<em>Senderismo</em> y rutas', en: '<em>Hiking</em> &amp; trails' },
+        img: 'images/Entorno 17.webp',
+        desc: {
+          es: 'Rutas señalizadas por el embalse, la Sierra de Ardales y el desfiladero. Desde paseos familiares hasta travesías exigentes. Descarga los tracks en Wikiloc y explora la naturaleza malagueña en su máxima expresión.',
+          en: 'Waymarked routes around the reservoir, Sierra de Ardales and the gorge. From family strolls to demanding traverses. Download tracks on Wikiloc and explore Málaga\'s nature at its finest.'
+        },
+        facts: [
+          { num: '✓', label: { es:'Rutas familiares', en:'Family routes' } },
+          { num: '✓', label: { es:'Tracks GPS', en:'GPS tracks' } },
+          { num: '✓', label: { es:'Señalizadas', en:'Waymarked' } }
+        ],
+        list: {
+          es: ['Rutas de 2–15 km en torno al embalse', 'Acceso directo a la Sierra de Ardales', 'Tracks descargables en Wikiloc', 'Mapas e indicaciones en recepción'],
+          en: ['2–15 km routes around the reservoir', 'Direct access to Sierra de Ardales', 'Downloadable tracks on Wikiloc', 'Maps and tips at reception']
+        },
+        ctas: [
+          { label: { es:'Ver rutas en Wikiloc', en:'Routes on Wikiloc' }, href: 'https://www.wikiloc.com/trails/hiking/spain/andalucia/malaga/ardales', external: true }
+        ]
+      },
+      {
+        tag: { es: 'Escapada cultural · ~45 min', en: 'Day trip · ~45 min' },
+        sup: { es: 'Ciudad emblemática', en: 'Iconic city' },
+        title: { es: 'Tajo de <em>Ronda</em>', en: 'Tajo de <em>Ronda</em>' },
+        img: 'images/Entorno 18.webp',
+        desc: {
+          es: 'Visita la emblemática ciudad de Ronda con su espectacular Puente Nuevo sobre el Tajo. Pasea por el casco antiguo, descubre la plaza de toros más antigua de España y disfruta de la gastronomía local.',
+          en: 'Visit the iconic city of Ronda with its spectacular Puente Nuevo over the gorge. Stroll through the old town, discover Spain\'s oldest bullring and enjoy the local cuisine.'
+        },
+        facts: [
+          { num: '45 min', label: { es:'En coche', en:'By car' } },
+          { num: '120 m',  label: { es:'Puente Nuevo', en:'Puente Nuevo' } },
+          { num: '1785',   label: { es:'Plaza de toros', en:'Bullring' } }
+        ],
+        list: {
+          es: ['Puente Nuevo sobre el Tajo', 'Casco antiguo medieval', 'Plaza de toros histórica', 'Bodegas y gastronomía serrana'],
+          en: ['Puente Nuevo over the gorge', 'Medieval old town', 'Historic bullring', 'Wineries and mountain cuisine']
+        },
+        ctas: []
+      },
+      {
+        tag: { es: 'Patrimonio UNESCO · ~1 h', en: 'UNESCO · ~1 h' },
+        sup: { es: 'Geología única', en: 'Unique geology' },
+        title: { es: 'El Torcal de <em>Antequera</em>', en: 'El Torcal de <em>Antequera</em>' },
+        img: 'images/Entorno 22.webp',
+        desc: {
+          es: 'Paraje natural con formaciones kársticas únicas en Europa. Rutas circulares señalizadas entre esculturas de piedra esculpidas por la erosión durante millones de años. Declarado Patrimonio de la Humanidad.',
+          en: 'A natural park with karst formations unique in Europe. Waymarked circular routes through stone sculptures carved by erosion over millions of years. Declared UNESCO World Heritage.'
+        },
+        facts: [
+          { num: '~1 h',  label: { es:'En coche', en:'By car' } },
+          { num: '3 km',  label: { es:'Ruta verde', en:'Green route' } },
+          { num: '4,5 km',label: { es:'Ruta amarilla', en:'Yellow route' } }
+        ],
+        list: {
+          es: ['Formaciones rocosas únicas', 'Rutas circulares señalizadas', 'Centro de visitantes en el aparcamiento alto', 'Mirador de Las Ventanillas'],
+          en: ['Unique rock formations', 'Waymarked circular routes', 'Visitor centre at the upper car park', 'Las Ventanillas viewpoint']
+        },
+        ctas: []
+      }
+    ];
 
-  /* Hamburger */
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-  });
-  mobileMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-    });
-  });
+    const tiles = document.querySelectorAll('.act-tile');
+    const overlay = document.getElementById('axOverlay');
+    const img = document.getElementById('axImg');
+    const tag = document.getElementById('axTag');
+    const sup = document.getElementById('axSup');
+    const title = document.getElementById('axTitle');
+    const desc = document.getElementById('axDesc');
+    const facts = document.getElementById('axFacts');
+    const list = document.getElementById('axList');
+    const ctas = document.getElementById('axCtas');
+    const close = document.getElementById('axClose');
 
-  /* Activity data */
-  const actData = [
-    { title: 'Caminito del Rey', titleEn: 'Caminito del Rey',
-      img: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=800&q=80',
-      desc: 'Una de las rutas más espectaculares de España. Pasarelas sobre cortados verticales con vistas únicas a los embalses del Chorro. Gestionamos tus entradas si reservas con nosotros con al menos 3 días de antelación.',
-      descEn: 'One of the most spectacular routes in Spain. Walkways over vertical cliffs with unique views of the El Chorro reservoirs. We manage your tickets if you book with us at least 3 days in advance.',
-      tags: ['7,7 km', '3–4 horas', 'Dificultad media', 'Entradas gestionadas'],
-      tagsEn: ['7.7 km', '3–4 hours', 'Moderate difficulty', 'Managed tickets'],
-      link: 'https://www.caminitodelrey.info' },
-    { title: 'Cueva de Ardales', titleEn: 'Ardales Cave',
-      img: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80',
-      desc: 'Pinturas rupestres del Paleolítico declaradas Patrimonio de la Humanidad por la UNESCO. Un viaje en el tiempo a través de miles de años de historia. Visitas guiadas disponibles de 12:00 a 19:30 · 2€/persona.',
-      descEn: 'Palaeolithic cave paintings declared a UNESCO World Heritage site. A journey back in time through thousands of years of history. Guided visits available 12:00–19:30 · 2€/person.',
-      tags: ['Patrimonio UNESCO', 'Visita guiada', '2€/persona'], tagsEn: ['UNESCO Heritage', 'Guided tour', '2€/person'], link: '' },
-    { title: 'Actividades Náuticas', titleEn: 'Water Activities',
-      img: 'https://images.unsplash.com/photo-1472745942893-4b9f730c7668?auto=format&fit=crop&w=800&q=80',
-      desc: 'Kayak, paddle surf y natación en las aguas cristalinas del Embalse Conde de Guadalhorce. El entorno perfecto para deportes acuáticos rodeado de un paisaje natural impresionante.',
-      descEn: 'Kayaking, paddle boarding and swimming in the crystal-clear waters of the Conde de Guadalhorce Reservoir. The perfect setting for water sports surrounded by stunning natural scenery.',
-      tags: ['Kayak', 'Paddle Surf', 'Natación'], tagsEn: ['Kayak', 'Paddle Surf', 'Swimming'], link: '' },
-    { title: 'Senderismo', titleEn: 'Hiking',
-      img: 'https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80',
-      desc: 'Rutas señalizadas de todos los niveles en el entorno del embalse y la Sierra de Ardales. Descarga los tracks en Wikiloc y disfruta de la naturaleza malagueña en su máxima expresión.',
-      descEn: 'Waymarked routes for all levels around the reservoir and Sierra de Ardales. Download tracks on Wikiloc and enjoy Málaga\'s nature at its finest.',
-      tags: ['Todos los niveles', 'GPS tracks', 'Wikiloc'], tagsEn: ['All levels', 'GPS tracks', 'Wikiloc'],
-      link: 'https://www.wikiloc.com/trails/hiking/spain/andalucia/malaga/ardales' },
-    { title: 'Escalada', titleEn: 'Rock Climbing',
-      img: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=800&q=80',
-      desc: 'El Chorro es uno de los destinos de escalada más reconocidos de Europa. Más de 800 vías de todos los niveles en las paredes del desfiladero del Guadalhorce.',
-      descEn: 'El Chorro is one of Europe\'s most renowned climbing destinations. Over 800 routes for all levels on the Guadalhorce gorge walls.',
-      tags: ['800+ vías', 'Todos los niveles', 'El Chorro'], tagsEn: ['800+ routes', 'All levels', 'El Chorro'], link: '' },
-    { title: 'Tajo de Ronda', titleEn: 'Tajo de Ronda',
-      img: 'https://images.unsplash.com/photo-1561632669-7f55f7975606?auto=format&fit=crop&w=800&q=80',
-      desc: 'Visita la emblemática ciudad de Ronda con su espectacular Puente Nuevo sobre el Tajo. Pasea por el casco antiguo, descubre la plaza de toros más antigua de España y disfruta de la gastronomía local.',
-      descEn: 'Visit the iconic city of Ronda with its spectacular Puente Nuevo over the gorge. Stroll through the old town, discover Spain\'s oldest bullring and enjoy the local cuisine.',
-      tags: ['Excursión de día', 'Patrimonio', '~45 min'], tagsEn: ['Day trip', 'Heritage', '~45 min'], link: '' },
-    { title: 'El Torcal de Antequera', titleEn: 'El Torcal de Antequera',
-      img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80',
-      desc: 'Paisaje kárstico de formaciones rocosas únicas declarado Patrimonio de la Humanidad por la UNESCO. Rutas señalizadas entre laberintos de piedra formados hace millones de años.',
-      descEn: 'Karst landscape with unique rock formations, declared a UNESCO World Heritage site. Waymarked routes through stone labyrinths formed millions of years ago.',
-      tags: ['Patrimonio UNESCO', 'Rutas señalizadas', '~40 min'], tagsEn: ['UNESCO Heritage', 'Waymarked routes', '~40 min'], link: '' },
-    { title: 'Ciclismo y BTT', titleEn: 'Cycling & MTB',
-      img: 'https://images.unsplash.com/photo-1541625602330-2277a4c46182?auto=format&fit=crop&w=800&q=80',
-      desc: 'Rutas de carretera y montaña por la Sierra de Ardales y alrededores del embalse. Terreno variado ideal para todos los niveles, con paisajes espectaculares en cada kilómetro.',
-      descEn: 'Road and mountain biking routes through Sierra de Ardales and around the reservoir. Varied terrain ideal for all levels, with spectacular scenery at every turn.',
-      tags: ['Carretera y BTT', 'Todos los niveles'], tagsEn: ['Road & MTB', 'All levels'], link: '' }
-  ];
+    function isEn() { return document.body.classList.contains('lang-en'); }
+    function L(obj) { return isEn() ? obj.en : obj.es; }
 
-  /* Modal */
-  const overlay = document.getElementById('actModalOverlay');
-  const modalImg = document.getElementById('actModalImg');
-  const modalTitle = document.getElementById('actModalTitle');
-  const modalDesc = document.getElementById('actModalDesc');
-  const modalTags = document.getElementById('actModalTags');
-  const modalLink = document.getElementById('actModalLink');
-
-  document.querySelectorAll('[data-act]').forEach(card => {
-    card.addEventListener('click', () => {
-      const d = actData[card.dataset.act];
-      const en = currentLang === 'en';
-      modalImg.src = d.img;
-      modalImg.alt = en ? d.titleEn : d.title;
-      modalTitle.textContent = en ? d.titleEn : d.title;
-      modalDesc.textContent = en ? d.descEn : d.desc;
-      modalTags.innerHTML = (en ? d.tagsEn : d.tags).map(t => '<span class="act-tag">' + t + '</span>').join('');
-      if (d.link) { modalLink.href = d.link; modalLink.style.display = ''; }
-      else { modalLink.style.display = 'none'; }
+    function open(idx) {
+      const d = data[idx];
+      if (!d) return;
+      img.src = d.img; img.alt = L(d.title).replace(/<[^>]+>/g,'');
+      tag.textContent = L(d.tag);
+      sup.textContent = L(d.sup);
+      title.innerHTML = L(d.title);
+      desc.textContent = L(d.desc);
+      facts.innerHTML = d.facts.map(f =>
+        `<div class="am-fact"><span class="am-fact-num">${f.num}</span><span class="am-fact-label">${L(f.label)}</span></div>`
+      ).join('');
+      list.innerHTML = L(d.list).map(x => `<li>${x}</li>`).join('');
+      ctas.innerHTML = d.ctas.map(c =>
+        `<a class="am-cta ${c.ghost?'ghost':''}" href="${c.href}" ${c.external?'target="_blank" rel="noopener"':''}>${L(c.label)} ${c.external
+          ? '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>'
+          : '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>'
+        }</a>`
+      ).join('');
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
-    });
-  });
+    }
 
-  function closeActModal() {
-    overlay.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  document.getElementById('actModalClose').addEventListener('click', closeActModal);
-  overlay.addEventListener('click', e => { if (e.target === overlay) closeActModal(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeActModal(); });
+    function closeModal() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    tiles.forEach(tile => {
+      tile.addEventListener('click', () => {
+        const ref = tile.dataset.act;
+        if (ref === 'escalada') {
+          openClimb();
+          return;
+        }
+        const idx = parseInt(ref, 10);
+        if (!isNaN(idx)) open(idx);
+      });
+    });
+    close.addEventListener('click', closeModal);
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+
+    /* Climb modal */
+    const climbOverlay = document.getElementById('climbOverlay');
+    const climbClose = document.getElementById('climbClose');
+    function openClimb() {
+      climbOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeClimb() {
+      climbOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    climbClose.addEventListener('click', closeClimb);
+    climbOverlay.addEventListener('click', e => { if (e.target === climbOverlay) closeClimb(); });
+
+    document.addEventListener('keydown', e => {
+      if (e.key !== 'Escape') return;
+      if (overlay.classList.contains('open')) closeModal();
+      else if (climbOverlay.classList.contains('open')) closeClimb();
+    });
+  })();
 </script>
 </body>
 </html>

@@ -2,1438 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#F4EFE6">
   <meta name="description" content="Camping Parque Ardales - Alojamiento familiar en plena naturaleza a orillas del Embalse Conde de Guadalhorce, Málaga. Gestión de entradas para el Caminito del Rey.">
   <title>Camping Parque Ardales · Embalse Conde de Guadalhorce · Málaga</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,700;1,9..144,900&family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      /* Brand */
-      --amber:        #E4A851;
-      --green:        #415243;
-      --teal:         #00879A;
-      /* Derived */
-      --green-deep:   #2A3628;
-      --green-mid:    #516654;
-      --green-light:  #6B8470;
-      --green-pale:   #D4DDD2;
-      --green-subtle: #EEF2ED;
-      --amber-light:  #F2CB85;
-      --amber-pale:   #FAF0D7;
-      --amber-dark:   #C4882E;
-      --teal-light:   #4AAFC0;
-      --teal-pale:    #C8EAED;
-      --teal-dark:    #006878;
-      /* Neutrals */
-      --cream:        #FAF7F2;
-      --cream-dark:   #F0EBE2;
-      --cream-deeper: #E5DDD0;
-      --ink:          #1C2219;
-      --ink-light:    #5C6858;
-      --ink-mid:      #3A4438;
-      --ink-faint:    #8A9688;
-      /* Compat aliases */
-      --terra:        #00879A;
-      --terra-light:  #4AAFC0;
-      --gold:         #E4A851;
-      --gold-light:   #F2CB85;
-      --water:        #00879A;
-      --water-light:  #4AAFC0;
-      --water-pale:   #C8EAED;
-      --shadow-sm:    rgba(42,54,40,0.08);
-      --shadow-md:    rgba(42,54,40,0.14);
-      --shadow-lg:    rgba(42,54,40,0.22);
-    }
-
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; font-size: 16px; }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: var(--cream);
-      color: var(--ink);
-      overflow-x: hidden;
-    }
-    h1, h2, h3, h4, h5 { font-family: 'Libre Baskerville', Georgia, serif; font-weight: 700; }
-    a { color: inherit; }
-    img { display: block; max-width: 100%; }
-
-    /* ─── LANGUAGE ─── */
-    .en { display: none !important; }
-    body.lang-en .es { display: none !important; }
-    body.lang-en .en { display: revert !important; }
-    /* for inline spans */
-    span.en { display: none !important; }
-    body.lang-en span.es { display: none !important; }
-    body.lang-en span.en { display: inline !important; }
-
-    /* ─── GRAIN OVERLAY ─── */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
-      opacity: 0.025;
-      pointer-events: none;
-      z-index: 9999;
-    }
-
-    /* ─── NAVIGATION ─── */
-    #nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 900;
-      padding: 1.2rem 2.5rem;
-      display: flex; align-items: center; justify-content: space-between;
-      transition: background 0.6s ease, box-shadow 0.6s ease, padding 0.5s ease, padding-bottom 0.5s ease;
-    }
-    #nav.scrolled {
-      padding: 0.8rem 2.5rem;
-    }
-    .nav-logo {
-      text-decoration: none; display: flex; align-items: center;
-    }
-    .nav-logo img {
-      width: auto; transition: opacity 0.2s;
-    }
-    .nav-logo:hover img { opacity: 0.85; }
-    .nav-links {
-      display: flex; gap: 0.25rem; list-style: none; align-items: center;
-      position: absolute; left: 50%; transform: translateX(-50%);
-    }
-    .nav-links a {
-      color: rgba(255,255,255,0.82); text-decoration: none;
-      font-family: 'Montserrat', serif; font-size: 0.8rem;
-      letter-spacing: 0.07em; padding: 0.4rem 0.7rem; border-radius: 4px;
-      transition: color 0.2s, background 0.2s;
-    }
-    .nav-links a:hover { color: var(--gold-light); background: rgba(255,255,255,0.07); }
-    .nav-right { display: flex; align-items: center; gap: 0.75rem; }
-    .lang-btn {
-      background: none; border: 1px solid rgba(255,255,255,0.35); color: white;
-      padding: 0.3rem 0.8rem; border-radius: 20px; cursor: pointer;
-      font-family: 'Montserrat', serif; font-size: 0.75rem; font-weight: 600;
-      letter-spacing: 0.12em; transition: all 0.2s;
-    }
-    .lang-btn:hover { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.7); }
-    .nav-cta {
-      background: var(--amber); color: var(--green-deep); text-decoration: none;
-      padding: 0.5rem 1.35rem; border-radius: 4px;
-      font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 700;
-      letter-spacing: 0.04em;
-      transition: background 0.2s, transform 0.15s;
-    }
-    .nav-cta:hover { background: var(--amber-light); transform: translateY(-1px); }
-    .hamburger {
-      display: none; flex-direction: column; gap: 5px; cursor: pointer;
-      background: none; border: none; padding: 4px; z-index: 901;
-    }
-    .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .mobile-menu {
-      display: none; position: fixed; inset: 0;
-      background: var(--green-deep); z-index: 899;
-      flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
-    }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      color: white; text-decoration: none;
-      font-family: 'Libre Baskerville', serif; font-size: 1.6rem;
-      transition: color 0.2s;
-    }
-    .mobile-menu a:hover { color: var(--gold-light); }
-
-    /* ─── HERO ─── */
-    #hero {
-      min-height: 88vh; position: relative;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      overflow: hidden;
-    }
-    .hero-photo {
-      position: absolute; inset: 0; background: var(--green-deep);
-    }
-    .hero-photo img {
-      width: 100%; height: 100%; object-fit: cover; opacity: 0.7;
-    }
-    .hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg,
-        rgba(42,54,40,0.3) 0%,
-        rgba(42,54,40,0.15) 40%,
-        rgba(42,54,40,0.6) 100%
-      );
-    }
-    .hero-content {
-      position: relative; z-index: 10;
-      text-align: center; padding: 0 1.5rem;
-      padding-top: 10rem; padding-bottom: 3rem;
-      width: 100%; max-width: 920px;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 0.6rem;
-      background: rgba(255,255,255,0.14); backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.28);
-      padding: 0.4rem 1.1rem; border-radius: 30px;
-      color: white; font-size: 0.72rem; letter-spacing: 0.18em;
-      text-transform: uppercase; margin-bottom: 1.4rem;
-      animation: fadeUp 0.9s ease both;
-    }
-    .hero-badge::before {
-      content: ''; width: 6px; height: 6px; border-radius: 50%;
-      background: var(--amber); flex-shrink: 0;
-    }
-    .hero-title {
-      font-size: clamp(2.6rem, 6vw, 4.8rem); font-weight: 700;
-      color: white; line-height: 1.1;
-      text-shadow: 0 2px 50px rgba(0,0,0,0.3);
-      margin-bottom: 1.4rem;
-      animation: fadeUp 0.9s 0.12s ease both;
-      letter-spacing: -0.01em;
-    }
-    .hero-title em { font-style: italic; color: var(--amber-light); }
-    .hero-sub {
-      font-family: 'Montserrat', sans-serif;
-      font-size: clamp(0.88rem, 1.6vw, 1rem);
-      font-weight: 300;
-      color: rgba(255,255,255,0.78); max-width: 500px;
-      margin: 0 auto 3rem; line-height: 1.9;
-      letter-spacing: 0.02em;
-      animation: fadeUp 0.9s 0.24s ease both;
-    }
-
-    /* Booking Widget */
-    .booking-card {
-      background: rgba(250, 246, 238, 0.97);
-      border-radius: 14px; padding: 1.75rem 2rem;
-      box-shadow: 0 24px 70px rgba(0,0,0,0.28), 0 0 0 1px rgba(255,255,255,0.6);
-      width: 100%; max-width: 900px; margin: 0 auto;
-      animation: fadeUp 0.9s 0.36s ease both;
-    }
-    .booking-title {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.95rem; font-weight: 700;
-      color: var(--green-deep); letter-spacing: 0.05em;
-      margin-bottom: 1.1rem; text-transform: uppercase;
-    }
-    .booking-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr 0.7fr 0.7fr auto;
-      gap: 0.75rem; align-items: end;
-    }
-    .bf { display: flex; flex-direction: column; gap: 0.35rem; }
-    .bf label {
-      font-size: 0.65rem; text-transform: uppercase;
-      letter-spacing: 0.15em; color: var(--green-mid);
-      font-family: 'Montserrat', serif; font-weight: 600;
-    }
-    .bf input, .bf select {
-      border: 1.5px solid var(--cream-dark);
-      border-radius: 6px; padding: 0.65rem 0.875rem;
-      font-family: 'Montserrat', serif; font-size: 0.875rem;
-      color: var(--ink); background: white; outline: none;
-      width: 100%; transition: border-color 0.2s, box-shadow 0.2s;
-      appearance: none; -webkit-appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%232D5A3A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 0.75rem center;
-      background-size: 10px;
-      padding-right: 2rem;
-    }
-    .bf input[type="date"] { background-image: none; padding-right: 0.875rem; }
-    .bf input:focus, .bf select:focus {
-      border-color: var(--green-mid);
-      box-shadow: 0 0 0 3px rgba(45,90,58,0.1);
-    }
-    .book-btn {
-      background: var(--green-deep); color: white; border: none;
-      padding: 0.75rem 1.75rem; border-radius: 6px;
-      font-family: 'Libre Baskerville', serif; font-size: 0.95rem; font-weight: 700;
-      cursor: pointer; white-space: nowrap; height: fit-content;
-      transition: background 0.2s, transform 0.15s;
-      letter-spacing: 0.02em;
-    }
-    .book-btn:hover { background: var(--green-mid); transform: translateY(-2px); }
-    .children-ages-row {
-      display: none; flex-wrap: wrap; gap: 0.5rem;
-      margin-top: 0.75rem; align-items: center;
-    }
-    .children-ages-row.visible { display: flex; }
-    .children-ages-row .age-label {
-      font-size: 0.7rem; color: var(--ink-light);
-      font-family: 'Montserrat', serif; white-space: nowrap;
-    }
-    .age-select {
-      border: 1.5px solid var(--cream-dark); border-radius: 5px;
-      padding: 0.3rem 0.5rem; font-family: 'Montserrat', serif;
-      font-size: 0.78rem; color: var(--ink); background: white; outline: none;
-    }
-    .scroll-hint {
-      position: absolute; bottom: 2.2rem; left: 50%;
-      transform: translateX(-50%); z-index: 10;
-      display: flex; flex-direction: column;
-      align-items: center; gap: 0.5rem;
-      color: rgba(255,255,255,0.65);
-      font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
-      animation: fadeUp 1.2s 1.2s ease both;
-    }
-    .scroll-arrow {
-      width: 22px; height: 22px;
-      border-right: 2px solid rgba(255,255,255,0.65);
-      border-bottom: 2px solid rgba(255,255,255,0.65);
-      transform: rotate(45deg);
-      animation: bounce 1.6s ease-in-out infinite;
-    }
-    @keyframes bounce {
-      0%,100% { transform: rotate(45deg) translateY(0); }
-      50% { transform: rotate(45deg) translateY(7px); }
-    }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(22px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ─── HIGHLIGHTS BAR ─── */
-    #highlights {
-      background: var(--green-deep);
-      padding: 2.25rem 2.5rem;
-    }
-    .highlights-inner {
-      max-width: 1200px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    .hl-item { display: flex; align-items: center; gap: 0.875rem; }
-    .hl-icon {
-      width: 46px; height: 46px; border-radius: 10px;
-      background: rgba(228,168,81,0.14);
-      border: 1px solid rgba(228,168,81,0.22);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; color: var(--amber);
-    }
-    .hl-text h4 {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.95rem; color: var(--gold-light); margin-bottom: 0.15rem;
-    }
-    .hl-text p {
-      font-size: 0.77rem; color: rgba(255,255,255,0.65); line-height: 1.4;
-    }
-
-    /* ─── SECTION COMMONS ─── */
-    .section { padding: 6rem 2.5rem; }
-    .container { max-width: 1200px; margin: 0 auto; }
-    .section-sup {
-      font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase;
-      color: var(--teal); font-family: 'Montserrat', sans-serif; font-weight: 700;
-      margin-bottom: 0.75rem;
-      display: flex; align-items: center; gap: 0.6rem;
-    }
-    .section-sup::before {
-      content: ''; display: inline-block; width: 24px; height: 1.5px; background: var(--teal);
-    }
-    .section-h {
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      color: var(--green-deep); line-height: 1.18; margin-bottom: 1rem;
-    }
-    .section-h em { font-style: italic; color: var(--terra); }
-    .section-desc {
-      font-size: 0.97rem; color: var(--ink-light);
-      line-height: 1.82; max-width: 580px; margin-bottom: 3rem;
-    }
-    .divider-wave { width: 100%; overflow: hidden; line-height: 0; display: block; }
-
-    /* ─── DOG FRIENDLY BANNER ─── */
-    .dog-banner {
-      background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-mid) 100%);
-      padding: 1rem 2.5rem;
-    }
-    .dog-inner {
-      max-width: 1200px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: center;
-      gap: 1.25rem; flex-wrap: wrap;
-    }
-    .dog-badge-pill {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: white; color: var(--green-deep);
-      padding: 0.35rem 1rem; border-radius: 30px;
-      font-size: 0.75rem; font-weight: 700; font-family: 'Montserrat', serif;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-    }
-    .dog-badge-pill .paw { font-size: 1rem; }
-    .dog-text {
-      color: rgba(255,255,255,0.85); font-size: 0.875rem; font-style: italic;
-    }
-
-    /* ─── ACCOMMODATIONS ─── */
-    #alojamientos { background: var(--cream); }
-    .acc-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-    }
-    .acc-card {
-      background: white; border-radius: 12px; overflow: hidden;
-      box-shadow: 0 2px 16px var(--shadow-sm);
-      border: 1px solid rgba(65,82,67,0.06);
-      transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s;
-    }
-    .acc-card:hover { transform: translateY(-6px); box-shadow: 0 20px 55px var(--shadow-md); }
-    .acc-img {
-      height: 230px; position: relative; overflow: hidden;
-    }
-    .acc-img img {
-      width: 100%; height: 100%; object-fit: cover;
-      transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
-    }
-    .acc-card:hover .acc-img img { transform: scale(1.04); }
-    .acc-new {
-      position: absolute; top: 1rem; right: 1rem;
-      background: var(--amber); color: var(--green-deep);
-      padding: 0.28rem 0.75rem; border-radius: 4px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.62rem; font-weight: 800;
-      letter-spacing: 0.14em; text-transform: uppercase;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-    }
-    .acc-body { padding: 1.6rem; }
-    .acc-body h3 {
-      font-size: 1.5rem; color: var(--green-deep); margin-bottom: 0.45rem;
-    }
-    .acc-body p {
-      font-size: 0.88rem; color: var(--ink-light);
-      line-height: 1.75; margin-bottom: 1rem;
-    }
-    .acc-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.1rem; }
-    .tag {
-      background: var(--green-subtle); color: var(--green);
-      padding: 0.22rem 0.65rem; border-radius: 4px;
-      font-size: 0.68rem; font-family: 'Montserrat', sans-serif;
-      font-weight: 600; letter-spacing: 0.03em;
-      border: 1px solid var(--green-pale);
-    }
-    .acc-link {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      color: var(--terra); font-size: 0.85rem; font-weight: 600;
-      text-decoration: none; transition: gap 0.2s;
-    }
-    .acc-link:hover { gap: 0.65rem; }
-    .acc-link .arrow { font-style: normal; }
-
-    /* ─── SERVICES ─── */
-    #servicios { background: var(--cream-dark); }
-    /* Featured Caminito Card */
-    .caminito-featured {
-      background: var(--green-deep); border-radius: 14px;
-      padding: 2.25rem 2.5rem; margin-bottom: 2rem;
-      display: grid; grid-template-columns: 1fr auto;
-      gap: 2rem; align-items: center;
-      box-shadow: 0 8px 35px var(--shadow-md);
-      position: relative; overflow: hidden;
-    }
-    .caminito-featured::before {
-      content: '';
-      position: absolute; top: -30%; right: -5%;
-      width: 50%; height: 160%;
-      background: radial-gradient(ellipse, rgba(200,145,30,0.15) 0%, transparent 70%);
-    }
-    .caminito-featured .cf-star {
-      font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--gold-light); font-family: 'Montserrat', serif; font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-    .caminito-featured h3 {
-      font-size: 1.7rem; color: white; margin-bottom: 0.6rem;
-    }
-    .caminito-featured h3 em { color: var(--gold-light); }
-    .caminito-featured p {
-      font-size: 0.93rem; color: rgba(255,255,255,0.78);
-      line-height: 1.75; max-width: 560px;
-    }
-    .cf-badge {
-      background: rgba(228,168,81,0.12); border: 1px solid rgba(228,168,81,0.25);
-      color: white;
-      padding: 1.5rem 1.75rem; border-radius: 10px;
-      text-align: center; min-width: 185px; flex-shrink: 0;
-    }
-    .cf-badge .cf-icon { color: var(--amber); display: flex; justify-content: center; margin-bottom: 0.7rem; }
-    .cf-badge .cf-title {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.9rem; font-weight: 700; margin-bottom: 0.3rem;
-    }
-    .cf-badge .cf-note {
-      font-size: 0.72rem; opacity: 0.88; line-height: 1.45;
-    }
-    /* Services grid */
-    .svc-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-    }
-    .svc-card {
-      background: white; border-radius: 10px;
-      padding: 1.6rem; box-shadow: 0 2px 12px var(--shadow-sm);
-      border-top: 3px solid transparent;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .svc-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px var(--shadow-md); }
-    .svc-card.c-green   { border-top-color: var(--green); }
-    .svc-card.c-terra   { border-top-color: var(--teal); }
-    .svc-card.c-gold    { border-top-color: var(--amber); }
-    .svc-card.c-water   { border-top-color: var(--teal); }
-    .svc-card.c-grey    { border-top-color: var(--ink-faint); }
-    .svc-icon { color: var(--green); margin-bottom: 1rem; display: flex; align-items: center; }
-    .svc-card.c-gold .svc-icon { color: var(--amber-dark); }
-    .svc-card.c-terra .svc-icon { color: var(--teal); }
-    .svc-card.c-water .svc-icon { color: var(--teal); }
-    .svc-card h3 {
-      font-size: 1.1rem; color: var(--green-deep); margin-bottom: 0.45rem;
-    }
-    .svc-card p {
-      font-size: 0.85rem; color: var(--ink-light);
-      line-height: 1.72; margin-bottom: 0.6rem;
-    }
-    .svc-info {
-      background: var(--cream); border-radius: 5px;
-      padding: 0.55rem 0.8rem; font-size: 0.78rem;
-      color: var(--ink); margin-bottom: 0.4rem; line-height: 1.55;
-    }
-    .svc-info strong { color: var(--green-deep); }
-    .svc-link {
-      display: inline-flex; align-items: center; gap: 0.3rem;
-      color: var(--terra); font-size: 0.78rem; font-weight: 600;
-      text-decoration: none; margin-top: 0.5rem;
-    }
-    .svc-link:hover { text-decoration: underline; }
-    /* Placeholder announcement */
-    .svc-card.coming-soon { border-top-color: var(--gold); opacity: 0.85; }
-    .coming-soon-badge {
-      display: inline-block;
-      background: var(--gold); color: white;
-      font-size: 0.65rem; font-weight: 700;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 0.15rem 0.5rem; border-radius: 3px; margin-bottom: 0.5rem;
-    }
-
-    /* ─── ACTIVITIES ─── */
-    #actividades {
-      background: var(--green-deep); position: relative; overflow: hidden;
-    }
-    #actividades::before {
-      content: ''; position: absolute; top: -40%; right: -15%;
-      width: 55%; height: 130%;
-      background: radial-gradient(ellipse, rgba(78,143,168,0.12) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    #actividades .section-sup { color: var(--gold-light); }
-    #actividades .section-h { color: white; }
-    #actividades .section-desc { color: rgba(255,255,255,0.68); }
-    .act-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1.15rem;
-    }
-    .act-card {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.11);
-      border-radius: 11px; overflow: hidden;
-      transition: background 0.25s, transform 0.25s;
-      text-decoration: none; display: block;
-    }
-    .act-card:hover { background: rgba(255,255,255,0.12); transform: translateY(-4px); }
-    .act-card.span2 { grid-column: span 2; }
-    .act-img {
-      height: 175px; position: relative; overflow: hidden;
-    }
-    .act-card.span2 .act-img { height: 210px; }
-    .act-img img {
-      width: 100%; height: 100%; object-fit: cover; opacity: 0.85;
-      transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), opacity 0.3s;
-    }
-    .act-card:hover .act-img img { transform: scale(1.05); opacity: 0.95; }
-    .act-featured-pill {
-      position: absolute; top: 0.85rem; left: 0.85rem;
-      background: var(--amber); color: var(--green-deep);
-      padding: 0.22rem 0.7rem; border-radius: 3px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.6rem; font-weight: 800;
-      letter-spacing: 0.14em; text-transform: uppercase;
-    }
-    .act-dist {
-      position: absolute; bottom: 0.75rem; right: 0.75rem;
-      background: rgba(0,0,0,0.55); color: white;
-      padding: 0.18rem 0.55rem; border-radius: 4px;
-      font-size: 0.72rem;
-    }
-    .act-body { padding: 1.15rem 1.25rem; }
-    .act-body h3 {
-      font-size: 1.05rem; color: white; margin-bottom: 0.35rem;
-    }
-    .act-card.span2 .act-body h3 { font-size: 1.4rem; color: var(--gold-light); }
-    .act-body p {
-      font-size: 0.8rem; color: rgba(255,255,255,0.63);
-      line-height: 1.6; margin-bottom: 0.75rem;
-    }
-    .act-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.6rem; }
-    .act-tag {
-      background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.78);
-      padding: 0.12rem 0.5rem; border-radius: 3px;
-      font-size: 0.68rem; letter-spacing: 0.04em;
-    }
-    .act-link {
-      display: inline-flex; align-items: center; gap: 0.3rem;
-      color: var(--gold-light); font-size: 0.78rem; font-weight: 600;
-      text-decoration: none;
-    }
-    .act-link:hover { text-decoration: underline; }
-
-    /* Activity modal */
-    .act-modal-overlay {
-      position: fixed; inset: 0; z-index: 1000;
-      background: rgba(26,34,25,0.65); backdrop-filter: blur(6px);
-      display: flex; align-items: center; justify-content: center;
-      opacity: 0; pointer-events: none;
-      transition: opacity 0.35s ease;
-    }
-    .act-modal-overlay.open { opacity: 1; pointer-events: auto; }
-    .act-modal {
-      background: white; border-radius: 14px; overflow: hidden;
-      max-width: 680px; width: 92%; max-height: 90vh;
-      box-shadow: 0 30px 90px rgba(0,0,0,0.35);
-      transform: translateY(30px) scale(0.96);
-      transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
-      overflow-y: auto;
-    }
-    .act-modal-overlay.open .act-modal { transform: translateY(0) scale(1); }
-    .act-modal-img { height: 280px; position: relative; overflow: hidden; }
-    .act-modal-img img { width: 100%; height: 100%; object-fit: cover; }
-    .act-modal-close {
-      position: absolute; top: 1rem; right: 1rem;
-      width: 36px; height: 36px; border-radius: 50%;
-      background: rgba(0,0,0,0.45); backdrop-filter: blur(4px);
-      border: none; color: white; font-size: 1.2rem;
-      cursor: pointer; display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s;
-    }
-    .act-modal-close:hover { background: rgba(0,0,0,0.7); }
-    .act-modal-body { padding: 2rem; }
-    .act-modal-body h3 { font-size: 1.6rem; color: var(--green-deep); margin-bottom: 0.6rem; }
-    .act-modal-body p { font-size: 0.9rem; color: var(--ink-light); line-height: 1.85; margin-bottom: 1rem; }
-    .act-modal-body .act-tags { margin-bottom: 1.2rem; }
-    .act-modal-body .act-tag {
-      background: var(--green-subtle); color: var(--green);
-      border: 1px solid var(--green-pale);
-    }
-
-    /* "Ver todas" button */
-    .section-more {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      margin-top: 2.5rem;
-      padding: 0.7rem 1.8rem; border-radius: 6px;
-      font-family: 'Montserrat', sans-serif; font-size: 0.82rem; font-weight: 700;
-      letter-spacing: 0.05em; cursor: pointer;
-      transition: all 0.25s; text-decoration: none;
-    }
-    .section-more-light {
-      background: white; border: none;
-      color: var(--noir); font-weight: 700;
-      padding: .9rem 2.2rem;
-      box-shadow: 0 4px 20px -6px rgba(0,0,0,0.35);
-    }
-    .section-more-light:hover {
-      background: var(--amber); color: var(--noir);
-      box-shadow: 0 8px 30px -8px rgba(228,168,81,0.5);
-      transform: translateY(-2px);
-    }
-    .section-more-dark {
-      background: var(--noir); border: none;
-      color: var(--bone); font-weight: 700;
-      padding: .9rem 2.2rem;
-      box-shadow: 0 4px 20px -6px rgba(0,0,0,0.25);
-    }
-    .section-more-dark:hover {
-      background: var(--amber); color: var(--noir);
-      box-shadow: 0 8px 30px -8px rgba(228,168,81,0.5);
-      transform: translateY(-2px);
-    }
-
-    /* ─── GALLERY ─── */
-    #galeria { background: var(--cream); }
-    .gallery-filters {
-      display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2rem;
-    }
-    .gf {
-      background: white; border: 1.5px solid var(--cream-dark);
-      color: var(--ink-light); padding: 0.38rem 1rem;
-      border-radius: 22px; font-size: 0.78rem;
-      font-family: 'Montserrat', serif; cursor: pointer;
-      transition: all 0.2s; font-weight: 500;
-    }
-    .gf:hover, .gf.active {
-      background: var(--green-deep); border-color: var(--green-deep); color: white;
-    }
-    .gallery-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 195px; gap: 0.7rem;
-    }
-    .gi { border-radius: 9px; overflow: hidden; position: relative; cursor: pointer; }
-    .gi.w2 { grid-column: span 2; }
-    .gi.t2 { grid-row: span 2; }
-    .gi-bg { width: 100%; height: 100%; }
-    .gi-bg img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1); }
-    .gi:hover .gi-bg img { transform: scale(1.07); }
-    .gi:hover .gi-ov { opacity: 1; }
-    .gi-ov {
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg, transparent 40%, rgba(42,54,40,0.72) 100%);
-      display: flex; align-items: flex-end;
-      padding: 1rem; opacity: 0;
-      transition: opacity 0.3s;
-    }
-    .gi-ov span {
-      color: white; font-family: 'Libre Baskerville', serif;
-      font-size: 0.875rem; font-style: italic;
-    }
-
-    /* ─── FAQ ─── */
-    #faq { background: var(--cream-dark); }
-    .faq-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 0.875rem; align-items: start;
-    }
-    .faq-item {
-      background: white; border-radius: 9px; overflow: hidden;
-      box-shadow: 0 1px 8px var(--shadow-sm);
-    }
-    .faq-q {
-      padding: 1.15rem 1.4rem; cursor: pointer;
-      display: flex; align-items: flex-start; justify-content: space-between;
-      gap: 0.875rem; user-select: none;
-    }
-    .faq-q h4 {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.95rem; color: var(--green-deep); font-weight: 600;
-      line-height: 1.4;
-    }
-    .faq-chevron {
-      width: 22px; height: 22px; flex-shrink: 0; margin-top: 2px;
-      border-radius: 50%; background: var(--green-pale);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--green-deep); font-size: 1rem; font-weight: 700;
-      transition: transform 0.3s, background 0.2s;
-    }
-    .faq-item.open .faq-chevron {
-      transform: rotate(45deg);
-      background: var(--green-deep); color: white;
-    }
-    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-    .faq-item.open .faq-a { max-height: 320px; }
-    .faq-a-inner {
-      padding: 0 1.4rem 1.15rem;
-      border-top: 1px solid var(--cream-dark);
-      padding-top: 0.875rem;
-      font-size: 0.875rem; color: var(--ink-light); line-height: 1.8;
-    }
-    .faq-a-inner a { color: var(--terra); font-weight: 600; }
-
-    /* ─── CONTACT / FOOTER ─── */
-    #contacto {
-      background: var(--green-deep);
-      padding: 5rem 2.5rem 3rem;
-    }
-    .contact-grid {
-      max-width: 1200px; margin: 0 auto;
-      display: grid; grid-template-columns: 1.6fr 1fr 1fr;
-      gap: 4rem; padding-bottom: 3.5rem;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      margin-bottom: 2.5rem;
-    }
-    .ct-brand h2 {
-      font-size: 2.1rem; color: white; margin-bottom: 0.4rem;
-    }
-    .ct-brand h2 em { color: var(--gold-light); font-style: italic; }
-    .ct-brand .ct-sub {
-      font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--gold-light); font-family: 'Montserrat', serif; margin-bottom: 1rem;
-    }
-    .ct-brand p {
-      color: rgba(255,255,255,0.6); font-size: 0.875rem;
-      line-height: 1.78; max-width: 320px; margin-bottom: 1.5rem;
-    }
-    .ct-email {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      color: var(--gold-light); font-size: 0.875rem; text-decoration: none;
-    }
-    .ct-col h4 {
-      font-family: 'Libre Baskerville', serif;
-      color: white; font-size: 1rem; margin-bottom: 1.2rem;
-    }
-    .ct-col ul { list-style: none; }
-    .ct-col ul li { margin-bottom: 0.55rem; }
-    .ct-col ul li a {
-      color: rgba(255,255,255,0.58); text-decoration: none;
-      font-size: 0.85rem; transition: color 0.2s;
-    }
-    .ct-col ul li a:hover { color: var(--gold-light); }
-    .footer-bottom {
-      max-width: 1200px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 0.75rem;
-    }
-    .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.78rem; }
-
-    /* ─── SCROLL REVEAL ─── */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
-    .reveal-d1 { transition-delay: 0.1s; }
-    .reveal-d2 { transition-delay: 0.2s; }
-    .reveal-d3 { transition-delay: 0.3s; }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 900px) {
-      .highlights-inner { grid-template-columns: 1fr 1fr 1fr; }
-      .acc-grid { grid-template-columns: 1fr; }
-      .svc-grid { grid-template-columns: 1fr 1fr; }
-      .caminito-featured { grid-template-columns: 1fr; }
-      .cf-badge { margin: 0 auto; }
-      .act-grid { grid-template-columns: 1fr 1fr; }
-      .act-card.span2 { grid-column: span 2; }
-      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
-      .gi.w2 { grid-column: span 1; }
-      .faq-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    }
-    @media (max-width: 680px) {
-      #nav { padding: 1rem 1.25rem; }
-      #nav.scrolled { padding: 0.7rem 1.25rem; }
-      .nav-links, .nav-right { display: none; }
-      .hamburger { display: flex; }
-      .hamburger { display: flex; }
-      .section { padding: 4rem 1.25rem; }
-      .booking-card { padding: 1.25rem 1rem; }
-      .booking-row { grid-template-columns: 1fr 1fr; }
-      .booking-row .book-btn { grid-column: span 2; }
-      .svc-grid { grid-template-columns: 1fr; }
-      .act-grid { grid-template-columns: 1fr; }
-      .act-card.span2 { grid-column: span 1; }
-      .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; }
-      .gi.w2, .gi.t2 { grid-column: span 1; grid-row: span 1; }
-      .highlights-inner { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-      .caminito-featured { padding: 1.5rem; }
-    }
-  </style>
-
-  <!-- ═════════════════════ AWARD-WINNING OVERRIDES ═════════════════════ -->
-  <style>
-    :root {
-      --display: 'Fraunces', 'Libre Baskerville', Georgia, serif;
-      --sans:    'Bricolage Grotesque', 'Montserrat', system-ui, sans-serif;
-      --noir:    #14180F;
-      --bone:    #F4EFE6;
-      --bone-2:  #ECE5D6;
-    }
-
-    body {
-      font-family: var(--sans);
-      background: var(--bone);
-      color: var(--noir);
-      cursor: none;
-    }
-    h1,h2,h3,h4,h5 { font-family: var(--display); font-weight: 500; letter-spacing: -0.02em; }
-    body::before { opacity: 0.05; mix-blend-mode: multiply; }
-
-    /* ─── CUSTOM CURSOR ─── */
-    .cursor-dot, .cursor-ring {
-      position: fixed; top:0; left:0; pointer-events:none; z-index:10000;
-      transform: translate(-50%,-50%); will-change: transform;
-    }
-    .cursor-dot {
-      width: 6px; height: 6px; border-radius:50%;
-      background: var(--amber); transition: transform .12s ease, background .25s;
-    }
-    .cursor-ring {
-      width: 38px; height: 38px; border-radius:50%;
-      border: 1px solid rgba(20,24,15,0.35);
-      transition: transform .35s cubic-bezier(.22,1,.36,1), width .25s, height .25s, border-color .25s, background .25s;
-      backdrop-filter: invert(0.05);
-    }
-    body.dark-cursor .cursor-ring { border-color: rgba(255,255,255,0.45); }
-    body.dark-cursor .cursor-dot { background: #fff; }
-    .cursor-hover .cursor-ring { width: 70px; height:70px; background: rgba(228,168,81,0.18); border-color: var(--amber); }
-    @media (max-width: 900px) { body { cursor:auto; } .cursor-dot,.cursor-ring{display:none;} }
-
-    /* ─── PROGRESS BAR ─── */
-    .scroll-progress {
-      position: fixed; top:0; left:0; height: 2px; width: 0%;
-      background: linear-gradient(90deg, var(--amber), var(--teal));
-      z-index: 9998; transition: width .08s linear;
-    }
-
-    /* ─── NAV refinement ─── */
-    #nav {
-      padding: 1.1rem 2.5rem;
-      background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.92) 30%, rgba(255,255,255,0.6) 60%, rgba(255,255,255,0.15) 85%, rgba(255,255,255,0) 100%);
-      border-bottom: none;
-      padding-bottom: 4rem;
-    }
-    #nav .nav-logo img { filter: none; height: 72px; transition: height .5s ease; }
-    #nav.scrolled .nav-logo img { height: 58px; }
-    #nav.scrolled { padding-bottom: 2.5rem; }
-    .nav-links a { color: var(--noir); font-family: var(--sans); font-weight: 500; font-size: .78rem; text-transform: uppercase; }
-    .nav-links a:hover { color: var(--amber-dark); background: transparent; }
-    .lang-btn { color: var(--noir); border-color: rgba(20,24,15,0.3); background: transparent; }
-    .lang-btn:hover { background: var(--noir); color: var(--bone); border-color: var(--noir); }
-    .nav-cta {
-      background: var(--amber); border-radius: 100px; padding: .7rem 1.6rem;
-      font-family: var(--sans); font-weight: 600; letter-spacing: .04em;
-      border: 1px solid var(--amber); color: var(--noir);
-    }
-    /* Language dropdown */
-    .lang-dropdown { position: relative; }
-    .lang-btn {
-      border-radius: 100px; display: inline-flex; align-items: center; gap: .4rem;
-      padding: .4rem .9rem; font-family: var(--sans); font-size: .72rem;
-      font-weight: 600; letter-spacing: .1em;
-    }
-    .lang-btn svg { transition: transform .25s; }
-    .lang-dropdown.open .lang-btn svg { transform: rotate(180deg); }
-    .lang-menu {
-      position: absolute; top: calc(100% + .5rem); right: 0;
-      background: var(--bone); border: 1px solid rgba(20,24,15,0.1);
-      border-radius: 10px; padding: .35rem; min-width: 140px;
-      box-shadow: 0 12px 40px -12px rgba(0,0,0,0.2);
-      opacity: 0; transform: translateY(-6px); pointer-events: none;
-      transition: opacity .25s, transform .25s;
-    }
-    .lang-dropdown.open .lang-menu { opacity: 1; transform: translateY(0); pointer-events: auto; }
-    .lang-option {
-      display: block; width: 100%; text-align: left;
-      background: none; border: none; padding: .55rem .9rem;
-      font-family: var(--sans); font-size: .78rem; color: var(--noir);
-      cursor: pointer; border-radius: 7px; transition: background .15s;
-    }
-    .lang-option:hover { background: rgba(20,24,15,0.06); }
-    .lang-option.active { font-weight: 700; color: var(--amber-dark); }
-
-    /* ─── HERO: editorial wow ─── */
-    #hero {
-      min-height: 100vh; padding: 0;
-      background: var(--noir);
-      display: block;
-      overflow: visible;
-    }
-    .hero-photo { inset: 0; overflow: hidden; }
-    .hero-photo img, .hero-photo video {
-      width: 100%; height: 100%; object-fit: cover;
-      opacity: .65;
-      transform: scale(1.08);
-      filter: contrast(1.05) saturate(1.05);
-      will-change: transform;
-    }
-    .hero-overlay {
-      background:
-        radial-gradient(ellipse at 75% 20%, rgba(228,168,81,0.18), transparent 55%),
-        linear-gradient(180deg, rgba(20,24,15,0.55) 0%, rgba(20,24,15,0.15) 35%, rgba(20,24,15,0.85) 100%);
-    }
-
-    .hero-content {
-      position: static !important; padding: 0 !important; max-width: none !important;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr auto;
-      align-items: end;
-    }
-    .hero-meta, .hero-coords { display: none !important; }
-
-    .hero-headline {
-      position: absolute; left: 0; bottom: 8rem;
-      padding: 0 4vw;
-      pointer-events: none;
-      text-align: left;
-      max-width: 65%;
-    }
-    .hero-headline .line {
-      display: block;
-      font-family: var(--display);
-      font-size: clamp(2.2rem, 7.4vw, 7.4rem);
-      line-height: .95;
-      color: #fff;
-      font-weight: 300;
-      letter-spacing: -0.035em;
-      font-variation-settings: "opsz" 144, "SOFT" 0;
-    }
-    .hero-headline .line .word {
-      display: inline-block; overflow: hidden; vertical-align: bottom;
-      line-height: 1.15; padding-bottom: 0.22em;
-    }
-    .hero-headline .line .word > span {
-      display: inline-block; transform: translateY(110%);
-      animation: wordRise 1.1s cubic-bezier(.22,1,.36,1) forwards;
-      padding-right: 0.06em;
-    }
-    .hero-headline .line.l1 { margin-bottom: -0.42em; }
-    .hero-headline .line.l2 .word:nth-child(1) > span { animation-delay: .25s; }
-    .hero-headline .line.l2 .word:nth-child(2) > span { animation-delay: .35s; }
-    .hero-headline .hl-italic {
-      font-style: italic; color: var(--amber-light); font-weight: 400;
-      font-family: var(--display);
-    }
-    .hero-headline .hl-sans {
-      font-family: var(--sans); font-style: normal;
-      font-weight: 500; letter-spacing: .04em;
-      font-size: .55em; vertical-align: 0.85em;
-      color: rgba(255,255,255,0.7);
-      text-transform: uppercase;
-      margin-left: .3em;
-    }
-    @keyframes wordRise { to { transform: translateY(0); } }
-
-    .hero-headline .number {
-      display: none;
-      font-family: var(--sans); font-size: .62rem; letter-spacing: .3em;
-      color: rgba(255,255,255,0.55); vertical-align: super;
-      margin-left: .5rem; text-transform: uppercase;
-    }
-
-    .hero-bottom {
-      position: absolute; right: 0; bottom: 11rem;
-      padding: 0 4vw;
-      display: flex; justify-content: flex-end;
-      z-index: 5;
-    }
-    .hero-bottom .lead {
-      max-width: 340px;
-      color: rgba(255,255,255,0.82);
-      font-family: var(--sans); font-size: 1.05rem; line-height: 1.7;
-      font-weight: 300;
-      opacity: 0; animation: fadeUp 1s 1.2s ease both;
-    }
-    .hero-bottom .lead::before {
-      content:''; display:block; width: 36px; height:1px; background: var(--amber); margin-bottom: 1rem;
-    }
-    .hero-bottom .center-mark, .hero-bottom .scroll-cue { display: none !important; }
-    .hero-bottom .center-mark {
-      text-align: center;
-      color: rgba(255,255,255,0.55);
-      font-family: var(--sans); font-size: .65rem; letter-spacing: .3em;
-      text-transform: uppercase;
-      opacity: 0; animation: fadeUp 1s 1.4s ease both;
-    }
-    .hero-bottom .center-mark strong {
-      display:block; font-family: var(--display); font-style: italic;
-      font-size: 1.6rem; color: #fff; font-weight: 400; letter-spacing: -.01em;
-      margin-bottom: .25rem;
-    }
-    .hero-bottom .scroll-cue {
-      justify-self: end; text-align: right;
-      color: rgba(255,255,255,0.6);
-      font-family: var(--sans); font-size: .65rem; letter-spacing: .3em;
-      text-transform: uppercase;
-      opacity: 0; animation: fadeUp 1s 1.6s ease both;
-    }
-    .hero-bottom .scroll-cue .bar {
-      display: inline-block; width: 1px; height: 60px;
-      background: linear-gradient(180deg, transparent, #fff);
-      margin-top: .8rem;
-      animation: scrollBar 2.4s ease-in-out infinite;
-      transform-origin: top;
-    }
-    @keyframes scrollBar {
-      0% { transform: scaleY(0); }
-      50% { transform: scaleY(1); }
-      100% { transform: scaleY(0); transform-origin: bottom; }
-    }
-
-    .hero-content > .hero-badge,
-    .hero-content > .hero-title,
-    .hero-content > .hero-sub,
-    .scroll-hint { display: none !important; }
-
-    /* ─── FLOATING RESERVE BUTTON + BOOKING POPUP ─── */
-    .floating-reserve {
-      position: fixed; left: 0; right: 0; bottom: 2.2rem;
-      margin-inline: auto; width: max-content;
-      transform: translateX(0);
-      z-index: 1200;
-      display: inline-flex; align-items: center; gap: .9rem;
-      background: var(--noir); color: var(--bone);
-      padding: 1.05rem 2rem 1.05rem 1.4rem;
-      border-radius: 100px;
-      font-family: var(--sans); font-weight: 600;
-      font-size: .78rem; letter-spacing: .15em; text-transform: uppercase;
-      cursor: pointer; border: none;
-      box-shadow:
-        0 0 0 1px rgba(228,168,81,0.55),
-        0 0 0 6px rgba(228,168,81,0.12),
-        0 18px 50px -10px rgba(228,168,81,0.45),
-        0 24px 60px -18px rgba(0,0,0,0.6);
-      animation: fabPulse 2.8s ease-in-out infinite;
-      transition: transform .55s cubic-bezier(.22,1,.36,1), background .3s, color .3s, padding .4s, border-radius .4s, bottom .55s cubic-bezier(.22,1,.36,1), box-shadow .4s;
-    }
-    @keyframes fabPulse {
-      0%, 100% {
-        box-shadow:
-          0 0 0 1px rgba(228,168,81,0.55),
-          0 0 0 6px rgba(228,168,81,0.10),
-          0 18px 50px -10px rgba(228,168,81,0.40),
-          0 24px 60px -18px rgba(0,0,0,0.6);
-      }
-      50% {
-        box-shadow:
-          0 0 0 1px rgba(228,168,81,0.8),
-          0 0 0 12px rgba(228,168,81,0.18),
-          0 22px 60px -8px rgba(228,168,81,0.55),
-          0 24px 60px -18px rgba(0,0,0,0.6);
-      }
-    }
-    .floating-reserve { opacity: 0; animation: fabPulse 2.8s ease-in-out infinite, fadeUp 1s 1.6s ease both; }
-    .floating-reserve:hover { background: var(--amber); color: var(--noir); transform: translateY(-3px); }
-    .floating-reserve .fr-dot {
-      width: 32px; height: 32px; border-radius: 50%;
-      background: var(--amber); color: var(--noir);
-      display: inline-flex; align-items: center; justify-content: center;
-      transition: background .25s, transform .4s;
-    }
-    .floating-reserve:hover .fr-dot { background: var(--noir); color: var(--amber); }
-    .floating-reserve .fr-dot svg { width: 14px; height: 14px; transition: opacity .3s, transform .3s; }
-    .floating-reserve .fr-x { display: none; }
-    body.booking-open .floating-reserve .fr-arrow { display: none; }
-    body.booking-open .floating-reserve .fr-x { display: block; }
-
-    /* Open state: morph into circular X above the card */
-    body.booking-open .floating-reserve {
-      padding: 0; width: 56px; height: 56px;
-      background: var(--amber); color: var(--noir);
-      gap: 0;
-      box-shadow: 0 18px 50px -12px rgba(0,0,0,0.5);
-    }
-    body.booking-open .floating-reserve .fr-label { display: none; }
-    body.booking-open .floating-reserve .fr-dot {
-      width: 56px; height: 56px; background: transparent; color: var(--noir);
-    }
-    body.booking-open .floating-reserve .fr-dot svg { transform: none; }
-    body.booking-open .floating-reserve:hover { background: var(--noir); color: var(--amber); transform: scale(1.05); }
-    body.booking-open .floating-reserve:hover .fr-dot { color: var(--amber); }
-
-    /* Booking popup overlay — slides up from bottom */
-    .booking-overlay {
-      position: fixed; inset: 0; z-index: 1100;
-      background: rgba(20,24,15,0.55);
-      backdrop-filter: blur(10px);
-      display: flex; align-items: flex-end; justify-content: center;
-      padding: 0 1.5rem 1.5rem;
-      opacity: 0; pointer-events: none;
-      transition: opacity .5s ease;
-    }
-    .booking-overlay.open { opacity: 1; pointer-events: auto; }
-
-    .booking-card {
-      position: relative !important;
-      left: auto !important; bottom: auto !important;
-      transform: translateY(120%) !important;
-      max-width: 1100px; width: 100%;
-      background: var(--bone);
-      border-radius: 28px;
-      padding: 3rem 3rem 2.5rem;
-      margin-bottom: 0;
-      box-shadow: 0 30px 80px -20px rgba(0,0,0,0.55);
-      border-top: 4px solid var(--amber);
-      animation: none !important;
-      transition: transform .7s cubic-bezier(.22,1,.36,1);
-    }
-    .booking-overlay.open .booking-card { transform: translateY(0) !important; }
-    .booking-close { display: none !important; }
-
-    .booking-close {
-      position: absolute; top: 1rem; right: 1rem;
-      width: 42px; height: 42px; border-radius: 50%;
-      background: transparent; border: 1px solid rgba(20,24,15,0.2);
-      cursor: pointer; display: flex; align-items: center; justify-content: center;
-      color: var(--noir); font-size: 1.1rem;
-      transition: background .2s, transform .25s, border-color .2s;
-    }
-    .booking-close:hover { background: var(--noir); color: var(--bone); border-color: var(--noir); transform: rotate(90deg); }
-
-    .booking-eyebrow {
-      font-family: var(--sans); font-size: .65rem; letter-spacing: .3em;
-      text-transform: uppercase; color: var(--amber-dark); font-weight: 600;
-      margin-bottom: .6rem;
-      display: flex; align-items: center; gap: .8rem;
-    }
-    .booking-eyebrow::before { content:''; width: 28px; height: 1px; background: var(--amber-dark); }
-    .booking-headline {
-      font-family: var(--display); font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-      font-weight: 300; line-height: 1; letter-spacing: -.02em;
-      color: var(--noir); margin-bottom: 2rem;
-    }
-    .booking-headline em { font-style: italic; color: var(--amber-dark); }
-    .booking-title { font-family: var(--sans); font-weight: 600; color: var(--noir); font-size: .7rem; letter-spacing: .25em; }
-    .bf label { font-family: var(--sans); }
-    .bf input, .bf select { font-family: var(--sans); border-radius: 0; border: 1px solid rgba(20,24,15,0.18); }
-    .book-btn {
-      background: var(--noir); color: var(--bone);
-      font-family: var(--sans); font-weight: 600; letter-spacing: .08em;
-      text-transform: uppercase; font-size: .8rem;
-      border-radius: 0; padding: .9rem 2rem;
-      position: relative; overflow: hidden;
-    }
-    .book-btn::after {
-      content:''; position:absolute; inset:0;
-      background: var(--amber); transform: translateY(100%);
-      transition: transform .4s cubic-bezier(.22,1,.36,1); z-index: -1;
-    }
-    .book-btn:hover { background: var(--noir); color: var(--noir); }
-    .book-btn:hover::after { transform: translateY(0); }
-    .book-btn { z-index: 1; }
-
-    /* ─── MARQUEE STRIPS ─── */
-    .marquee {
-      background: var(--noir); color: var(--bone);
-      padding: .9rem 0; overflow: hidden;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      margin-top: 0;
-    }
-    .marquee-track {
-      display: flex; gap: 2.2rem; white-space: nowrap;
-      animation: marqueeScroll 90s linear infinite;
-      width: max-content; align-items: center;
-    }
-    .marquee span {
-      font-family: var(--display); font-style: italic;
-      font-size: clamp(1rem, 1.8vw, 1.5rem); font-weight: 300;
-      letter-spacing: -.01em; line-height: 1.4; padding-bottom: .12em;
-    }
-    .marquee .dot { font-size: .8rem; }
-    .marquee span:nth-child(odd) { color: var(--bone); }
-    .marquee span:nth-child(even) { color: var(--amber); -webkit-text-stroke: 1px var(--amber); -webkit-text-fill-color: transparent; }
-    .marquee .dot { font-style: normal; color: var(--amber); -webkit-text-fill-color: var(--amber); }
-    @keyframes marqueeScroll {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
-    }
-
-    /* ─── HIGHLIGHTS reframed ─── */
-    #highlights {
-      background: var(--bone-2);
-      padding: 4rem 3rem;
-    }
-    .highlights-inner { grid-template-columns: repeat(3, 1fr); gap: 3rem; }
-    .hl-item { flex-direction: column; align-items: flex-start; gap: 1.2rem; padding-right: 2rem; border-left: 1px solid rgba(20,24,15,0.15); padding-left: 1.5rem; }
-    .hl-icon { background: transparent; border: none; color: var(--noir); width:auto; height:auto; }
-    .hl-text h4 { color: var(--noir); font-family: var(--display); font-size: 1.35rem; font-weight: 400; }
-    .hl-text p { color: rgba(20,24,15,0.6); font-size: .82rem; font-family: var(--sans); }
-    .hl-item::before {
-      content: counter(hl, decimal-leading-zero);
-      counter-increment: hl;
-      font-family: var(--sans); font-size: .65rem; letter-spacing: .25em;
-      color: var(--amber-dark); font-weight: 600;
-    }
-    .highlights-inner { counter-reset: hl; }
-
-    /* ─── SECTION COMMONS reframed ─── */
-    .section { padding: 9rem 3rem; }
-    .container { max-width: 1320px; }
-    .section-sup { font-family: var(--sans); color: var(--amber-dark); font-size: .7rem; letter-spacing: .3em; }
-    .section-sup::before { background: var(--amber-dark); width: 32px; }
-    .section-h {
-      font-family: var(--display);
-      font-size: clamp(2.6rem, 7vw, 6rem);
-      line-height: .92;
-      color: var(--noir);
-      font-weight: 300;
-      letter-spacing: -.035em;
-      margin-bottom: 2rem;
-      max-width: 16ch;
-    }
-    .section-h em { font-style: italic; color: var(--noir); font-family: var(--display); position: relative; }
-    .section-h em::after {
-      content:''; position:absolute; left:0; right: 0; bottom: -.05em;
-      height: 8px; background: var(--amber); z-index: -1; opacity: .7;
-    }
-    .section-desc { font-family: var(--sans); font-size: 1rem; color: rgba(20,24,15,0.65); max-width: 540px; }
-
-    /* ─── ACCOMMODATIONS bento ─── */
-    #alojamientos { background: var(--bone); }
-    .acc-grid {
-      grid-template-columns: 1.4fr 1fr;
-      gap: 1.2rem;
-    }
-    .acc-card {
-      border-radius: 0;
-      background: var(--noir);
-      border: none;
-      box-shadow: none;
-      position: relative;
-      overflow: hidden;
-    }
-    .acc-card:nth-child(1) { grid-row: span 1; }
-    .acc-card:hover { transform: none; box-shadow: none; }
-    .acc-img { height: 460px; }
-    .acc-card:nth-child(2) .acc-img { height: 460px; }
-    .acc-img img { opacity: .85; transition: transform .9s cubic-bezier(.22,1,.36,1), opacity .4s; }
-    .acc-card:hover .acc-img img { transform: scale(1.08); opacity: 1; }
-    .acc-img::after {
-      content:''; position:absolute; inset:0;
-      background: linear-gradient(180deg, transparent 30%, rgba(20,24,15,0.85) 100%);
-    }
-    .acc-body {
-      position: absolute; left:0; right:0; bottom:0;
-      padding: 2rem 2.2rem; color: #fff; z-index: 2;
-    }
-    .acc-body h3 {
-      font-family: var(--display); font-size: 2.2rem; font-weight: 400;
-      color: #fff; margin-bottom: .5rem; letter-spacing: -.02em;
-    }
-    .acc-body p {
-      color: rgba(255,255,255,0.72); font-family: var(--sans);
-      font-size: .82rem; max-width: 380px; margin-bottom: 1rem;
-    }
-    .acc-tags { display: none; }
-    .acc-link {
-      color: var(--amber-light); font-family: var(--sans);
-      font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
-      font-weight: 600;
-    }
-    .acc-link .arrow { transition: transform .35s; display:inline-block; }
-    .acc-card:hover .acc-link .arrow { transform: translateX(8px); }
-    .acc-new {
-      background: var(--amber); border-radius: 0;
-      font-family: var(--sans);
-    }
-    .acc-card::before {
-      content: counter(acc, decimal-leading-zero);
-      position: absolute; top: 1.5rem; left: 1.8rem; z-index: 3;
-      counter-increment: acc;
-      font-family: var(--sans); font-size: .65rem; letter-spacing: .25em;
-      color: rgba(255,255,255,0.7); font-weight: 600;
-    }
-    .acc-grid { counter-reset: acc; }
-
-    /* ─── SERVICES ─── */
-    #servicios { background: var(--bone-2); }
-    .caminito-featured {
-      border-radius: 0; background: var(--noir);
-      padding: 4rem 3.5rem;
-      grid-template-columns: 1.5fr auto;
-      box-shadow: none;
-    }
-    .caminito-featured h3 { font-family: var(--display); font-size: 3rem; font-weight: 300; color:#fff; letter-spacing: -.02em; }
-    .caminito-featured h3 em { color: var(--amber-light); }
-    .cf-badge { border-radius: 0; }
-
-    .svc-grid { grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid rgba(20,24,15,0.15); }
-    .svc-card {
-      background: transparent; border-radius: 0; box-shadow: none;
-      border-top: none; border-right: 1px solid rgba(20,24,15,0.15); border-bottom: 1px solid rgba(20,24,15,0.15);
-      padding: 2.2rem 2rem;
-      transition: background .35s;
-    }
-    .svc-card:nth-child(3n) { border-right: none; }
-    .svc-card:hover { background: rgba(20,24,15,0.03); transform: none; box-shadow: none; }
-    .svc-card h3 { font-family: var(--display); font-size: 1.55rem; font-weight: 400; }
-    .svc-card p { font-family: var(--sans); }
-    .svc-icon svg { width: 36px; height: 36px; }
-
-    /* ─── ACTIVITIES ─── */
-    #actividades { background: var(--noir); padding: 9rem 3rem; }
-    body.in-dark, .in-dark { } /* placeholder */
-    #actividades .section-h { color: #fff; }
-    #actividades .section-h em { color:#fff; }
-    #actividades .section-h em::after { background: var(--amber); opacity: .8; }
-    .act-grid { grid-template-columns: repeat(12, 1fr); gap: 1rem; }
-    .act-card {
-      grid-column: span 4; border-radius: 0;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      transition: transform .5s cubic-bezier(.22,1,.36,1), background .35s;
-    }
-    .act-card:nth-child(1) { grid-column: span 7; }
-    .act-card:nth-child(2) { grid-column: span 5; }
-    .act-card:nth-child(3) { grid-column: span 5; }
-    .act-card:nth-child(4) { grid-column: span 4; }
-    .act-card:nth-child(5) { grid-column: span 3; }
-    .act-card:nth-child(6) { grid-column: span 6; }
-    .act-card:nth-child(7) { grid-column: span 6; }
-    .act-card.span2 { grid-column: span 7; }
-    .act-img { height: 280px; }
-    .act-card:nth-child(1) .act-img,
-    .act-card.span2 .act-img { height: 360px; }
-    .act-card:hover { transform: translateY(-4px); }
-    .act-img img { opacity: .75; }
-    .act-card:hover .act-img img { opacity: 1; transform: scale(1.06); }
-    .act-body h3 { font-family: var(--display); font-size: 1.4rem; font-weight: 400; color:#fff; }
-    .act-card.span2 .act-body h3, .act-card:nth-child(1) .act-body h3 { font-size: 2rem; color: var(--amber-light); }
-    .act-featured-pill { background: var(--amber); border-radius: 0; }
-
-    /* ─── GALLERY ─── */
-    #galeria { background: var(--bone); }
-    .gallery-grid { gap: 1rem; grid-auto-rows: 220px; }
-    .gi { border-radius: 0; }
-    .gi-bg img { transition: transform 1s cubic-bezier(.22,1,.36,1), filter .5s; filter: grayscale(20%); }
-    .gi:hover .gi-bg img { transform: scale(1.06); filter: none; }
-    .gf { border-radius: 0; font-family: var(--sans); border: 1px solid rgba(20,24,15,0.2); background: transparent; text-transform: uppercase; font-size: .7rem; letter-spacing: .12em; }
-    .gf:hover, .gf.active { background: var(--noir); border-color: var(--noir); }
-
-    /* ─── FAQ ─── */
-    #faq { background: var(--bone-2); }
-    .faq-item { border-radius: 0; box-shadow: none; background: transparent; border-bottom: 1px solid rgba(20,24,15,0.15); }
-    .faq-grid { grid-template-columns: 1fr; gap: 0; max-width: 900px; margin: 0 auto; }
-    .faq-q { padding: 1.8rem 0; }
-    .faq-q h4 { font-family: var(--display); font-size: 1.3rem; font-weight: 400; }
-    .faq-a-inner { padding: 0 0 1.5rem; border-top: none; font-family: var(--sans); }
-    .faq-chevron { background: transparent; border: 1px solid rgba(20,24,15,0.3); }
-
-    /* ─── FOOTER ─── */
-    #contacto { background: var(--noir); padding: 8rem 3rem 3rem; }
-    .ct-brand h2 { font-family: var(--display); font-size: clamp(3rem, 8vw, 7rem); font-weight: 300; line-height: .9; letter-spacing: -.03em; }
-    .ct-brand h2 em { color: var(--amber-light); }
-    .ct-col h4 { font-family: var(--sans); font-size: .72rem; letter-spacing: .25em; text-transform: uppercase; color: var(--amber-light); }
-
-    /* ─── REVEAL upgrades ─── */
-    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 1s cubic-bezier(.22,1,.36,1), transform 1s cubic-bezier(.22,1,.36,1); }
-    .reveal.visible { opacity: 1; transform: none; }
-
-    /* Section header — split words */
-    .split-word { display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.12em; }
-    .split-word > span { display: inline-block; transform: translateY(110%); transition: transform 1s cubic-bezier(.22,1,.36,1); }
-    .reveal.visible .split-word > span { transform: translateY(0); }
-    .reveal.visible .split-word:nth-child(2) > span { transition-delay: .08s; }
-    .reveal.visible .split-word:nth-child(3) > span { transition-delay: .16s; }
-    .reveal.visible .split-word:nth-child(4) > span { transition-delay: .24s; }
-    .reveal.visible .split-word:nth-child(5) > span { transition-delay: .32s; }
-    .reveal.visible .split-word:nth-child(6) > span { transition-delay: .40s; }
-    .reveal.visible .split-word:nth-child(7) > span { transition-delay: .48s; }
-    .reveal.visible .split-word:nth-child(8) > span { transition-delay: .56s; }
-
-    /* Magnetic CTA hover state via class */
-    .magnetic { display: inline-block; }
-
-    /* Section index marker */
-    .sec-index {
-      font-family: var(--sans); font-size: .65rem; letter-spacing: .3em;
-      text-transform: uppercase; color: var(--amber-dark); font-weight: 600;
-      display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;
-    }
-    .sec-index::before { content:''; width: 36px; height: 1px; background: var(--amber-dark); }
-
-    /* ─── RESPONSIVE override ─── */
-    @media (max-width: 1100px) {
-      .acc-grid { grid-template-columns: 1fr; }
-      .act-card,
-      .act-card:nth-child(n) { grid-column: span 12 !important; }
-      .hero-meta, .hero-coords { display: none; }
-      .hero-headline { top: 18vh; }
-      .hero-bottom { grid-template-columns: 1fr; gap: 1rem; }
-      .hero-bottom .center-mark, .hero-bottom .scroll-cue { display: none; }
-      .booking-card { width: calc(100% - 2.5rem); padding: 1.2rem 1.4rem; }
-      .marquee { margin-top: 100px; }
-      #nav { padding: 1rem 1.5rem; }
-      .section { padding: 6rem 1.5rem; }
-      .svc-grid { grid-template-columns: 1fr; }
-      .svc-card { border-right: none; }
-      body { cursor: auto; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -1443,12 +19,12 @@
     <img src="logo.svg" alt="Camping Parque Ardales">
   </a>
   <ul class="nav-links">
-    <li><a href="#alojamientos"><span class="es">Alojamientos</span><span class="en">Accommodation</span></a></li>
-    <li><a href="#servicios"><span class="es">Servicios</span><span class="en">Services</span></a></li>
-    <li><a href="#actividades"><span class="es">Actividades</span><span class="en">Activities</span></a></li>
-    <li><a href="#galeria"><span class="es">Galería</span><span class="en">Gallery</span></a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#contacto"><span class="es">Contacto</span><span class="en">Contact</span></a></li>
+    <li><a href="camping.html">Camping</a></li>
+    <li><a href="apartamentos.html"><span class="es">Apartamentos</span><span class="en">Apartments</span></a></li>
+    <li><a href="servicios.html"><span class="es">Servicios</span><span class="en">Services</span></a></li>
+    <li><a href="actividades.html"><span class="es">Actividades</span><span class="en">Activities</span></a></li>
+    <li><a href="galeria.html"><span class="es">Galería</span><span class="en">Gallery</span></a></li>
+    <li><a href="contacto.html"><span class="es">Contacto</span><span class="en">Contact</span></a></li>
   </ul>
   <div class="nav-right">
     <div class="lang-dropdown" id="langDropdown">
@@ -1467,12 +43,12 @@
 
 <!-- Mobile menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#alojamientos" class="mob-link"><span class="es">Alojamientos</span><span class="en">Accommodation</span></a>
-  <a href="#servicios" class="mob-link"><span class="es">Servicios</span><span class="en">Services</span></a>
-  <a href="#actividades" class="mob-link"><span class="es">Actividades</span><span class="en">Activities</span></a>
-  <a href="#galeria" class="mob-link"><span class="es">Galería</span><span class="en">Gallery</span></a>
-  <a href="#faq" class="mob-link">FAQ</a>
-  <a href="#contacto" class="mob-link"><span class="es">Contacto</span><span class="en">Contact</span></a>
+  <a href="camping.html" class="mob-link">Camping</a>
+  <a href="apartamentos.html" class="mob-link"><span class="es">Apartamentos</span><span class="en">Apartments</span></a>
+  <a href="servicios.html" class="mob-link"><span class="es">Servicios</span><span class="en">Services</span></a>
+  <a href="actividades.html" class="mob-link"><span class="es">Actividades</span><span class="en">Activities</span></a>
+  <a href="galeria.html" class="mob-link"><span class="es">Galería</span><span class="en">Gallery</span></a>
+  <a href="contacto.html" class="mob-link"><span class="es">Contacto</span><span class="en">Contact</span></a>
 </div>
 
 <!-- ─────────────────────────── HERO ─────────────────────────── -->
@@ -1525,48 +101,7 @@
       <span class="en">Family campsite on the shores of the Conde de Guadalhorce Reservoir. Apartments, pitches, activities and pristine nature in the heart of Málaga.</span>
     </p>
 
-    <!-- Booking Widget (moved into popup overlay below) -->
-    <div class="booking-card" id="booking">
-      <button class="booking-close" id="bookingClose" aria-label="Close">✕</button>
-      <p class="booking-eyebrow"><span class="es">Reserva tu estancia</span><span class="en">Book your stay</span></p>
-      <h3 class="booking-headline"><span class="es">Tu refugio en la <em>naturaleza</em></span><span class="en">Your retreat in <em>nature</em></span></h3>
-      <div class="booking-row">
-        <div class="bf">
-          <label><span class="es">Llegada</span><span class="en">Arrival</span></label>
-          <input type="date" id="checkin">
-        </div>
-        <div class="bf">
-          <label><span class="es">Salida</span><span class="en">Departure</span></label>
-          <input type="date" id="checkout">
-        </div>
-        <div class="bf">
-          <label><span class="es">Adultos</span><span class="en">Adults</span></label>
-          <select id="adults">
-            <option>1</option><option selected>2</option><option>3</option>
-            <option>4</option><option>5</option><option>6</option>
-            <option>7</option><option>8</option>
-          </select>
-        </div>
-        <div class="bf">
-          <label><span class="es">Niños</span><span class="en">Children</span></label>
-          <select id="children" onchange="updateChildAges()">
-            <option value="0">0</option><option value="1">1</option>
-            <option value="2">2</option><option value="3">3</option>
-            <option value="4">4</option><option value="5">5</option>
-            <option value="6">6</option>
-          </select>
-        </div>
-        <button class="book-btn" onclick="doSearch()">
-          <span class="es">Buscar</span>
-          <span class="en">Search</span>
-        </button>
-      </div>
-      <div class="children-ages-row" id="childAgesRow">
-        <span class="age-label es">Edad de los niños:</span>
-        <span class="age-label en">Children's ages:</span>
-        <div id="ageSelects" style="display:flex;gap:0.5rem;flex-wrap:wrap;"></div>
-      </div>
-    </div>
+    <!-- Booking card injected by scripts.js -->
   </div>
 
   <div class="scroll-hint">
@@ -1666,7 +201,7 @@
       <!-- Apartments -->
       <div class="acc-card reveal">
         <div class="acc-img">
-          <img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=800&q=80" alt="Apartamentos" loading="lazy">
+          <img src="images/Bung-exterior1.webp" alt="Apartamentos" loading="lazy">
         </div>
         <div class="acc-body">
           <h3><span class="es">Apartamentos</span><span class="en">Apartments</span></h3>
@@ -1677,34 +212,34 @@
             <span class="tag"><span class="es">Vistas al embalse</span><span class="en">Reservoir views</span></span>
             <span class="tag">A/C</span>
           </div>
-          <a href="#booking" class="acc-link"><span class="es">Ver disponibilidad</span><span class="en">Check availability</span> <span class="arrow">→</span></a>
+          <a href="apartamentos.html" class="acc-link"><span class="es">Ver detalles y tarifas</span><span class="en">Details &amp; rates</span> <span class="arrow">→</span></a>
         </div>
       </div>
 
       <!-- Tent pitches -->
       <div class="acc-card reveal reveal-d1">
         <div class="acc-img">
-          <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80" alt="Parcelas para tiendas" loading="lazy">
+          <img src="images/TIENDAS 2.webp" alt="Parcelas para tiendas" loading="lazy">
         </div>
         <div class="acc-body">
-          <h3><span class="es">Parcelas para Tiendas</span><span class="en">Tent Pitches</span></h3>
+          <h3><span class="es">Parcelas para tiendas</span><span class="en">Tent Pitches</span></h3>
           <p><span class="es">Parcelas con sombra natural rodeadas de vegetación. Delimitadas y con acceso a todos los servicios del camping.</span><span class="en">Naturally shaded pitches surrounded by vegetation. Marked out with access to all campsite services.</span></p>
           <div class="acc-tags">
             <span class="tag"><span class="es">Electricidad</span><span class="en">Electricity</span></span>
             <span class="tag"><span class="es">Agua corriente</span><span class="en">Running water</span></span>
             <span class="tag"><span class="es">Zona sombreada</span><span class="en">Shaded area</span></span>
           </div>
-          <a href="#booking" class="acc-link"><span class="es">Ver disponibilidad</span><span class="en">Check availability</span> <span class="arrow">→</span></a>
+          <a href="camping.html#tiendas" class="acc-link"><span class="es">Ver detalles y tarifas</span><span class="en">Details &amp; rates</span> <span class="arrow">→</span></a>
         </div>
       </div>
 
       <!-- Caravan pitches -->
       <div class="acc-card reveal">
         <div class="acc-img">
-          <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=800&q=80" alt="Parcelas para caravanas" loading="lazy">
+          <img src="images/Caravanas 1.webp" alt="Parcelas para caravanas" loading="lazy">
         </div>
         <div class="acc-body">
-          <h3><span class="es">Parcelas para Caravanas</span><span class="en">Caravan Pitches</span></h3>
+          <h3><span class="es">Parcelas para caravanas</span><span class="en">Caravan Pitches</span></h3>
           <p><span class="es">Parcelas amplias con toma de agua, electricidad y desagüe. Acceso fácil para autocaravanas y caravanas de todos los tamaños.</span><span class="en">Spacious pitches with water, electricity and drainage. Easy access for motorhomes and caravans of all sizes.</span></p>
           <div class="acc-tags">
             <span class="tag">16A</span>
@@ -1712,19 +247,19 @@
             <span class="tag">WiFi</span>
             <span class="tag"><span class="es">Acceso autocaravana</span><span class="en">Motorhome access</span></span>
           </div>
-          <a href="#booking" class="acc-link"><span class="es">Ver disponibilidad</span><span class="en">Check availability</span> <span class="arrow">→</span></a>
+          <a href="camping.html#caravanas" class="acc-link"><span class="es">Ver detalles y tarifas</span><span class="en">Details &amp; rates</span> <span class="arrow">→</span></a>
         </div>
       </div>
 
       <!-- Actividades -->
       <div class="acc-card reveal reveal-d1">
         <div class="acc-img">
-          <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80" alt="Actividades" loading="lazy">
+          <img src="images/KAYAKs 2.webp" alt="Actividades" loading="lazy">
         </div>
         <div class="acc-body">
           <h3><span class="es">Actividades</span><span class="en">Activities</span></h3>
           <p><span class="es">Senderismo, kayak, escalada, Caminito del Rey y mucho más. Un paraíso de experiencias al aire libre a tu alcance.</span><span class="en">Hiking, kayaking, climbing, Caminito del Rey and much more. A paradise of outdoor experiences at your fingertips.</span></p>
-          <a href="#actividades" class="acc-link">
+          <a href="actividades.html" class="acc-link">
             <span class="es">Ver actividades</span><span class="en">See activities</span> <span class="arrow">→</span>
           </a>
         </div>
@@ -1820,9 +355,9 @@
         <h3><span class="es">Cabaña Salón-Cocina</span><span class="en">Salon-Kitchen Cabin</span></h3>
         <p><span class="es">Espacio único disponible para alquiler por días. Ideal para celebraciones, reuniones familiares o eventos en plena naturaleza.</span><span class="en">Unique space available to rent by the day. Ideal for celebrations, family gatherings or events in the heart of nature.</span></p>
         <div class="svc-info">
-          <strong>Email:</strong> camping@parqueardales.com
+          <strong>Email:</strong> info@parqueardales.com
         </div>
-        <a href="mailto:camping@parqueardales.com" class="svc-link">
+        <a href="mailto:info@parqueardales.com" class="svc-link">
           <span class="es">Solicitar información</span><span class="en">Request information</span> →
         </a>
       </div>
@@ -1833,9 +368,9 @@
         <h3><span class="es">Grupos</span><span class="en">Groups</span></h3>
         <p><span class="es">Organizamos estancias para grupos, celebraciones y eventos en plena naturaleza. Contacta para un presupuesto personalizado.</span><span class="en">We organise stays for groups, celebrations and events in the heart of nature. Get in touch for a tailored quote.</span></p>
         <div class="svc-info">
-          <strong>Email:</strong> camping@parqueardales.com
+          <strong>Email:</strong> info@parqueardales.com
         </div>
-        <a href="mailto:camping@parqueardales.com" class="svc-link">
+        <a href="mailto:info@parqueardales.com" class="svc-link">
           <span class="es">Solicitar información</span><span class="en">Request information</span> →
         </a>
       </div>
@@ -1857,7 +392,7 @@
       <!-- Caminito del Rey - FEATURED -->
       <div class="act-card span2 reveal" style="cursor:pointer" data-act="0">
         <div class="act-img">
-          <img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=800&q=80" alt="Caminito del Rey" loading="lazy">
+          <img src="images/caminito.webp" alt="Caminito del Rey" loading="lazy">
           <div class="act-featured-pill">CAMINITO DEL REY</div>
           <div class="act-dist"><span class="es">~5 km del camping</span><span class="en">~5 km from campsite</span></div>
         </div>
@@ -1874,7 +409,7 @@
       <!-- Cueva de Ardales -->
       <div class="act-card reveal reveal-d1" style="cursor:pointer" data-act="1">
         <div class="act-img">
-          <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80" alt="Cueva de Ardales" loading="lazy">
+          <img src="images/cueva-ardales.jpg" alt="Cueva de Ardales" loading="lazy">
           <div class="act-dist"><span class="es">Ardales pueblo</span><span class="en">Ardales village</span></div>
         </div>
         <div class="act-body">
@@ -1889,7 +424,7 @@
       <!-- Actividades náuticas -->
       <div class="act-card reveal" style="cursor:pointer" data-act="2">
         <div class="act-img">
-          <img src="https://images.unsplash.com/photo-1472745942893-4b9f730c7668?auto=format&fit=crop&w=800&q=80" alt="Actividades Náuticas" loading="lazy">
+          <img src="images/KAYAKs.webp" alt="Actividades Náuticas" loading="lazy">
           <div class="act-dist"><span class="es">En el embalse</span><span class="en">On the reservoir</span></div>
         </div>
         <div class="act-body">
@@ -1904,7 +439,7 @@
       <!-- Senderismo -->
       <div class="act-card reveal reveal-d1" style="cursor:pointer" data-act="3">
         <div class="act-img">
-          <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80" alt="Senderismo" loading="lazy">
+          <img src="images/Entorno 17.webp" alt="Senderismo" loading="lazy">
         </div>
         <div class="act-body">
           <h3><span class="es">Senderismo</span><span class="en">Hiking</span></h3>
@@ -1918,7 +453,7 @@
       <!-- Escalada -->
       <div class="act-card reveal" style="cursor:pointer" data-act="4">
         <div class="act-img">
-          <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=800&q=80" alt="Escalada" loading="lazy">
+          <img src="images/escalada1.webp" alt="Escalada" loading="lazy">
           <div class="act-dist">El Chorro</div>
         </div>
         <div class="act-body">
@@ -1969,23 +504,23 @@
 
     <div class="gallery-grid reveal" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: 200px 200px;">
       <div class="gi t2">
-        <div class="gi-bg"><img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=600&q=80" alt="Apartamento" loading="lazy"></div>
+        <div class="gi-bg"><img src="images/Bung-salon1.webp" alt="Apartamento" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Apartamento con vistas</span><span class="en">Apartment with views</span></span></div>
       </div>
       <div class="gi">
-        <div class="gi-bg"><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=600&q=80" alt="Zona de tiendas" loading="lazy"></div>
+        <div class="gi-bg"><img src="images/Entorno 5.webp" alt="Zona de tiendas" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Zona de tiendas</span><span class="en">Tent area</span></span></div>
       </div>
       <div class="gi">
-        <div class="gi-bg"><img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=600&q=80" alt="Caminito del Rey" loading="lazy"></div>
+        <div class="gi-bg"><img src="images/caminitodelrey2.jpg" alt="Caminito del Rey" loading="lazy"></div>
         <div class="gi-ov"><span>Caminito del Rey</span></div>
       </div>
       <div class="gi">
-        <div class="gi-bg"><img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=600&q=80" alt="Piscina" loading="lazy"></div>
+        <div class="gi-bg"><img src="images/Entorno 20.webp" alt="Piscina" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Piscina</span><span class="en">Pool</span></span></div>
       </div>
       <div class="gi">
-        <div class="gi-bg"><img src="https://images.unsplash.com/photo-1449158743715-0a90f5e39154?auto=format&fit=crop&w=600&q=80" alt="Cabaña" loading="lazy"></div>
+        <div class="gi-bg"><img src="images/Cabaña1.webp" alt="Cabaña" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Cabaña salón-cocina</span><span class="en">Salon-kitchen cabin</span></span></div>
       </div>
     </div>
@@ -2039,8 +574,8 @@
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">Si realizas una reserva de camping o apartamento con al menos 3 días de antelación, nosotros gestionamos las entradas por ti. Solo tienes que indicarlo al hacer tu reserva o contactarnos por email a <a href="mailto:camping@parqueardales.com">camping@parqueardales.com</a>.</span>
-          <span class="en">If you book a camping pitch or apartment at least 3 days in advance, we handle the tickets for you. Just let us know when you make your booking or contact us by email at <a href="mailto:camping@parqueardales.com">camping@parqueardales.com</a>.</span>
+          <span class="es">Si realizas una reserva de camping o apartamento con al menos 3 días de antelación, nosotros gestionamos las entradas por ti. Solo tienes que indicarlo al hacer tu reserva o contactarnos por email a <a href="mailto:info@parqueardales.com">info@parqueardales.com</a>.</span>
+          <span class="en">If you book a camping pitch or apartment at least 3 days in advance, we handle the tickets for you. Just let us know when you make your booking or contact us by email at <a href="mailto:info@parqueardales.com">info@parqueardales.com</a>.</span>
         </div></div>
       </div>
 
@@ -2094,8 +629,8 @@
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">La cabaña salón-cocina se alquila por días y requiere reserva previa. Para consultar disponibilidad y precios, envíanos un email a <a href="mailto:camping@parqueardales.com">camping@parqueardales.com</a> con las fechas que te interesan.</span>
-          <span class="en">The salon-kitchen cabin is rented by the day and requires prior booking. To check availability and pricing, send us an email at <a href="mailto:camping@parqueardales.com">camping@parqueardales.com</a> with your desired dates.</span>
+          <span class="es">La cabaña salón-cocina se alquila por días y requiere reserva previa. Para consultar disponibilidad y precios, envíanos un email a <a href="mailto:info@parqueardales.com">info@parqueardales.com</a> con las fechas que te interesan.</span>
+          <span class="en">The salon-kitchen cabin is rented by the day and requires prior booking. To check availability and pricing, send us an email at <a href="mailto:info@parqueardales.com">info@parqueardales.com</a> with your desired dates.</span>
         </div></div>
       </div>
 
@@ -2130,35 +665,36 @@
   <div class="contact-grid">
     <div class="ct-brand">
       <div class="ct-sub"><span class="es">Camping familiar · Embalse Conde de Guadalhorce</span><span class="en">Family camping · Conde de Guadalhorce Reservoir</span></div>
-      <img src="logo.svg" alt="Camping Parque Ardales" style="height:50px;width:auto;filter:brightness(0) invert(1);margin-bottom:0.6rem;">
+      <img src="logo-negativo.svg" alt="Camping Parque Ardales" style="height:70px;width:auto;margin-bottom:0.6rem;">
       <p>
         <span class="es">Un rincón único en la naturaleza malagueña, a orillas del embalse y a las puertas del Caminito del Rey y la Cueva de Ardales.</span>
         <span class="en">A unique corner of Málaga's natural landscape, on the shores of the reservoir and at the gateway to the Caminito del Rey and Ardales Cave.</span>
       </p>
-      <a href="mailto:camping@parqueardales.com" class="ct-email">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> camping@parqueardales.com
+      <a href="mailto:info@parqueardales.com" class="ct-email">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> info@parqueardales.com
       </a>
+      <a href="tel:+34951264924" class="ct-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> 951 264 924</a>
     </div>
 
     <div class="ct-col">
-      <h4><span class="es">Alojamientos</span><span class="en">Accommodation</span></h4>
+      <h4><span class="es">Estancia</span><span class="en">Stay</span></h4>
       <ul>
-        <li><a href="#alojamientos"><span class="es">Apartamentos</span><span class="en">Apartments</span></a></li>
-        <li><a href="#alojamientos"><span class="es">Parcelas tiendas</span><span class="en">Tent pitches</span></a></li>
-        <li><a href="#alojamientos"><span class="es">Parcelas caravanas</span><span class="en">Caravan pitches</span></a></li>
-        <li><a href="#alojamientos"><span class="es">Cabaña Salón-Cocina</span><span class="en">Salon-Kitchen Cabin</span></a></li>
+        <li><a href="apartamentos.html"><span class="es">Apartamentos</span><span class="en">Apartments</span></a></li>
+        <li><a href="camping.html#tiendas"><span class="es">Parcelas tiendas</span><span class="en">Tent pitches</span></a></li>
+        <li><a href="camping.html#caravanas"><span class="es">Parcelas caravanas</span><span class="en">Caravan pitches</span></a></li>
+        <li><a href="servicios.html#cabana"><span class="es">Cabaña Salón-Cocina</span><span class="en">Salon-Kitchen Cabin</span></a></li>
       </ul>
     </div>
 
     <div class="ct-col">
       <h4><span class="es">Actividades</span><span class="en">Activities</span></h4>
       <ul>
-        <li><a href="#actividades">Caminito del Rey</a></li>
-        <li><a href="#actividades"><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></a></li>
-        <li><a href="#actividades"><span class="es">Senderismo</span><span class="en">Hiking</span></a></li>
-        <li><a href="#actividades"><span class="es">Actividades náuticas</span><span class="en">Water activities</span></a></li>
-        <li><a href="#actividades">Tajo de Ronda</a></li>
-        <li><a href="#actividades">El Torcal</a></li>
+        <li><a href="actividades.html#caminito">Caminito del Rey</a></li>
+        <li><a href="actividades.html#cueva"><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></a></li>
+        <li><a href="actividades.html#senderismo"><span class="es">Senderismo</span><span class="en">Hiking</span></a></li>
+        <li><a href="actividades.html#nauticas"><span class="es">Actividades náuticas</span><span class="en">Water activities</span></a></li>
+        <li><a href="actividades.html#ronda">Tajo de Ronda</a></li>
+        <li><a href="actividades.html#torcal">El Torcal</a></li>
       </ul>
     </div>
   </div>
@@ -2184,337 +720,6 @@
 
 <!-- ─────────────────────────── JAVASCRIPT ─────────────────────────── -->
 <script src="https://unpkg.com/lenis@1/dist/lenis.min.js"></script>
-<script>
-  const lenis = new Lenis({ duration: 1.4, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
-  function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-  requestAnimationFrame(raf);
-</script>
-<script>
-  /* ── Language dropdown ── */
-  let currentLang = 'es';
-  const langDropdown = document.getElementById('langDropdown');
-  const langBtn = document.getElementById('langBtn');
-  const langMenu = document.getElementById('langMenu');
-  const langLabels = { es: 'ES', en: 'EN', de: 'DE' };
-
-  langBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    langDropdown.classList.toggle('open');
-  });
-  document.addEventListener('click', () => langDropdown.classList.remove('open'));
-
-  langMenu.querySelectorAll('.lang-option').forEach(opt => {
-    opt.addEventListener('click', () => {
-      currentLang = opt.dataset.lang;
-      document.body.classList.toggle('lang-en', currentLang === 'en');
-      document.documentElement.lang = currentLang;
-      langBtn.innerHTML = langLabels[currentLang] + ' <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg>';
-      langMenu.querySelectorAll('.lang-option').forEach(o => o.classList.remove('active'));
-      opt.classList.add('active');
-      langDropdown.classList.remove('open');
-    });
-  });
-
-  /* ── Navbar scroll ── */
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
-  });
-
-  /* ── Hamburger mobile menu ── */
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-  });
-  mobileMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-    });
-  });
-
-  /* ── Booking: date defaults ── */
-  const today = new Date();
-  const tomorrow = new Date(today); tomorrow.setDate(today.getDate() + 1);
-  const nextWeek = new Date(today); nextWeek.setDate(today.getDate() + 7);
-  const fmt = d => d.toISOString().slice(0, 10);
-  document.getElementById('checkin').value = fmt(tomorrow);
-  document.getElementById('checkout').value = fmt(nextWeek);
-
-  /* ── Children ages ── */
-  function updateChildAges() {
-    const n = parseInt(document.getElementById('children').value);
-    const row = document.getElementById('childAgesRow');
-    const container = document.getElementById('ageSelects');
-    container.innerHTML = '';
-    if (n === 0) { row.classList.remove('visible'); return; }
-    row.classList.add('visible');
-    for (let i = 1; i <= n; i++) {
-      const lbl = document.createElement('span');
-      lbl.className = 'age-label';
-      lbl.textContent = (currentLang === 'en' ? 'Child ' : 'Niño ') + i + ':';
-      container.appendChild(lbl);
-      const sel = document.createElement('select');
-      sel.className = 'age-select';
-      for (let age = 0; age <= 17; age++) {
-        const opt = document.createElement('option');
-        opt.value = age;
-        opt.textContent = age === 0 ? (currentLang === 'en' ? '< 1 year' : '< 1 año') : age + (currentLang === 'en' ? ' yr' : ' años');
-        sel.appendChild(opt);
-      }
-      container.appendChild(sel);
-    }
-  }
-
-  /* ── Booking search ── */
-  function doSearch() {
-    const checkin  = document.getElementById('checkin').value;
-    const checkout = document.getElementById('checkout').value;
-    const adults   = document.getElementById('adults').value;
-    const children = document.getElementById('children').value;
-    // Collect child ages
-    const ages = Array.from(document.querySelectorAll('#ageSelects .age-select')).map(s => s.value);
-    // Build external search URL — replace with actual booking engine URL
-    const params = new URLSearchParams({ checkin, checkout, adults, children });
-    ages.forEach((a, i) => params.append('child_age_' + (i + 1), a));
-    // Replace the URL below with the actual booking engine endpoint
-    const url = 'https://www.parqueardales.com/reservas?' + params.toString();
-    // For demo: show alert; in production: window.location.href = url;
-    alert((currentLang === 'en'
-      ? 'Redirecting to booking engine...\n\n'
-      : 'Redirigiendo al motor de reservas...\n\n')
-      + 'Check-in: ' + checkin + '\nCheck-out: ' + checkout
-      + '\nAdults: ' + adults + '\nChildren: ' + children);
-  }
-
-  /* ── Activity modal ── */
-  const actData = [
-    { title: 'Caminito del Rey', titleEn: 'Caminito del Rey',
-      img: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=800&q=80',
-      desc: 'Una de las rutas más espectaculares de España. Pasarelas sobre cortados verticales con vistas únicas a los embalses del Chorro. Gestionamos tus entradas si reservas con nosotros con al menos 3 días de antelación.',
-      descEn: 'One of the most spectacular routes in Spain. Walkways over vertical cliffs with unique views of the El Chorro reservoirs. We manage your tickets if you book with us at least 3 days in advance.',
-      tags: ['7,7 km', '3–4 horas', 'Dificultad media', 'Entradas gestionadas'],
-      tagsEn: ['7.7 km', '3–4 hours', 'Moderate difficulty', 'Managed tickets'],
-      link: 'https://www.caminitodelrey.info' },
-    { title: 'Cueva de Ardales', titleEn: 'Ardales Cave',
-      img: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80',
-      desc: 'Pinturas rupestres del Paleolítico declaradas Patrimonio de la Humanidad. Visitas guiadas 12:00–19:30 · 2€/persona.',
-      descEn: 'Palaeolithic cave paintings declared UNESCO World Heritage. Guided visits 12:00–19:30 · 2€/person.',
-      tags: ['Patrimonio UNESCO', 'Visita guiada'], tagsEn: ['UNESCO Heritage', 'Guided tour'], link: '' },
-    { title: 'Actividades Náuticas', titleEn: 'Water Activities',
-      img: 'https://images.unsplash.com/photo-1472745942893-4b9f730c7668?auto=format&fit=crop&w=800&q=80',
-      desc: 'Kayak, paddle surf y natación en las aguas cristalinas del embalse. El entorno perfecto para deportes acuáticos.',
-      descEn: 'Kayaking, paddle boarding and swimming in the crystal-clear reservoir waters. The perfect setting for water sports.',
-      tags: ['Kayak', 'Paddle Surf', 'Natación'], tagsEn: ['Kayak', 'Paddle Surf', 'Swimming'], link: '' },
-    { title: 'Senderismo', titleEn: 'Hiking',
-      img: 'https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80',
-      desc: 'Rutas señalizadas de todos los niveles en el entorno del embalse y la Sierra de Ardales. Descarga los tracks en Wikiloc.',
-      descEn: 'Waymarked routes for all levels around the reservoir and Sierra de Ardales. Download tracks on Wikiloc.',
-      tags: ['Todos los niveles', 'GPS tracks'], tagsEn: ['All levels', 'GPS tracks'],
-      link: 'https://www.wikiloc.com/trails/hiking/spain/andalucia/malaga/ardales' },
-    { title: 'Escalada', titleEn: 'Rock Climbing',
-      img: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=800&q=80',
-      desc: 'El Chorro es uno de los destinos de escalada más reconocidos de Europa. Más de 800 vías de todos los niveles en las paredes del desfiladero.',
-      descEn: 'El Chorro is one of Europe\'s most renowned climbing destinations. Over 800 routes for all levels on the gorge walls.',
-      tags: ['800+ vías', 'Todos los niveles'], tagsEn: ['800+ routes', 'All levels'], link: '' }
-  ];
-  const overlay = document.getElementById('actModalOverlay');
-  const modalImg = document.getElementById('actModalImg');
-  const modalTitle = document.getElementById('actModalTitle');
-  const modalDesc = document.getElementById('actModalDesc');
-  const modalTags = document.getElementById('actModalTags');
-  const modalLink = document.getElementById('actModalLink');
-
-  document.querySelectorAll('[data-act]').forEach(card => {
-    card.addEventListener('click', () => {
-      const d = actData[card.dataset.act];
-      const en = currentLang === 'en';
-      modalImg.src = d.img;
-      modalImg.alt = en ? d.titleEn : d.title;
-      modalTitle.textContent = en ? d.titleEn : d.title;
-      modalDesc.textContent = en ? d.descEn : d.desc;
-      modalTags.innerHTML = (en ? d.tagsEn : d.tags).map(t => '<span class="act-tag">' + t + '</span>').join('');
-      if (d.link) { modalLink.href = d.link; modalLink.style.display = ''; }
-      else { modalLink.style.display = 'none'; }
-      overlay.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-  });
-  function closeActModal() {
-    overlay.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  document.getElementById('actModalClose').addEventListener('click', closeActModal);
-  overlay.addEventListener('click', e => { if (e.target === overlay) closeActModal(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeActModal(); });
-
-  /* ── FAQ accordion ── */
-  document.querySelectorAll('.faq-q').forEach(q => {
-    q.addEventListener('click', () => {
-      const item = q.closest('.faq-item');
-      const isOpen = item.classList.contains('open');
-      // Close all
-      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-      // Open clicked (unless it was already open)
-      if (!isOpen) item.classList.add('open');
-    });
-  });
-
-  /* ── Scroll reveal ── */
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  /* ── Split words for section headers ── */
-  document.querySelectorAll('.section-h').forEach(h => {
-    h.querySelectorAll('span.es, span.en').forEach(langSpan => {
-      const html = langSpan.innerHTML;
-      // tokenize words while preserving <em> tags
-      const wrapped = html.replace(/(<em>[\s\S]*?<\/em>|[^\s<]+)/g, m => `<span class="split-word"><span>${m}</span></span>`);
-      langSpan.innerHTML = wrapped + ' ';
-    });
-  });
-
-  /* ── Custom cursor ── */
-  (function(){
-    if (window.matchMedia('(max-width: 900px)').matches) return;
-    const dot  = document.getElementById('cursorDot');
-    const ring = document.getElementById('cursorRing');
-    let mx=0,my=0,rx=0,ry=0;
-    window.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; dot.style.transform = `translate(${mx}px,${my}px) translate(-50%,-50%)`; });
-    function loop(){ rx += (mx-rx)*0.18; ry += (my-ry)*0.18; ring.style.transform = `translate(${rx}px,${ry}px) translate(-50%,-50%)`; requestAnimationFrame(loop); }
-    loop();
-    document.querySelectorAll('a, button, .faq-q, .acc-card, .act-card, .gi, .svc-card').forEach(el => {
-      el.addEventListener('mouseenter', ()=>document.body.classList.add('cursor-hover'));
-      el.addEventListener('mouseleave', ()=>document.body.classList.remove('cursor-hover'));
-    });
-    // dark sections — invert cursor
-    const dark = ['#hero','#actividades','#contacto','.marquee','.caminito-featured'];
-    const darkObserver = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting && e.intersectionRatio > 0.4) document.body.classList.add('dark-cursor');
-        else if (!e.isIntersecting) {
-          // check if any other dark is visible
-          if (![...document.querySelectorAll(dark.join(','))].some(el => {
-            const r = el.getBoundingClientRect();
-            return r.top < window.innerHeight/2 && r.bottom > window.innerHeight/2;
-          })) document.body.classList.remove('dark-cursor');
-        }
-      });
-    }, { threshold: [0, 0.4, 1] });
-    document.querySelectorAll(dark.join(',')).forEach(el => darkObserver.observe(el));
-  })();
-
-  /* ── Scroll progress ── */
-  const progress = document.getElementById('scrollProgress');
-  window.addEventListener('scroll', () => {
-    const h = document.documentElement;
-    const pct = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
-    progress.style.width = pct + '%';
-  }, { passive: true });
-
-  /* ── Hero parallax ── */
-  const heroPhoto = document.querySelector('.hero-photo img');
-  const heroHead  = document.querySelector('.hero-headline');
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    if (y < window.innerHeight) {
-      if (heroPhoto) heroPhoto.style.transform = `scale(${1.08 + y*0.0004}) translateY(${y*0.18}px)`;
-      if (heroHead)  heroHead.style.transform  = `translateY(${y*-0.25}px)`;
-    }
-  }, { passive: true });
-
-  /* ── Booking popup ── */
-  (function(){
-    const card = document.getElementById('booking');
-    if (!card) return;
-    // Wrap in overlay & move to body
-    const overlay = document.createElement('div');
-    overlay.className = 'booking-overlay';
-    overlay.id = 'bookingOverlay';
-    document.body.appendChild(overlay);
-    overlay.appendChild(card);
-
-    // Floating reserve button
-    const fab = document.createElement('button');
-    fab.className = 'floating-reserve';
-    fab.id = 'floatingReserve';
-    fab.innerHTML = `
-      <span class="fr-dot">
-        <svg class="fr-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        <svg class="fr-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
-      </span>
-      <span class="fr-label"><span class="es">Reservar estancia</span><span class="en">Book your stay</span></span>
-    `;
-    document.body.appendChild(fab);
-
-    function positionFab(){
-      if (document.body.classList.contains('booking-open')) {
-        const h = card.offsetHeight;
-        fab.style.bottom = (h + 18) + 'px';
-      } else {
-        fab.style.bottom = '';
-      }
-    }
-    function open(){
-      overlay.classList.add('open');
-      document.body.classList.add('booking-open');
-      document.body.style.overflow = 'hidden';
-      requestAnimationFrame(positionFab);
-    }
-    function close(){
-      overlay.classList.remove('open');
-      document.body.classList.remove('booking-open');
-      document.body.style.overflow = '';
-      positionFab();
-    }
-    window.addEventListener('resize', positionFab);
-
-    fab.addEventListener('click', () => {
-      if (document.body.classList.contains('booking-open')) close(); else open();
-    });
-    document.getElementById('bookingClose').addEventListener('click', close);
-    overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
-
-    // Also let any [href="#booking"] open the popup instead of scrolling
-    document.querySelectorAll('a[href="#booking"]').forEach(a => {
-      a.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); open(); }, true);
-    });
-  })();
-
-  /* ── Magnetic CTA ── */
-  document.querySelectorAll('.book-btn, .acc-link, .section-more').forEach(el => {
-    el.classList.add('magnetic');
-    el.addEventListener('mousemove', e => {
-      const r = el.getBoundingClientRect();
-      const x = e.clientX - r.left - r.width/2;
-      const y = e.clientY - r.top - r.height/2;
-      el.style.transform = `translate(${x*0.25}px, ${y*0.35}px)`;
-    });
-    el.addEventListener('mouseleave', () => { el.style.transform = ''; });
-  });
-
-  /* ── Smooth scroll for nav links ── */
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        const offset = 80;
-        const top = target.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
-    });
-  });
-</script>
+<script src="scripts.js"></script>
 </body>
 </html>
