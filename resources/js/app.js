@@ -26,7 +26,7 @@
   /* ── Navbar scroll + height sync para submenu ── */
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
+    nav.classList.toggle('scrolled', window.scrollY > 8);
   });
   function syncNavHeight() {
     document.documentElement.style.setProperty('--nav-height', nav.offsetHeight + 'px');
