@@ -63,18 +63,16 @@
     body.lang-en span.es { display: none !important; }
     body.lang-en span.en { display: inline !important; }
 
-    /* ─── iOS CHROME SPACER ───
-       Bloque crema en flujo normal del documento. iOS Safari samplea el
-       contenido del flujo (NO los position:fixed) para el blur translúcido
-       de su URL bar y status bar. Este spacer ocupa la zona donde iOS
-       muestrea para que vea siempre crema sólido, no la sección oscura
-       de page-hero. El margin-bottom negativo neutraliza su altura para
-       que el resto del layout no se vea afectado. */
+    /* DIAGNÓSTICO: rojo brillante para ver dónde aparece visualmente y testear
+       si iOS lo samplea para su URL bar. Reportar:
+       1. ¿Veo una franja roja en algún sitio del viewport?
+       2. ¿La status bar de iOS sale roja, crema, o transparente?
+       3. ¿El header se ve más alto que antes? */
     .ios-chrome-spacer {
       position: relative;
       width: 100%;
       height: 120px;
-      background: var(--bone);
+      background: #FF0000 !important;
       margin-bottom: -120px;
       z-index: 1;
       pointer-events: none;
