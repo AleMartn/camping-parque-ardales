@@ -78,12 +78,12 @@
     }
     @supports (-webkit-touch-callout: none) {
       .safe-area-cover {
-        /* Solo cubre el notch / status bar de iOS, lo mínimo. */
-        height: env(safe-area-inset-top, 0px);
+        /* env + 20px: cubre notch y un poco más para que iOS samplee crema
+           en su franja de chrome. No empujamos el nav — el logo se solapa
+           con la cover en su zona superior (donde suele haber whitespace),
+           prácticamente imperceptible. Mantiene la altura del nav original. */
+        height: calc(env(safe-area-inset-top, 0px) + 20px);
       }
-      /* No hace falta empujar el nav: la cover solo cubre el notch, que
-         queda por encima del padding-top del nav (env). El logo no se
-         solapa con la cover. Mantenemos padding-top original. */
     }
 
     /* ─── GRAIN OVERLAY ─── */
