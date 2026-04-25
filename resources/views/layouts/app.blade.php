@@ -14,6 +14,12 @@
 </head>
 <body class="{{ trim(($bodyClass ?? '').' lang-'.app()->getLocale()) }}">
 
+  {{-- iOS Safari muestrea el contenido en flujo del documento (no los fixed)
+       para tintar su URL bar y tab bar. Este spacer está en flujo normal con
+       un margin negativo que neutraliza su altura: ocupa el área donde iOS
+       muestrea pero no empuja la página. Solo se activa en iOS via @supports. --}}
+  <div class="ios-chrome-spacer" aria-hidden="true"></div>
+
   <div class="safe-area-cover" aria-hidden="true"></div>
 
   <x-nav :active="$active ?? null" />
