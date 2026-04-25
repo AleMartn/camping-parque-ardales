@@ -2263,6 +2263,8 @@ img, svg, video, iframe { max-width: 100%; height: auto; }
 .ax-modal-body {
   padding: 2.5rem 2.2rem;
   overflow-y: auto; overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  min-height: 0;
 }
 .ax-modal-body .am-sup {
   font-family: var(--sans); font-size: 0.68rem; font-weight: 700;
@@ -2341,8 +2343,18 @@ img, svg, video, iframe { max-width: 100%; height: auto; }
 .ax-modal-close:hover { background: var(--amber); color: var(--noir); border-color: var(--noir); transform: rotate(90deg); }
 
 @media (max-width: 900px) {
-  .ax-modal { grid-template-columns: 1fr; max-height: 92vh; }
-  .ax-modal-img { min-height: 240px; max-height: 38vh; }
+  /* En móvil cambiamos de grid a flex column para que .ax-modal-body reciba
+     el espacio restante (flex: 1) y su overflow-y: auto funcione bien.
+     Con grid-template-columns: 1fr y filas auto, la celda no tiene altura
+     definida y el scroll interno no se activa. */
+  .ax-modal {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    max-height: 92vh;
+  }
+  .ax-modal-img { min-height: 240px; max-height: 38vh; flex: 0 0 auto; }
+  .ax-modal-body { flex: 1 1 auto; }
 }
 @media (max-width: 600px) {
   .ax-modal-overlay { padding: 0.75rem; }
