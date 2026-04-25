@@ -78,11 +78,17 @@
     }
     @supports (-webkit-touch-callout: none) {
       .safe-area-cover {
-        /* env + 20px: cubre notch y un poco más para que iOS samplee crema
-           en su franja de chrome. No empujamos el nav — el logo se solapa
-           con la cover en su zona superior (donde suele haber whitespace),
-           prácticamente imperceptible. Mantiene la altura del nav original. */
+        /* env + 20px: lo mínimo para que iOS samplee crema en su chrome. */
         height: calc(env(safe-area-inset-top, 0px) + 20px);
+      }
+      /* Empujamos el padding-top del nav justo +20px para que el logo quede
+         por debajo de la cover (sin cortarse). +20 es bastante más bajo
+         que el +60 inicial, así el header se mantiene compacto. */
+      #nav {
+        padding-top: calc(0.7rem + env(safe-area-inset-top, 0px) + 20px) !important;
+      }
+      #nav.scrolled {
+        padding-top: calc(0.5rem + env(safe-area-inset-top, 0px) + 20px) !important;
       }
     }
 
