@@ -63,15 +63,15 @@
     body.lang-en span.es { display: none !important; }
     body.lang-en span.en { display: inline !important; }
 
-    /* DIAGNÓSTICO: rojo brillante, altura forzada env+60, z-index 9999.
-       Esta es exactamente la configuración A1 que funcionaba al principio.
-       Si ahora se ve bien (rojo cubriendo notch + status bar + URL bar) →
-       confirmamos que el problema es z-index < nav. */
+    /* Cover crema fija que cubre notch + zona URL bar de iOS. z-index 800
+       para que el nav (z-index 900) se quede por encima y se vea su logo
+       completo. iOS samplea esta capa para tintar su chrome → status bar
+       sólida crema. */
     .safe-area-cover {
       position: fixed; top: 0; left: 0; right: 0;
       height: calc(env(safe-area-inset-top, 0px) + 60px);
-      background: #FF0000 !important;
-      z-index: 9999;
+      background: var(--bone);
+      z-index: 800;
       pointer-events: none;
     }
 
