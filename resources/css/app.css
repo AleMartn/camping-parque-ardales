@@ -63,6 +63,23 @@
     body.lang-en span.es { display: none !important; }
     body.lang-en span.en { display: inline !important; }
 
+    /* ─── iOS CHROME SPACER ───
+       Bloque crema en flujo normal del documento. iOS Safari samplea el
+       contenido del flujo (NO los position:fixed) para el blur translúcido
+       de su URL bar y status bar. Este spacer ocupa la zona donde iOS
+       muestrea para que vea siempre crema sólido, no la sección oscura
+       de page-hero. El margin-bottom negativo neutraliza su altura para
+       que el resto del layout no se vea afectado. */
+    .ios-chrome-spacer {
+      position: relative;
+      width: 100%;
+      height: 120px;
+      background: var(--bone);
+      margin-bottom: -120px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
     /* ─── GRAIN OVERLAY ─── */
     body::before {
       content: '';

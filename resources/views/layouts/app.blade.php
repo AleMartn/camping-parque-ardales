@@ -14,6 +14,12 @@
 </head>
 <body class="{{ trim(($bodyClass ?? '').' lang-'.app()->getLocale()) }}">
 
+  {{-- Bloque crema en flujo normal al inicio del body. iOS Safari samplea
+       el primer contenido del flujo del documento (no los position: fixed)
+       para el blur translúcido de su URL bar. Sin esto, samplea .page-hero
+       (oscuro) y la status bar sale tintada oscura sobre fondo crema → parece
+       "transparente". El margin-bottom negativo lo neutraliza visualmente. --}}
+  <div class="ios-chrome-spacer" aria-hidden="true"></div>
 
   <x-nav :active="$active ?? null" />
 

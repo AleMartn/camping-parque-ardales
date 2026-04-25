@@ -30,7 +30,8 @@
     document.body.style.left = '';
     document.body.style.right = '';
     document.body.style.width = '';
-    window.scrollTo(0, savedScrollY);
+    /* 'instant' evita que html { scroll-behavior: smooth } anime el restore. */
+    window.scrollTo({ top: savedScrollY, left: 0, behavior: 'instant' });
     if (lenis && typeof lenis.start === 'function') lenis.start();
   };
 
