@@ -2,7 +2,7 @@
 <html lang="{{ app()->getLocale() }}">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#F4EFE6">
   <meta name="description" content="@yield('meta_description', __('Camping Parque Ardales - Alojamiento familiar en plena naturaleza a orillas del Embalse Conde de Guadalhorce, Málaga.'))">
   <title>@yield('title', 'Camping Parque Ardales · Embalse Conde de Guadalhorce · Málaga')</title>
@@ -14,13 +14,6 @@
 </head>
 <body class="{{ trim(($bodyClass ?? '').' lang-'.app()->getLocale()) }}">
 
-  {{-- iOS Safari muestrea el contenido en flujo del documento (no los fixed)
-       para tintar su URL bar y tab bar. Este spacer está en flujo normal con
-       un margin negativo que neutraliza su altura: ocupa el área donde iOS
-       muestrea pero no empuja la página. Solo se activa en iOS via @supports. --}}
-  <div class="ios-chrome-spacer" aria-hidden="true"></div>
-
-  <div class="safe-area-cover" aria-hidden="true"></div>
 
   <x-nav :active="$active ?? null" />
 
