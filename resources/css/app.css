@@ -64,16 +64,10 @@
     body.lang-en span.en { display: inline !important; }
 
 
-    /* ─── GRAIN OVERLAY ─── */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
-      opacity: 0.025;
-      pointer-events: none;
-      z-index: 9999;
-    }
+    /* Grain overlay eliminado. Era un body::before fixed con opacity 0.025
+       (efectivamente ~0.875% visible) que iOS 26 Safari sampleaba para
+       tintar su toolbar como translúcido. Ver:
+       https://nasedk.in/blog/ios26-safari-toolbar-colors/ */
 
 
     /* ─── NAVIGATION ─── */
@@ -840,7 +834,7 @@
       color: var(--noir);
     }
     h1,h2,h3,h4,h5 { font-family: var(--display); font-weight: 500; letter-spacing: -0.02em; }
-    body::before { opacity: 0.05; mix-blend-mode: multiply; }
+    /* body::before override eliminado al quitar el grain overlay arriba. */
 
     /* ─── PROGRESS BAR ─── */
     .scroll-progress {
