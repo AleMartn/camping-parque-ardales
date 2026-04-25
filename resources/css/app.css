@@ -836,7 +836,7 @@
 
     body {
       font-family: var(--sans);
-      background: var(--bone);
+      background-color: var(--bone);
       color: var(--noir);
     }
     h1,h2,h3,h4,h5 { font-family: var(--display); font-weight: 500; letter-spacing: -0.02em; }
