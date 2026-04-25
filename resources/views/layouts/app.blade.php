@@ -2,7 +2,7 @@
 <html lang="{{ app()->getLocale() }}">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#F4EFE6">
   <meta name="description" content="@yield('meta_description', __('Camping Parque Ardales - Alojamiento familiar en plena naturaleza a orillas del Embalse Conde de Guadalhorce, Málaga.'))">
   <title>@yield('title', 'Camping Parque Ardales · Embalse Conde de Guadalhorce · Málaga')</title>
@@ -13,12 +13,6 @@
   @stack('head')
 </head>
 <body class="{{ trim(($bodyClass ?? '').' lang-'.app()->getLocale()) }}">
-
-  {{-- Cover fixed BEHIND el nav. Cubre la zona del notch + URL bar de iOS
-       (donde Safari samplea para tintar su chrome translúcido). El nav (z-index 900)
-       se queda por encima, así no se ve más alto el header. La cover solo es
-       visible donde el nav no llega. --}}
-  <div class="safe-area-cover" aria-hidden="true"></div>
 
   <x-nav :active="$active ?? null" />
 

@@ -63,31 +63,6 @@
     body.lang-en span.es { display: none !important; }
     body.lang-en span.en { display: inline !important; }
 
-    /* Cover crema fija. iOS Safari SOLO samplea esta capa para tintar su
-       chrome translúcido si está EN FRENTE del nav (z-index alto). Empíricamente
-       comprobado: con z-index 800 (detrás del nav) iOS NO la samplea aunque
-       visualmente el nav la cubra. Con z-index 9999 (delante) sí.
-       Solo se activa en iOS via @supports para no afectar a desktop, donde
-       env() = 0 y el cover sería un bloque crema innecesario. */
-    .safe-area-cover {
-      position: fixed; top: 0; left: 0; right: 0;
-      height: 0;
-      background: var(--bone);
-      z-index: 9999;
-      pointer-events: none;
-    }
-    /* Solo en iOS (detectado vía JS, clase .is-ios en <html>) — los fixes
-       de cover y padding-push del nav. Otros navegadores (Chrome desktop,
-       Chrome Android, Firefox, etc.) no se ven afectados. */
-    .is-ios .safe-area-cover {
-      height: calc(env(safe-area-inset-top, 0px) + 20px);
-    }
-    .is-ios #nav {
-      padding-top: calc(0.7rem + env(safe-area-inset-top, 0px) + 20px) !important;
-    }
-    .is-ios #nav.scrolled {
-      padding-top: calc(0.5rem + env(safe-area-inset-top, 0px) + 20px) !important;
-    }
 
     /* ─── GRAIN OVERLAY ─── */
     body::before {
@@ -875,11 +850,7 @@
     }
 
     /* ─── NAV refinement ─── */
-    /* Nav siempre sólido. La capa translúcida que Safari iOS aplicaba sobre
-       la URL bar queda cubierta por .safe-area-cover (que en iOS se extiende
-       env + 60px). El fade visual hacia el hero se consigue con #nav::after
-       justo debajo del nav, que no es un fixed element superior y por tanto
-       no interfiere con el tintado de la status bar. */
+    /* Nav siempre sólido. */
     #nav {
       padding: calc(1.1rem + env(safe-area-inset-top, 0px)) 2.5rem 1.1rem;
       background-color: var(--bone);
