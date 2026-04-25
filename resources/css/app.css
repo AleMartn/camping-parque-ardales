@@ -2330,14 +2330,16 @@ img, svg, video, iframe { max-width: 100%; height: auto; }
 
 .ax-modal-close {
   position: absolute; top: 1rem; right: 1rem;
-  width: 40px; height: 40px; border-radius: 50%;
-  background: rgba(20,24,15,0.08); border: 1px solid rgba(20,24,15,0.12);
-  color: var(--noir); cursor: pointer;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--noir); border: 2px solid var(--bone);
+  color: #fff; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.2rem; z-index: 2;
+  font-size: 1.6rem; line-height: 1; font-weight: 500;
+  z-index: 5;
+  box-shadow: 0 6px 18px -4px rgba(0,0,0,0.45);
   transition: all .2s;
 }
-.ax-modal-close:hover { background: var(--noir); color: var(--bone); border-color: var(--noir); transform: rotate(90deg); }
+.ax-modal-close:hover { background: var(--amber); color: var(--noir); border-color: var(--noir); transform: rotate(90deg); }
 
 @media (max-width: 900px) {
   .ax-modal { grid-template-columns: 1fr; max-height: 92vh; }
@@ -2813,14 +2815,16 @@ body.has-submenu.submenu-stuck #nav {
 
 .climb-modal-close {
   position: absolute; top: 1rem; right: 1rem;
-  width: 42px; height: 42px; border-radius: 50%;
-  background: rgba(20,24,15,0.08); border: 1px solid rgba(20,24,15,0.12);
-  color: var(--noir); cursor: pointer;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--noir); border: 2px solid var(--bone);
+  color: #fff; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.3rem; z-index: 5;
+  font-size: 1.6rem; line-height: 1; font-weight: 500;
+  z-index: 10;
+  box-shadow: 0 6px 18px -4px rgba(0,0,0,0.45);
   transition: all .25s;
 }
-.climb-modal-close:hover { background: var(--noir); color: var(--bone); transform: rotate(90deg); }
+.climb-modal-close:hover { background: var(--amber); color: var(--noir); border-color: var(--noir); transform: rotate(90deg); }
 
 .climb-modal-body {
   overflow-y: auto; overscroll-behavior: contain;
