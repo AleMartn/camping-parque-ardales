@@ -348,7 +348,7 @@
 
     <div class="act-grid">
       <!-- Caminito del Rey - FEATURED -->
-      <div class="act-card span2 reveal" style="cursor:pointer" data-act="0">
+      <a class="act-card span2 reveal" href="{{ route('actividades') }}#act-0">
         <div class="act-img">
           <img src="/images/caminito.webp" alt="Caminito del Rey" loading="lazy">
           <div class="act-featured-pill">CAMINITO DEL REY</div>
@@ -362,10 +362,10 @@
             <span class="act-tag"><span class="es">Entradas gestionadas</span><span class="en">Managed tickets</span></span>
           </div>
         </div>
-      </div>
+      </a>
 
       <!-- Cueva de Ardales -->
-      <div class="act-card reveal reveal-d1" style="cursor:pointer" data-act="1">
+      <a class="act-card reveal reveal-d1" href="{{ route('actividades') }}#act-1">
         <div class="act-img">
           <img src="/images/cueva-ardales.jpg" alt="Cueva de Ardales" loading="lazy">
           <div class="act-dist"><span class="es">Ardales pueblo</span><span class="en">Ardales village</span></div>
@@ -377,10 +377,10 @@
             <span class="act-tag"><span class="es">Visita guiada</span><span class="en">Guided tour</span></span>
           </div>
         </div>
-      </div>
+      </a>
 
       <!-- Actividades náuticas -->
-      <div class="act-card reveal" style="cursor:pointer" data-act="2">
+      <a class="act-card reveal" href="{{ route('actividades') }}#act-2">
         <div class="act-img">
           <img src="/images/KAYAKs.webp" alt="Actividades Náuticas" loading="lazy">
           <div class="act-dist"><span class="es">En el embalse</span><span class="en">On the reservoir</span></div>
@@ -392,10 +392,10 @@
             <span class="act-tag">Paddle Surf</span>
           </div>
         </div>
-      </div>
+      </a>
 
       <!-- Senderismo -->
-      <div class="act-card reveal reveal-d1" style="cursor:pointer" data-act="3">
+      <a class="act-card reveal reveal-d1" href="{{ route('actividades') }}#act-3">
         <div class="act-img">
           <img src="/images/Entorno 17.webp" alt="Senderismo" loading="lazy">
         </div>
@@ -406,10 +406,10 @@
             <span class="act-tag">GPS tracks</span>
           </div>
         </div>
-      </div>
+      </a>
 
       <!-- Escalada -->
-      <div class="act-card reveal" style="cursor:pointer" data-act="4">
+      <a class="act-card reveal" href="{{ route('actividades') }}#act-escalada">
         <div class="act-img">
           <img src="/images/escalada1.webp" alt="Escalada" loading="lazy">
           <div class="act-dist">El Chorro</div>
@@ -420,7 +420,7 @@
             <span class="act-tag">800+ <span class="es">vías</span><span class="en">routes</span></span>
           </div>
         </div>
-      </div>
+      </a>
     </div>
 
     <div style="text-align:center">
@@ -431,24 +431,6 @@
     </div>
   </div>
 </section>
-
-<!-- Activity Modal -->
-<div class="act-modal-overlay" id="actModalOverlay">
-  <div class="act-modal">
-    <div class="act-modal-img">
-      <img id="actModalImg" src="" alt="">
-      <button class="act-modal-close" id="actModalClose">&times;</button>
-    </div>
-    <div class="act-modal-body">
-      <h3 id="actModalTitle"></h3>
-      <p id="actModalDesc"></p>
-      <div class="act-tags" id="actModalTags"></div>
-      <a href="#" id="actModalLink" class="acc-link" target="_blank" rel="noopener" style="display:none">
-        <span class="es">Más información</span><span class="en">More information</span> <span class="arrow">→</span>
-      </a>
-    </div>
-  </div>
-</div>
 
 <!-- ─────────────────────────── GALLERY ─────────────────────────── -->
 <section id="galeria" class="section">

@@ -23,8 +23,6 @@
   <x-site-footer />
 
   <div class="scroll-progress" id="scrollProgress"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-  <div class="cursor-dot" id="cursorDot"></div>
 
   @stack('modals')
 

@@ -339,7 +339,7 @@
         tag: { es: 'Destacado · 5 km del camping', en: 'Featured · 5 km from camp' },
         sup: { es: 'El hito imprescindible', en: 'The must-see' },
         title: { es: 'Caminito <em>del Rey</em>', en: 'Caminito <em>del Rey</em>' },
-        img: 'images/caminito.webp',
+        img: '/images/caminito.webp',
         desc: {
           es: 'Una de las rutas más espectaculares de España. Pasarelas sobre cortados verticales con vistas únicas al desfiladero de los Gaitanes y los embalses del Chorro. Si reservas con nosotros con al menos 3 días de antelación, gestionamos tus entradas.',
           en: 'One of the most spectacular routes in Spain. Walkways over vertical cliffs with unique views of the Gaitanes gorge and El Chorro reservoirs. Book with us at least 3 days in advance and we handle your tickets.'
@@ -355,14 +355,14 @@
         },
         ctas: [
           { label: { es:'Web oficial', en:'Official site' }, href: 'https://www.caminitodelrey.info', external: true },
-          { label: { es:'Reservar con entradas', en:'Book stay with tickets' }, href: 'index.html#booking', ghost: true }
+          { label: { es:'Reservar con entradas', en:'Book stay with tickets' }, href: '#booking', ghost: true }
         ]
       },
       {
         tag: { es: 'Patrimonio UNESCO · ~8 km', en: 'UNESCO Heritage · ~8 km' },
         sup: { es: 'Prehistoria viva', en: 'Living prehistory' },
         title: { es: 'Cueva de <em>Ardales</em>', en: 'Ardales <em>Cave</em>' },
-        img: 'images/cueva-ardales.jpg',
+        img: '/images/cueva-ardales.jpg',
         desc: {
           es: 'Una de las cuevas prehistóricas más importantes de Andalucía, con pinturas rupestres del Paleolítico declaradas Patrimonio de la Humanidad. Visitas guiadas disponibles con reserva previa.',
           en: 'One of the most important prehistoric caves in Andalusia, with Palaeolithic rock paintings declared UNESCO World Heritage. Guided visits available with prior booking.'
@@ -384,7 +384,7 @@
         tag: { es: 'En el embalse', en: 'On the reservoir' },
         sup: { es: 'Aguas cristalinas', en: 'Crystal-clear waters' },
         title: { es: 'Actividades <em>náuticas</em>', en: 'Water <em>activities</em>' },
-        img: 'images/KAYAKs.webp',
+        img: '/images/KAYAKs.webp',
         desc: {
           es: 'Kayak, paddle surf y natación en las aguas del Embalse Conde de Guadalhorce. Un escenario espectacular rodeado de pinares y paredes rocosas que se reflejan en el agua.',
           en: 'Kayaking, paddle boarding and swimming in the Conde de Guadalhorce Reservoir. A spectacular setting surrounded by pine forest and rocky walls mirrored in the water.'
@@ -399,14 +399,14 @@
           en: ['Gear rental from local providers', 'Calm waters suitable for beginners', 'Pier close to the campsite']
         },
         ctas: [
-          { label: { es:'Consultar proveedores', en:'Ask about providers' }, href: 'contacto.html' }
+          { label: { es:'Consultar proveedores', en:'Ask about providers' }, href: '{{ route('contacto') }}' }
         ]
       },
       {
         tag: { es: 'Todos los niveles', en: 'All levels' },
         sup: { es: 'Sierra de Ardales', en: 'Sierra de Ardales' },
         title: { es: '<em>Senderismo</em> y rutas', en: '<em>Hiking</em> &amp; trails' },
-        img: 'images/Entorno 17.webp',
+        img: '/images/Entorno 17.webp',
         desc: {
           es: 'Rutas señalizadas por el embalse, la Sierra de Ardales y el desfiladero. Desde paseos familiares hasta travesías exigentes. Descarga los tracks en Wikiloc y explora la naturaleza malagueña en su máxima expresión.',
           en: 'Waymarked routes around the reservoir, Sierra de Ardales and the gorge. From family strolls to demanding traverses. Download tracks on Wikiloc and explore Málaga\'s nature at its finest.'
@@ -428,7 +428,7 @@
         tag: { es: 'Escapada cultural · ~45 min', en: 'Day trip · ~45 min' },
         sup: { es: 'Ciudad emblemática', en: 'Iconic city' },
         title: { es: 'Tajo de <em>Ronda</em>', en: 'Tajo de <em>Ronda</em>' },
-        img: 'images/Entorno 18.webp',
+        img: '/images/Entorno 18.webp',
         desc: {
           es: 'Visita la emblemática ciudad de Ronda con su espectacular Puente Nuevo sobre el Tajo. Pasea por el casco antiguo, descubre la plaza de toros más antigua de España y disfruta de la gastronomía local.',
           en: 'Visit the iconic city of Ronda with its spectacular Puente Nuevo over the gorge. Stroll through the old town, discover Spain\'s oldest bullring and enjoy the local cuisine.'
@@ -448,7 +448,7 @@
         tag: { es: 'Patrimonio UNESCO · ~1 h', en: 'UNESCO · ~1 h' },
         sup: { es: 'Geología única', en: 'Unique geology' },
         title: { es: 'El Torcal de <em>Antequera</em>', en: 'El Torcal de <em>Antequera</em>' },
-        img: 'images/Entorno 22.webp',
+        img: '/images/Entorno 22.webp',
         desc: {
           es: 'Paraje natural con formaciones kársticas únicas en Europa. Rutas circulares señalizadas entre esculturas de piedra esculpidas por la erosión durante millones de años. Declarado Patrimonio de la Humanidad.',
           en: 'A natural park with karst formations unique in Europe. Waymarked circular routes through stone sculptures carved by erosion over millions of years. Declared UNESCO World Heritage.'
@@ -522,6 +522,19 @@
     close.addEventListener('click', closeModal);
     overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
 
+    /* Click en CTA "Reservar con entradas": cerrar este modal y abrir el
+       popup de reserva global (FAB) en la misma página, sin navegar. */
+    ctas.addEventListener('click', e => {
+      const a = e.target.closest('a[href="#booking"]');
+      if (!a) return;
+      e.preventDefault();
+      closeModal();
+      const fab = document.getElementById('floatingReserve');
+      if (fab && !document.body.classList.contains('booking-open')) {
+        fab.click();
+      }
+    });
+
     /* Climb modal */
     const climbOverlay = document.getElementById('climbOverlay');
     const climbClose = document.getElementById('climbClose');
@@ -541,6 +554,21 @@
       if (overlay.classList.contains('open')) closeModal();
       else if (climbOverlay.classList.contains('open')) closeClimb();
     });
+
+    /* Deeplink: si la URL trae #act-N o #act-escalada, abre el modal correspondiente. */
+    function openFromHash() {
+      const h = window.location.hash;
+      if (!h.startsWith('#act-')) return;
+      const ref = h.substring(5);
+      if (ref === 'escalada') {
+        openClimb();
+      } else {
+        const idx = parseInt(ref, 10);
+        if (!isNaN(idx) && data[idx]) open(idx);
+      }
+    }
+    openFromHash();
+    window.addEventListener('hashchange', openFromHash);
   })();
 </script>
 @endpush

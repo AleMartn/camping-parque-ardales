@@ -26,11 +26,11 @@
     <div class="ct-col">
       <h4><span class="es">Actividades</span><span class="en">Activities</span></h4>
       <ul>
-        <li><a href="{{ route('actividades') }}">Caminito del Rey</a></li>
-        <li><a href="{{ route('actividades') }}"><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></a></li>
-        <li><a href="{{ route('actividades') }}"><span class="es">Escalada</span><span class="en">Climbing</span></a></li>
-        <li><a href="{{ route('actividades') }}"><span class="es">Senderismo</span><span class="en">Hiking</span></a></li>
-        <li><a href="{{ route('actividades') }}"><span class="es">Actividades náuticas</span><span class="en">Water activities</span></a></li>
+        <li><a href="{{ route('actividades') }}#act-0">Caminito del Rey</a></li>
+        <li><a href="{{ route('actividades') }}#act-1"><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></a></li>
+        <li><a href="{{ route('actividades') }}#act-escalada"><span class="es">Escalada</span><span class="en">Climbing</span></a></li>
+        <li><a href="{{ route('actividades') }}#act-3"><span class="es">Senderismo</span><span class="en">Hiking</span></a></li>
+        <li><a href="{{ route('actividades') }}#act-2"><span class="es">Actividades náuticas</span><span class="en">Water activities</span></a></li>
       </ul>
     </div>
   </div>
