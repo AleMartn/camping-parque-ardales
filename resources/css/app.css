@@ -78,16 +78,17 @@
     }
     @supports (-webkit-touch-callout: none) {
       .safe-area-cover {
-        height: calc(env(safe-area-inset-top, 0px) + 60px);
+        height: calc(env(safe-area-inset-top, 0px) + 25px);
       }
       /* Empujar el nav hacia abajo en iOS para que el logo quede debajo
-         del cover (que está por encima del nav). +60px = altura extra
-         del cover sobre el notch. */
+         del cover (que está por encima del nav). +25px = altura extra
+         del cover sobre el notch (lo justo para cubrir lo que iOS samplea
+         sin inflar el header). */
       #nav {
-        padding-top: calc(0.7rem + env(safe-area-inset-top, 0px) + 60px) !important;
+        padding-top: calc(0.7rem + env(safe-area-inset-top, 0px) + 25px) !important;
       }
       #nav.scrolled {
-        padding-top: calc(0.5rem + env(safe-area-inset-top, 0px) + 60px) !important;
+        padding-top: calc(0.5rem + env(safe-area-inset-top, 0px) + 25px) !important;
       }
     }
 
