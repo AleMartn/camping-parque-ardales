@@ -1,3 +1,13 @@
+  /* Detección fiable de iOS (iPhone, iPad incluyendo iPad "MacIntel" desde iPadOS).
+     Marca el body con .is-ios para que el CSS pueda aplicar fixes específicos
+     SOLO en iOS, sin tocar Chrome/Firefox/etc. */
+  (function(){
+    const ua = navigator.userAgent || '';
+    const isIOS = /iPad|iPhone|iPod/.test(ua)
+      || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    if (isIOS) document.documentElement.classList.add('is-ios');
+  })();
+
   const lenis = new Lenis({ duration: 1.4, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
   function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
   requestAnimationFrame(raf);

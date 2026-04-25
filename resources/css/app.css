@@ -76,20 +76,17 @@
       z-index: 9999;
       pointer-events: none;
     }
-    @supports (-webkit-touch-callout: none) {
-      .safe-area-cover {
-        /* env + 20px: lo mínimo para que iOS samplee crema en su chrome. */
-        height: calc(env(safe-area-inset-top, 0px) + 20px);
-      }
-      /* Empujamos el padding-top del nav justo +20px para que el logo quede
-         por debajo de la cover (sin cortarse). +20 es bastante más bajo
-         que el +60 inicial, así el header se mantiene compacto. */
-      #nav {
-        padding-top: calc(0.7rem + env(safe-area-inset-top, 0px) + 20px) !important;
-      }
-      #nav.scrolled {
-        padding-top: calc(0.5rem + env(safe-area-inset-top, 0px) + 20px) !important;
-      }
+    /* Solo en iOS (detectado vía JS, clase .is-ios en <html>) — los fixes
+       de cover y padding-push del nav. Otros navegadores (Chrome desktop,
+       Chrome Android, Firefox, etc.) no se ven afectados. */
+    .is-ios .safe-area-cover {
+      height: calc(env(safe-area-inset-top, 0px) + 20px);
+    }
+    .is-ios #nav {
+      padding-top: calc(0.7rem + env(safe-area-inset-top, 0px) + 20px) !important;
+    }
+    .is-ios #nav.scrolled {
+      padding-top: calc(0.5rem + env(safe-area-inset-top, 0px) + 20px) !important;
     }
 
     /* ─── GRAIN OVERLAY ─── */
@@ -2262,9 +2259,17 @@ img, svg, video, iframe { max-width: 100%; height: auto; }
 }
 .ax-modal-body {
   padding: 2.5rem 2.2rem;
-  overflow-y: auto; overscroll-behavior: contain;
-  -webkit-overflow-scrolling: touch;
-  min-height: 0;
+  /* Ya no scrollea el body individualmente; el scroll vive en .ax-modal en
+     móvil. En desktop (grid 2 cols), el body sí scrollea via las reglas
+     condicionales de abajo. */
+}
+@media (min-width: 901px) {
+  .ax-modal-body {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    min-height: 0;
+  }
 }
 .ax-modal-body .am-sup {
   font-family: var(--sans); font-size: 0.68rem; font-weight: 700;
@@ -2330,31 +2335,42 @@ img, svg, video, iframe { max-width: 100%; height: auto; }
 .ax-modal-body .am-cta.ghost:hover { background: var(--noir); color: var(--bone); border-color: var(--noir); }
 
 .ax-modal-close {
-  position: absolute; top: 1rem; right: 1rem;
+  /* Posicionado relativo al overlay (fixed) → se queda visible aunque
+     el modal scrollee. */
+  position: absolute;
+  top: calc(2rem + env(safe-area-inset-top, 0px));
+  right: 2rem;
   width: 48px; height: 48px; border-radius: 50%;
   background: var(--noir); border: 2px solid var(--bone);
   color: #fff; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   font-size: 1.6rem; line-height: 1; font-weight: 500;
-  z-index: 5;
+  z-index: 1600;
   box-shadow: 0 6px 18px -4px rgba(0,0,0,0.45);
   transition: all .2s;
 }
 .ax-modal-close:hover { background: var(--amber); color: var(--noir); border-color: var(--noir); transform: rotate(90deg); }
+@media (max-width: 600px) {
+  .ax-modal-close {
+    top: calc(1rem + env(safe-area-inset-top, 0px));
+    right: 1rem;
+  }
+}
 
 @media (max-width: 900px) {
-  /* En móvil cambiamos de grid a flex column para que .ax-modal-body reciba
-     el espacio restante (flex: 1) y su overflow-y: auto funcione bien.
-     Con grid-template-columns: 1fr y filas auto, la celda no tiene altura
-     definida y el scroll interno no se activa. */
+  /* En móvil el modal entero scrollea (imagen + body juntos) como en escalada.
+     El close button vive fuera (en el overlay) y se queda visible. */
   .ax-modal {
-    display: flex;
-    flex-direction: column;
+    display: block;
     grid-template-columns: none;
     max-height: 92vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
   }
-  .ax-modal-img { min-height: 240px; max-height: 38vh; flex: 0 0 auto; }
-  .ax-modal-body { flex: 1 1 auto; }
+  .ax-modal-img { min-height: 240px; max-height: 38vh; }
+  .ax-modal-body { padding-bottom: 2rem; }
 }
 @media (max-width: 600px) {
   .ax-modal-overlay { padding: 0.75rem; }

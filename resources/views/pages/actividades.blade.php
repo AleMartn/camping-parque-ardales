@@ -122,13 +122,15 @@
 
 <!-- ─── RICH ACTIVITY MODAL ─── -->
 <div class="ax-modal-overlay" id="axOverlay" role="dialog" aria-modal="true">
-  <div class="ax-modal">
-    <button class="ax-modal-close" id="axClose" aria-label="Close">✕</button>
+  {{-- Botón fuera de .ax-modal: posicionado relativo al overlay (fixed) para
+       que se quede visible aunque .ax-modal scrollee internamente. --}}
+  <button class="ax-modal-close" id="axClose" aria-label="Close">✕</button>
+  <div class="ax-modal" data-lenis-prevent>
     <div class="ax-modal-img">
       <img id="axImg" src="" alt="">
       <div class="am-tag" id="axTag"></div>
     </div>
-    <div class="ax-modal-body" data-lenis-prevent>
+    <div class="ax-modal-body">
       <p class="am-sup" id="axSup"></p>
       <h3 id="axTitle"></h3>
       <p id="axDesc"></p>
