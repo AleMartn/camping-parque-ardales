@@ -462,8 +462,8 @@
       const en = document.body.classList.contains('lang-en');
       lbCap.textContent = en ? (it.dataset.labelEn || '') : (it.dataset.labelEs || '');
     }
-    function open(i) { idx = i; render(); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
-    function close() { overlay.classList.remove('open'); document.body.style.overflow = ''; }
+    function open(i) { idx = i; render(); overlay.classList.add('open'); window.lockBodyScroll(); }
+    function close() { overlay.classList.remove('open'); window.unlockBodyScroll(); }
     items.forEach((it, i) => it.addEventListener('click', () => open(i)));
     lbClose.addEventListener('click', close);
     lbPrev.addEventListener('click', () => { idx--; render(); });

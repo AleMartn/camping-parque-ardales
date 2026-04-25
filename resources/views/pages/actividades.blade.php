@@ -500,12 +500,12 @@
         }</a>`
       ).join('');
       overlay.classList.add('open');
-      document.body.style.overflow = 'hidden';
+      window.lockBodyScroll();
     }
 
     function closeModal() {
       overlay.classList.remove('open');
-      document.body.style.overflow = '';
+      window.unlockBodyScroll();
     }
 
     tiles.forEach(tile => {
@@ -540,11 +540,11 @@
     const climbClose = document.getElementById('climbClose');
     function openClimb() {
       climbOverlay.classList.add('open');
-      document.body.style.overflow = 'hidden';
+      window.lockBodyScroll();
     }
     function closeClimb() {
       climbOverlay.classList.remove('open');
-      document.body.style.overflow = '';
+      window.unlockBodyScroll();
     }
     climbClose.addEventListener('click', closeClimb);
     climbOverlay.addEventListener('click', e => { if (e.target === climbOverlay) closeClimb(); });

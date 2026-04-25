@@ -284,11 +284,11 @@
       idx = i;
       render();
       overlay.classList.add('open');
-      document.body.style.overflow = 'hidden';
+      window.lockBodyScroll();
     }
     function close() {
       overlay.classList.remove('open');
-      document.body.style.overflow = '';
+      window.unlockBodyScroll();
     }
 
     items.forEach((it, i) => {

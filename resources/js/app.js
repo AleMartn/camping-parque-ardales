@@ -2,6 +2,38 @@
   function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
   requestAnimationFrame(raf);
 
+  /* ── Scroll lock global (modal-safe, iOS Safari incluido) ──
+     `body { overflow: hidden }` no basta en iOS — el truco que funciona es
+     congelar el body con position: fixed conservando la posición de scroll
+     y restaurarla al cerrar. También paramos Lenis. Contador para que múltiples
+     modales anidados no se pisen. */
+  let scrollLockCount = 0;
+  let savedScrollY = 0;
+  window.lockBodyScroll = function lockBodyScroll() {
+    scrollLockCount++;
+    if (scrollLockCount > 1) return; // ya bloqueado
+    savedScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+    if (lenis && typeof lenis.stop === 'function') lenis.stop();
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${savedScrollY}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+    document.body.classList.add('scroll-locked');
+  };
+  window.unlockBodyScroll = function unlockBodyScroll() {
+    scrollLockCount = Math.max(0, scrollLockCount - 1);
+    if (scrollLockCount > 0) return; // todavía hay otro modal abierto
+    document.body.classList.remove('scroll-locked');
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
+    window.scrollTo(0, savedScrollY);
+    if (lenis && typeof lenis.start === 'function') lenis.start();
+  };
+
   /* ── Language dropdown (only handles open/close; options are real <a> links) ── */
   const langDropdown = document.getElementById('langDropdown');
   const langBtn = document.getElementById('langBtn');
@@ -452,12 +484,12 @@
         if (d.link) { modalLink.href = d.link; modalLink.style.display = ''; }
         else { modalLink.style.display = 'none'; }
         overlay.classList.add('open');
-        document.body.style.overflow = 'hidden';
+        window.lockBodyScroll();
       });
     });
     function closeActModal() {
       overlay.classList.remove('open');
-      document.body.style.overflow = '';
+      window.unlockBodyScroll();
     }
     document.getElementById('actModalClose').addEventListener('click', closeActModal);
     overlay.addEventListener('click', e => { if (e.target === overlay) closeActModal(); });
@@ -564,13 +596,13 @@
     function open(){
       overlay.classList.add('open');
       document.body.classList.add('booking-open');
-      document.body.style.overflow = 'hidden';
+      window.lockBodyScroll();
       requestAnimationFrame(positionFab);
     }
     function close(){
       overlay.classList.remove('open');
       document.body.classList.remove('booking-open');
-      document.body.style.overflow = '';
+      window.unlockBodyScroll();
       positionFab();
     }
     window.addEventListener('resize', positionFab);
