@@ -134,8 +134,7 @@
       <label><span class="es">Adultos</span><span class="en">Adults</span></label>
       <select id="adults">
         <option>1</option><option selected>2</option><option>3</option>
-        <option>4</option><option>5</option><option>6</option>
-        <option>7</option><option>8</option>
+        <option>4</option><option>5</option>
       </select>
     </div>
     <div class="bf">

@@ -139,8 +139,8 @@
       DOG FRIENDLY
     </div>
     <p class="dog-text">
-      <span class="es">Tu mejor amigo es bienvenido — 2€ por animal en el recinto. Zona habilitada para mascotas.</span>
-      <span class="en">Your best friend is welcome — 2€ per animal on the grounds. Dedicated pet area available.</span>
+      <span class="es">Tu mejor amigo es bienvenido en el recinto. Zona habilitada para mascotas.</span>
+      <span class="en">Your best friend is welcome on the grounds. Dedicated pet area available.</span>
     </p>
   </div>
 </div>
@@ -200,7 +200,7 @@
           <h3><span class="es">Parcelas para caravanas</span><span class="en">Caravan Pitches</span></h3>
           <p><span class="es">Parcelas amplias con toma de agua, electricidad y desagüe. Acceso fácil para autocaravanas y caravanas de todos los tamaños.</span><span class="en">Spacious pitches with water, electricity and drainage. Easy access for motorhomes and caravans of all sizes.</span></p>
           <div class="acc-tags">
-            <span class="tag">16A</span>
+            <span class="tag">15A</span>
             <span class="tag"><span class="es">Agua y desagüe</span><span class="en">Water & drainage</span></span>
             <span class="tag">WiFi</span>
             <span class="tag"><span class="es">Acceso autocaravana</span><span class="en">Motorhome access</span></span>
@@ -255,22 +255,8 @@
 
     <!-- Services grid -->
     <div class="svc-grid">
-      <!-- Cueva de Ardales -->
-      <div class="svc-card c-green reveal">
-        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17c0-6 4-12 9-12s9 6 9 12"/><path d="M9 17v-3a3 3 0 016 0v3"/></svg></div>
-        <h3><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></h3>
-        <p><span class="es">Una de las cuevas prehistóricas más importantes de Andalucía, con pinturas rupestres declaradas Patrimonio de la Humanidad.</span><span class="en">One of Andalusia's most important prehistoric caves, with rock paintings declared UNESCO World Heritage.</span></p>
-        <div class="svc-info">
-          <strong><span class="es">Horario:</span><span class="en">Opening times:</span></strong> 12:00 – 19:30
-        </div>
-        <div class="svc-info">
-          <strong><span class="es">Precio:</span><span class="en">Price:</span></strong> 2€ / <span class="es">persona · coche · animal</span><span class="en">person · car · pet</span>
-        </div>
-        <a href="#" class="svc-link"><span class="es">Comprar entradas</span><span class="en">Buy tickets</span> →</a>
-      </div>
-
       <!-- Supermarket -->
-      <div class="svc-card c-gold reveal reveal-d1">
+      <div class="svc-card c-gold reveal">
         <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg></div>
         <h3><span class="es">Supermercado</span><span class="en">Supermarket</span></h3>
         <p><span class="es">Disponemos de supermercado en las instalaciones para que no te falte nada durante tu estancia.</span><span class="en">We have an on-site supermarket so you have everything you need during your stay.</span></p>
@@ -284,13 +270,10 @@
       </div>
 
       <!-- Dog Friendly Service info -->
-      <div class="svc-card c-terra reveal reveal-d2">
+      <div class="svc-card c-terra reveal reveal-d1">
         <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 10c-1.5 2-4 3.5-4 6a4 4 0 008 0c0-2.5-2.5-4-4-6z"/><circle cx="7.5" cy="6" r="1.8"/><circle cx="16.5" cy="6" r="1.8"/><circle cx="12" cy="3.5" r="1.8"/><circle cx="4.5" cy="10" r="1.8"/><circle cx="19.5" cy="10" r="1.8"/></svg></div>
         <h3><span class="es">Zona Pet Friendly</span><span class="en">Pet Friendly Zone</span></h3>
         <p><span class="es">Somos un camping Dog Friendly. Tu perro u otras mascotas son bienvenidos en nuestras instalaciones con zona habilitada.</span><span class="en">We are a Dog Friendly campsite. Your dog or other pets are welcome at our facilities with a dedicated area.</span></p>
-        <div class="svc-info">
-          <strong><span class="es">Tarifa:</span><span class="en">Rate:</span></strong> 2€ / <span class="es">animal / día</span><span class="en">animal / day</span>
-        </div>
         <div class="svc-info">
           <span class="es">Zona de paseo y área de esparcimiento para mascotas.</span>
           <span class="en">Walking area and play zone for pets.</span>
@@ -298,7 +281,7 @@
       </div>
 
       <!-- Pool -->
-      <div class="svc-card c-water reveal">
+      <div class="svc-card c-water reveal reveal-d2">
         <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16c1.5 0 2.5 1 4 1s2.5-1 4-1 2.5 1 4 1 2.5-1 4-1 2.5 1 4 1"/><path d="M2 20c1.5 0 2.5 1 4 1s2.5-1 4-1 2.5 1 4 1 2.5-1 4-1 2.5 1 4 1"/><path d="M12 4a2 2 0 012 2v6"/><path d="M8 12h8"/></svg></div>
         <h3><span class="es">Piscina Infinita</span><span class="en">Infinity Pool</span></h3>
         <p><span class="es">Refréscate en nuestra piscina infinita rodeada de naturaleza. El lugar perfecto para que los niños disfruten durante los meses de verano.</span><span class="en">Cool off in our infinity pool surrounded by nature. The perfect place for children to enjoy during the summer months.</span></p>
@@ -308,7 +291,7 @@
       </div>
 
       <!-- Cabin info -->
-      <div class="svc-card c-gold reveal reveal-d1">
+      <div class="svc-card c-gold reveal">
         <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
         <h3><span class="es">Cabaña Salón-Cocina</span><span class="en">Salon-Kitchen Cabin</span></h3>
         <p><span class="es">Espacio único disponible para alquiler por días. Ideal para celebraciones, reuniones familiares o eventos en plena naturaleza.</span><span class="en">Unique space available to rent by the day. Ideal for celebrations, family gatherings or events in the heart of nature.</span></p>
@@ -321,7 +304,7 @@
       </div>
 
       <!-- Grupos -->
-      <div class="svc-card c-gold reveal reveal-d2">
+      <div class="svc-card c-gold reveal reveal-d1">
         <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="2.5"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/><circle cx="17.5" cy="9.5" r="2"/><path d="M17.5 13.5c2.5 0 3.5 1.5 3.5 3v1"/></svg></div>
         <h3><span class="es">Grupos</span><span class="en">Groups</span></h3>
         <p><span class="es">Organizamos estancias para grupos, celebraciones y eventos en plena naturaleza. Contacta para un presupuesto personalizado.</span><span class="en">We organise stays for groups, celebrations and events in the heart of nature. Get in touch for a tailored quote.</span></p>
@@ -331,6 +314,17 @@
         <a href="mailto:info@parqueardales.com" class="svc-link">
           <span class="es">Solicitar información</span><span class="en">Request information</span> →
         </a>
+      </div>
+
+      <!-- Cueva de Ardales -->
+      <div class="svc-card c-green reveal reveal-d2">
+        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17c0-6 4-12 9-12s9 6 9 12"/><path d="M9 17v-3a3 3 0 016 0v3"/></svg></div>
+        <h3><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></h3>
+        <p><span class="es">Una de las cuevas prehistóricas más importantes de Andalucía, con pinturas rupestres declaradas Patrimonio de la Humanidad.</span><span class="en">One of Andalusia's most important prehistoric caves, with rock paintings declared UNESCO World Heritage.</span></p>
+        <div class="svc-info">
+          <strong><span class="es">Horario:</span><span class="en">Opening times:</span></strong> 12:00 – 19:30
+        </div>
+        <a href="https://www.giglon.com/todos?idEvent=visitas-guiadas-a-la-cueva-de-ardales-malaga" target="_blank" rel="noopener" class="svc-link"><span class="es">Comprar entradas</span><span class="en">Buy tickets</span> →</a>
       </div>
     </div>
   </div>
@@ -352,7 +346,7 @@
         <div class="act-img">
           <img src="/images/caminito.webp" alt="Caminito del Rey" loading="lazy">
           <div class="act-featured-pill">CAMINITO DEL REY</div>
-          <div class="act-dist"><span class="es">~5 km del camping</span><span class="en">~5 km from campsite</span></div>
+          <div class="act-dist"><span class="es">~1,5 km del camping</span><span class="en">~1.5 km from campsite</span></div>
         </div>
         <div class="act-body">
           <h3>Caminito del Rey</h3>
@@ -503,8 +497,8 @@
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">¡Sí! Somos un camping Dog Friendly. Las mascotas son bienvenidas con una tarifa adicional de 2€ por animal al día. Disponemos de zona habilitada para mascotas.</span>
-          <span class="en">Yes! We are a Dog Friendly campsite. Pets are welcome with an additional charge of 2€ per animal per day. We have a dedicated pet area on site.</span>
+          <span class="es">¡Sí! Somos un camping Dog Friendly. Las mascotas son bienvenidas en nuestras instalaciones y disponemos de zona habilitada para ellas.</span>
+          <span class="en">Yes! We are a Dog Friendly campsite. Pets are welcome at our facilities and we have a dedicated pet area on site.</span>
         </div></div>
       </div>
 
@@ -525,8 +519,8 @@
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">Todas las parcelas incluyen electricidad (16A), punto de agua, acceso a baños y duchas con agua caliente, y WiFi en la zona del recinto. Las parcelas para caravanas incluyen además toma de desagüe.</span>
-          <span class="en">All pitches include electricity (16A), water point, access to bathrooms and hot showers, and WiFi in the campsite area. Caravan pitches also include drainage connection.</span>
+          <span class="es">Todas las parcelas incluyen punto de agua, acceso a baños y duchas con agua caliente, y WiFi en la zona del recinto. Las parcelas para caravanas y autocaravanas cuentan con toma eléctrica de 15 amperios y conexión de desagüe. Las parcelas de acampada con luz disponen de 10 amperios (unos 4.700 W). La potencia puede variar en algunas parcelas.</span>
+          <span class="en">All pitches include a water point, access to bathrooms and hot showers, and WiFi in the campsite area. Caravan and motorhome pitches have a 15-amp power supply and drainage connection. Tent pitches with electricity have 10 amps (around 4,700 W). Power may vary on some pitches.</span>
         </div></div>
       </div>
 
@@ -543,12 +537,12 @@
 
       <div class="faq-item">
         <div class="faq-q">
-          <h4><span class="es">¿Cuánto cuesta visitar la Cueva de Ardales?</span><span class="en">How much does it cost to visit Ardales Cave?</span></h4>
+          <h4><span class="es">¿Dónde compro las entradas a la Cueva de Ardales?</span><span class="en">Where can I buy tickets for Ardales Cave?</span></h4>
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">El precio de acceso es de 2€ por persona, 2€ por coche y 2€ por animal. El horario de visita es de 12:00 a 19:30. Puedes adquirir las entradas a través del enlace en nuestra web o en taquilla.</span>
-          <span class="en">The entry price is 2€ per person, 2€ per car, and 2€ per animal. Opening hours are 12:00 to 19:30. You can purchase tickets via the link on our website or at the ticket office.</span>
+          <span class="es">El horario de visita es de 12:00 a 19:30. Puedes comprar las entradas directamente en <a href="https://www.giglon.com/todos?idEvent=visitas-guiadas-a-la-cueva-de-ardales-malaga" target="_blank" rel="noopener">Giglon</a> o en taquilla.</span>
+          <span class="en">Opening hours are 12:00 to 19:30. You can buy tickets directly on <a href="https://www.giglon.com/todos?idEvent=visitas-guiadas-a-la-cueva-de-ardales-malaga" target="_blank" rel="noopener">Giglon</a> or at the ticket office.</span>
         </div></div>
       </div>
 
@@ -580,8 +574,8 @@
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">Sí. El acceso al Caminito del Rey está a unos 5 km del camping. Es posible llegar en coche (hay aparcamiento) o en bicicleta. Recuerda que las entradas deben comprarse con antelación — nosotros te las gestionamos si reservas con nosotros.</span>
-          <span class="en">Yes. The Caminito del Rey entrance is about 5 km from the campsite. You can get there by car (there is parking) or by bicycle. Remember that tickets must be bought in advance — we manage them for you if you book with us.</span>
+          <span class="es">Sí. Estamos a tan solo 1,5 km del acceso peatonal del Caminito del Rey, desde donde sale un sendero de otros 1,5 km a pie hasta la taquilla de entrada. También puedes llegar en coche o bicicleta. Recuerda que las entradas deben comprarse con antelación — nosotros te las gestionamos si reservas con nosotros.</span>
+          <span class="en">Yes. We are just 1.5 km from the pedestrian access to the Caminito del Rey, from where a 1.5 km footpath leads to the ticket office. You can also get there by car or bike. Remember that tickets must be bought in advance — we handle them for you if you book with us.</span>
         </div></div>
       </div>
 

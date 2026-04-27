@@ -2328,7 +2328,7 @@ img, svg, video, iframe { max-width: 100%; height: auto; }
   .ax-modal {
     display: block;
     grid-template-columns: none;
-    max-height: 92vh;
+    max-height: 88vh;
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
@@ -2338,7 +2338,14 @@ img, svg, video, iframe { max-width: 100%; height: auto; }
   .ax-modal-body { padding-bottom: 2rem; }
 }
 @media (max-width: 600px) {
-  .ax-modal-overlay { padding: 0.75rem; }
+  .ax-modal-overlay {
+    padding:
+      max(1rem, env(safe-area-inset-top))
+      max(1rem, env(safe-area-inset-right))
+      max(1rem, env(safe-area-inset-bottom))
+      max(1rem, env(safe-area-inset-left));
+  }
+  .ax-modal { max-height: 86vh; }
   .ax-modal-body { padding: 1.6rem 1.4rem; }
   .ax-modal-body .am-facts { grid-template-columns: 1fr 1fr 1fr; }
   .ax-modal-body .am-fact { padding: 0.7rem 0.5rem; }

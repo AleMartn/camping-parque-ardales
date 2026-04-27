@@ -36,7 +36,7 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </div>
         <div class="at-ov">
-          <span class="at-tag"><span class="es">Destacado · 5 km</span><span class="en">Featured · 5 km</span></span>
+          <span class="at-tag"><span class="es">Destacado · 1,5 km</span><span class="en">Featured · 1.5 km</span></span>
           <h3>Caminito del Rey</h3>
           <p class="at-sub"><span class="es">Pasarelas sobre el desfiladero de los Gaitanes</span><span class="en">Walkways over the Gaitanes gorge</span></p>
         </div>
@@ -338,7 +338,7 @@
   (function(){
     const data = [
       {
-        tag: { es: 'Destacado · 5 km del camping', en: 'Featured · 5 km from camp' },
+        tag: { es: 'Destacado · 1,5 km del camping', en: 'Featured · 1.5 km from camp' },
         sup: { es: 'El hito imprescindible', en: 'The must-see' },
         title: { es: 'Caminito <em>del Rey</em>', en: 'Caminito <em>del Rey</em>' },
         img: '/images/caminito.webp',
@@ -352,8 +352,8 @@
           { num: 'Media',  label: { es:'Dificultad', en:'Difficulty' } }
         ],
         list: {
-          es: ['Pasarelas colgantes sobre el desfiladero', 'Puente colgante final', 'Acceso recomendado en coche o bici (~5 km)', 'Las entradas deben comprarse con antelación'],
-          en: ['Hanging walkways over the gorge', 'Final suspension bridge', 'Access by car or bike recommended (~5 km)', 'Tickets must be purchased in advance']
+          es: ['Pasarelas colgantes sobre el desfiladero', 'Puente colgante final', 'Acceso peatonal a 1,5 km del camping (más 1,5 km de sendero hasta la taquilla)', 'Las entradas deben comprarse con antelación'],
+          en: ['Hanging walkways over the gorge', 'Final suspension bridge', 'Pedestrian access 1.5 km from the campsite (plus 1.5 km footpath to the ticket office)', 'Tickets must be purchased in advance']
         },
         ctas: [
           { label: { es:'Web oficial', en:'Official site' }, href: 'https://www.caminitodelrey.info', external: true },
@@ -371,15 +371,14 @@
         },
         facts: [
           { num: '12:00', label: { es:'Apertura', en:'Opens' } },
-          { num: '19:30', label: { es:'Cierre', en:'Closes' } },
-          { num: '2 €',   label: { es:'Entrada', en:'Ticket' } }
+          { num: '19:30', label: { es:'Cierre', en:'Closes' } }
         ],
         list: {
           es: ['Pinturas rupestres del Paleolítico', 'Visitas guiadas en español', 'Reserva previa recomendada', 'Formaciones kársticas únicas'],
           en: ['Palaeolithic rock paintings', 'Guided tours in Spanish', 'Advance booking recommended', 'Unique karst formations']
         },
         ctas: [
-          { label: { es:'Consultar visita', en:'Ask about visits' }, href: 'mailto:info@parqueardales.com?subject=Visita%20Cueva%20de%20Ardales' }
+          { label: { es:'Comprar entradas', en:'Buy tickets' }, href: 'https://www.giglon.com/todos?idEvent=visitas-guiadas-a-la-cueva-de-ardales-malaga', external: true }
         ]
       },
       {

@@ -63,7 +63,7 @@
         <div class="fact-strip">
           <div class="fact"><span class="fact-num">2–4</span><span class="fact-label"><span class="es">Plazas</span><span class="en">Guests</span></span></div>
           <div class="fact"><span class="fact-num">40m²</span><span class="fact-label"><span class="es">Superficie</span><span class="en">Size</span></span></div>
-          <div class="fact"><span class="fact-num">16:00</span><span class="fact-label"><span class="es">Check-in</span><span class="en">Check-in</span></span></div>
+          <div class="fact"><span class="fact-num">14:00</span><span class="fact-label"><span class="es">Check-in</span><span class="en">Check-in</span></span></div>
           <div class="fact"><span class="fact-num">12:00</span><span class="fact-label"><span class="es">Check-out</span><span class="en">Check-out</span></span></div>
         </div>
         <div class="detail-cta-row">

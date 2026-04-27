@@ -91,15 +91,14 @@
           <span class="en">Caravans &amp; <em>motorhomes</em></span>
         </h2>
         <p class="lead">
-          <span class="es">Parcelas amplias con fácil acceso para caravanas, autocaravanas y campers. Toma eléctrica de 16A, agua potable y conexión de desagüe en cada plaza. Zona habilitada para vaciado químico.</span>
-          <span class="en">Spacious pitches with easy access for caravans, motorhomes and campers. 16A power, drinking water and drainage on every plot. Chemical disposal area available.</span>
+          <span class="es">Parcelas amplias con fácil acceso para caravanas, autocaravanas y campers. Toma eléctrica de 15A, agua potable y conexión de desagüe en cada plaza. Zona habilitada para vaciado químico.</span>
+          <span class="en">Spacious pitches with easy access for caravans, motorhomes and campers. 15A power, drinking water and drainage on every plot. Chemical disposal area available.</span>
         </p>
         <ul class="feature-list">
-          <li><span class="es">Toma eléctrica 16A</span><span class="en">16A power supply</span></li>
+          <li><span class="es">Toma eléctrica 15A</span><span class="en">15A power supply</span></li>
           <li><span class="es">Agua potable</span><span class="en">Drinking water</span></li>
           <li><span class="es">Desagüe aguas grises</span><span class="en">Greywater drainage</span></li>
           <li><span class="es">Vaciado químico</span><span class="en">Chemical disposal</span></li>
-          <li><span class="es">Parcelas 90m²+</span><span class="en">Pitches 90m²+</span></li>
           <li><span class="es">WiFi en zona común</span><span class="en">WiFi in common area</span></li>
         </ul>
         <div class="detail-cta-row">

@@ -110,9 +110,6 @@
         <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 10c-1.5 2-4 3.5-4 6a4 4 0 008 0c0-2.5-2.5-4-4-6z"/><circle cx="7.5" cy="6" r="1.8"/><circle cx="16.5" cy="6" r="1.8"/><circle cx="12" cy="3.5" r="1.8"/><circle cx="4.5" cy="10" r="1.8"/><circle cx="19.5" cy="10" r="1.8"/></svg></div>
         <h3><span class="es">Zona pet friendly</span><span class="en">Pet friendly zone</span></h3>
         <p><span class="es">Somos un camping Dog Friendly. Tu perro u otras mascotas son bienvenidos con zona habilitada para paseos y esparcimiento.</span><span class="en">We are a Dog Friendly campsite. Your dog or other pets are welcome with a dedicated walking and play zone.</span></p>
-        <div class="svc-info">
-          <strong><span class="es">Tarifa:</span><span class="en">Rate:</span></strong> 2€ / <span class="es">animal / día</span><span class="en">animal / day</span>
-        </div>
       </div>
 
       <!-- WiFi -->

@@ -65,8 +65,8 @@
         </div>
         <h3><span class="es">Ubicación</span><span class="en">Location</span></h3>
         <p>
-          <span class="es">Ardales, Málaga · Embalse Conde de Guadalhorce. A 5 km del Caminito del Rey.</span>
-          <span class="en">Ardales, Málaga · Conde de Guadalhorce Reservoir. 5 km from Caminito del Rey.</span>
+          <span class="es">Ardales, Málaga · Embalse Conde de Guadalhorce. A 1,5 km del acceso peatonal del Caminito del Rey.</span>
+          <span class="en">Ardales, Málaga · Conde de Guadalhorce Reservoir. 1.5 km from the Caminito del Rey pedestrian access.</span>
         </p>
         <a href="https://www.google.com/maps/search/?api=1&query=36.919909701148974,-4.804192046065863" target="_blank" rel="noopener" class="cc-link">
           <span class="es">Abrir en Google Maps</span><span class="en">Open in Google Maps</span>
@@ -104,8 +104,8 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17l4-4 4 4 6-6"/><polyline points="14 7 20 7 20 13"/></svg>
           <div>
             <strong><span class="es">Distancias</span><span class="en">Distances</span></strong>
-            <span class="es">Caminito del Rey: 5 km · Málaga: 60 km · Ronda: 45 km · Antequera: 40 km</span>
-            <span class="en">Caminito del Rey: 5 km · Málaga: 60 km · Ronda: 45 km · Antequera: 40 km</span>
+            <span class="es">Caminito del Rey: 1,5 km · Málaga: 60 km · Ronda: 45 km · Antequera: 40 km</span>
+            <span class="en">Caminito del Rey: 1.5 km · Málaga: 60 km · Ronda: 45 km · Antequera: 40 km</span>
           </div>
         </div>
         <div class="detail-cta-row" style="margin-top: 1.5rem;">
@@ -156,8 +156,8 @@
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">¡Sí! Somos un camping Dog Friendly. Las mascotas son bienvenidas con una tarifa adicional de 2€ por animal al día. Disponemos de zona habilitada para mascotas.</span>
-          <span class="en">Yes! We are a Dog Friendly campsite. Pets are welcome with an additional charge of 2€ per animal per day. We have a dedicated pet area on site.</span>
+          <span class="es">¡Sí! Somos un camping Dog Friendly. Las mascotas son bienvenidas en nuestras instalaciones y disponemos de zona habilitada para ellas.</span>
+          <span class="en">Yes! We are a Dog Friendly campsite. Pets are welcome at our facilities and we have a dedicated pet area on site.</span>
         </div></div>
       </div>
 
@@ -178,8 +178,8 @@
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">Todas las parcelas incluyen electricidad (16A), punto de agua, acceso a baños y duchas con agua caliente, y WiFi en la zona del recinto. Las parcelas para caravanas incluyen además toma de desagüe.</span>
-          <span class="en">All pitches include electricity (16A), water point, access to bathrooms and hot showers, and WiFi in the campsite area. Caravan pitches also include drainage connection.</span>
+          <span class="es">Todas las parcelas incluyen punto de agua, acceso a baños y duchas con agua caliente, y WiFi en la zona del recinto. Las parcelas para caravanas y autocaravanas cuentan con toma eléctrica de 15 amperios y conexión de desagüe. Las parcelas de acampada con luz disponen de 10 amperios (unos 4.700 W). La potencia puede variar en algunas parcelas.</span>
+          <span class="en">All pitches include a water point, access to bathrooms and hot showers, and WiFi in the campsite area. Caravan and motorhome pitches have a 15-amp power supply and drainage connection. Tent pitches with electricity have 10 amps (around 4,700 W). Power may vary on some pitches.</span>
         </div></div>
       </div>
 
@@ -196,12 +196,12 @@
 
       <div class="faq-item">
         <div class="faq-q">
-          <h4><span class="es">¿Cuánto cuesta visitar la Cueva de Ardales?</span><span class="en">How much does it cost to visit Ardales Cave?</span></h4>
+          <h4><span class="es">¿Dónde compro las entradas a la Cueva de Ardales?</span><span class="en">Where can I buy tickets for Ardales Cave?</span></h4>
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">El precio de acceso es de 2€ por persona, 2€ por coche y 2€ por animal. El horario de visita es de 12:00 a 19:30. Puedes adquirir las entradas a través del enlace en nuestra web o en taquilla.</span>
-          <span class="en">The entry price is 2€ per person, 2€ per car, and 2€ per animal. Opening hours are 12:00 to 19:30. You can purchase tickets via the link on our website or at the ticket office.</span>
+          <span class="es">El horario de visita es de 12:00 a 19:30. Puedes comprar las entradas directamente en <a href="https://www.giglon.com/todos?idEvent=visitas-guiadas-a-la-cueva-de-ardales-malaga" target="_blank" rel="noopener">Giglon</a> o en taquilla.</span>
+          <span class="en">Opening hours are 12:00 to 19:30. You can buy tickets directly on <a href="https://www.giglon.com/todos?idEvent=visitas-guiadas-a-la-cueva-de-ardales-malaga" target="_blank" rel="noopener">Giglon</a> or at the ticket office.</span>
         </div></div>
       </div>
 
@@ -233,8 +233,8 @@
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">El acceso al Caminito del Rey está a unos 5 km del camping. Es posible llegar en coche (hay aparcamiento) o en bicicleta. Recuerda que las entradas deben comprarse con antelación — nosotros te las gestionamos si reservas con nosotros.</span>
-          <span class="en">The Caminito del Rey entrance is about 5 km from the campsite. You can get there by car (there is parking) or by bicycle. Remember that tickets must be bought in advance — we manage them for you if you book with us.</span>
+          <span class="es">Estamos a tan solo 1,5 km del acceso peatonal del Caminito del Rey, desde donde sale un sendero de otros 1,5 km a pie hasta la taquilla de entrada. También puedes llegar en coche o bicicleta. Recuerda que las entradas deben comprarse con antelación — nosotros te las gestionamos si reservas con nosotros.</span>
+          <span class="en">We are just 1.5 km from the pedestrian access to the Caminito del Rey, from where a 1.5 km footpath leads to the ticket office. You can also get there by car or bike. Remember that tickets must be bought in advance — we handle them for you if you book with us.</span>
         </div></div>
       </div>
 
