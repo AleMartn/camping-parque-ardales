@@ -93,7 +93,7 @@
 
       <!-- 5 · Ronda -->
       <div class="act-tile" data-act="4">
-        <img src="/images/Entorno 18.webp" alt="Tajo de Ronda" loading="lazy">
+        <img src="/images/tajo-de-ronda.jpg" alt="Tajo de Ronda" loading="lazy">
         <div class="at-arrow">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </div>
@@ -105,7 +105,7 @@
 
       <!-- 6 · Torcal -->
       <div class="act-tile wide" data-act="5">
-        <img src="/images/Entorno 22.webp" alt="El Torcal de Antequera" loading="lazy">
+        <img src="/images/el-torcal-de-antequera.jpg" alt="El Torcal de Antequera" loading="lazy">
         <div class="at-arrow">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </div>
@@ -426,7 +426,7 @@
         tag: { es: 'Escapada cultural · ~45 min', en: 'Day trip · ~45 min' },
         sup: { es: 'Ciudad emblemática', en: 'Iconic city' },
         title: { es: 'Tajo de <em>Ronda</em>', en: 'Tajo de <em>Ronda</em>' },
-        img: '/images/Entorno 18.webp',
+        img: '/images/tajo-de-ronda.jpg',
         desc: {
           es: 'Visita la emblemática ciudad de Ronda con su espectacular Puente Nuevo sobre el Tajo. Pasea por el casco antiguo, descubre la plaza de toros más antigua de España y disfruta de la gastronomía local.',
           en: 'Visit the iconic city of Ronda with its spectacular Puente Nuevo over the gorge. Stroll through the old town, discover Spain\'s oldest bullring and enjoy the local cuisine.'
@@ -446,7 +446,7 @@
         tag: { es: 'Patrimonio UNESCO · ~1 h', en: 'UNESCO · ~1 h' },
         sup: { es: 'Geología única', en: 'Unique geology' },
         title: { es: 'El Torcal de <em>Antequera</em>', en: 'El Torcal de <em>Antequera</em>' },
-        img: '/images/Entorno 22.webp',
+        img: '/images/el-torcal-de-antequera.jpg',
         desc: {
           es: 'Paraje natural con formaciones kársticas únicas en Europa. Rutas circulares señalizadas entre esculturas de piedra esculpidas por la erosión durante millones de años. Declarado Patrimonio de la Humanidad.',
           en: 'A natural park with karst formations unique in Europe. Waymarked circular routes through stone sculptures carved by erosion over millions of years. Declared UNESCO World Heritage.'
