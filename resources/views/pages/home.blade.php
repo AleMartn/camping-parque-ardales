@@ -450,7 +450,7 @@
         <div class="gi-ov"><span>Caminito del Rey</span></div>
       </div>
       <div class="gi">
-        <div class="gi-bg"><img src="/images/Entorno 20.webp" alt="Piscina" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/PISCINA.png" alt="Piscina" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Piscina</span><span class="en">Pool</span></span></div>
       </div>
       <div class="gi">

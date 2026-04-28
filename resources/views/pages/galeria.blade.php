@@ -89,8 +89,24 @@
 
       <!-- Instalaciones -->
       <div class="gi t2" data-cat="instalaciones" data-label-es="Piscina infinita" data-label-en="Infinity pool">
-        <div class="gi-bg"><img src="/images/Entorno 20.webp" alt="Piscina infinita" loading="lazy"></div>
+        <div class="gi-bg"><img src="/images/PISCINA.png" alt="Piscina infinita" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Piscina infinita</span><span class="en">Infinity pool</span></span></div>
+      </div>
+      <div class="gi" data-cat="instalaciones" data-label-es="Piscina · vistas" data-label-en="Pool · views">
+        <div class="gi-bg"><img src="/images/PISCINA 2.png" alt="Piscina con vistas" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Piscina · vistas</span><span class="en">Pool · views</span></span></div>
+      </div>
+      <div class="gi" data-cat="instalaciones" data-label-es="Piscina · zona de baño" data-label-en="Pool · swim zone">
+        <div class="gi-bg"><img src="/images/PISCINA 3.png" alt="Piscina zona de baño" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Piscina · zona de baño</span><span class="en">Pool · swim zone</span></span></div>
+      </div>
+      <div class="gi" data-cat="instalaciones" data-label-es="Piscina · solárium" data-label-en="Pool · sun deck">
+        <div class="gi-bg"><img src="/images/PISCINA 4.png" alt="Piscina solárium" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Piscina · solárium</span><span class="en">Pool · sun deck</span></span></div>
+      </div>
+      <div class="gi" data-cat="instalaciones" data-label-es="Piscina al atardecer" data-label-en="Pool at sunset">
+        <div class="gi-bg"><img src="/images/PISCINA 5.png" alt="Piscina al atardecer" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Piscina al atardecer</span><span class="en">Pool at sunset</span></span></div>
       </div>
       <div class="gi" data-cat="instalaciones" data-label-es="Supermercado" data-label-en="Supermarket">
         <div class="gi-bg"><img src="/images/Supermercado 1.webp" alt="Supermercado" loading="lazy"></div>
@@ -195,8 +211,8 @@
     </div>
 
     <div class="gallery-count" id="galleryCount">
-      <span class="es">Mostrando <span id="gcNum">36</span> fotos</span>
-      <span class="en">Showing <span id="gcNumEn">36</span> photos</span>
+      <span class="es">Mostrando <span id="gcNum">39</span> fotos</span>
+      <span class="en">Showing <span id="gcNumEn">39</span> photos</span>
     </div>
   </div>
 </section>
