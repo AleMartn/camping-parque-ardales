@@ -393,8 +393,8 @@
           { num: '✓', label: { es:'Baño', en:'Swimming' } }
         ],
         list: {
-          es: ['Alquiler de equipo en proveedores locales', 'Aguas tranquilas aptas para iniciación', 'Embarcadero cercano al camping'],
-          en: ['Gear rental from local providers', 'Calm waters suitable for beginners', 'Pier close to the campsite']
+          es: ['Alquiler de equipo en proveedores locales', 'Aguas tranquilas aptas para iniciación', 'Acceso al embalse directamente desde el camping'],
+          en: ['Gear rental from local providers', 'Calm waters suitable for beginners', 'Direct reservoir access from the campsite']
         },
         ctas: [
           { label: { es:'Consultar proveedores', en:'Ask about providers' }, href: '{{ route('contacto') }}' }

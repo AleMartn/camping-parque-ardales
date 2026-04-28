@@ -65,7 +65,7 @@
           <strong><span class="es">Temporada:</span><span class="en">Season:</span></strong> <span class="es">Junio – Septiembre</span><span class="en">June – September</span>
         </div>
         <div class="svc-info">
-          <strong><span class="es">Horario:</span><span class="en">Hours:</span></strong> 11:00 – 20:00
+          <strong><span class="es">Horario:</span><span class="en">Hours:</span></strong> 12:00 – 20:00
         </div>
       </div>
 

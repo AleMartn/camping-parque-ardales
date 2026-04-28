@@ -761,6 +761,13 @@
     }
     .ct-email:hover, .ct-phone:hover { color: var(--amber-light); }
     .ct-phone { margin-top: 0.4rem; font-variant-numeric: tabular-nums; }
+    .ct-social { margin-top: 0.9rem; }
+    .ct-social a {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--gold-light); font-size: 0.875rem; text-decoration: none;
+      transition: color 0.2s;
+    }
+    .ct-social a:hover { color: var(--amber-light); }
     .ct-col h4 {
       font-family: 'Libre Baskerville', serif;
       color: white; font-size: 1rem; margin-bottom: 1.2rem;

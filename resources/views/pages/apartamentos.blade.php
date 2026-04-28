@@ -55,6 +55,7 @@
         <ul class="feature-list">
           <li><span class="es">Cocina equipada</span><span class="en">Equipped kitchen</span></li>
           <li><span class="es">Aire acondicionado</span><span class="en">Air conditioning</span></li>
+          <li><span class="es">Calefacción</span><span class="en">Heating</span></li>
           <li><span class="es">Baño privado</span><span class="en">Private bathroom</span></li>
           <li><span class="es">WiFi gratuito en recepción</span><span class="en">Free WiFi at reception</span></li>
           <li><span class="es">Terraza con vistas</span><span class="en">Terrace with views</span></li>
@@ -140,7 +141,7 @@
               <td><span class="price baja">4 €</span></td>
             </tr>
             <tr>
-              <td><span class="es">Mascota</span><span class="en">Pet</span> <span style="color:var(--ink-light);font-size:0.8rem">· <span class="es">máx 3</span><span class="en">max 3</span></span></td>
+              <td><span class="es">Mascota</span><span class="en">Pet</span> <span style="color:var(--ink-light);font-size:0.8rem">· <span class="es">máx 3 · solo en apartamentos seleccionados</span><span class="en">max 3 · selected apartments only</span></span></td>
               <td><span class="price">8 €</span></td>
               <td><span class="price">8 €</span></td>
               <td><span class="price">8 €</span></td>

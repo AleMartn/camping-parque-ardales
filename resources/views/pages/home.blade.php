@@ -492,8 +492,8 @@
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">¡Sí! Somos un camping Dog Friendly. Las mascotas son bienvenidas en nuestras instalaciones y disponemos de zona habilitada para ellas.</span>
-          <span class="en">Yes! We are a Dog Friendly campsite. Pets are welcome at our facilities and we have a dedicated pet area on site.</span>
+          <span class="es">¡Sí! Somos un camping Dog Friendly. Las mascotas son bienvenidas en nuestras instalaciones y disponemos de zona habilitada para ellas. En los apartamentos solo se permiten mascotas en unidades seleccionadas — consulta disponibilidad al reservar.</span>
+          <span class="en">Yes! We are a Dog Friendly campsite. Pets are welcome at our facilities and we have a dedicated pet area on site. In the apartments, pets are only allowed in selected units — please check availability when booking.</span>
         </div></div>
       </div>
 

@@ -90,7 +90,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <div>
             <strong><span class="es">Dirección</span><span class="en">Address</span></strong>
-            Ardales, 29550 · Málaga · España
+            Carretera de los Embalses, 7 · 29550 Ardales · Málaga · España
           </div>
         </div>
         <div class="loc-row">
@@ -156,8 +156,8 @@
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">¡Sí! Somos un camping Dog Friendly. Las mascotas son bienvenidas en nuestras instalaciones y disponemos de zona habilitada para ellas.</span>
-          <span class="en">Yes! We are a Dog Friendly campsite. Pets are welcome at our facilities and we have a dedicated pet area on site.</span>
+          <span class="es">¡Sí! Somos un camping Dog Friendly. Las mascotas son bienvenidas en nuestras instalaciones y disponemos de zona habilitada para ellas. En los apartamentos solo se permiten mascotas en unidades seleccionadas — consulta disponibilidad al reservar.</span>
+          <span class="en">Yes! We are a Dog Friendly campsite. Pets are welcome at our facilities and we have a dedicated pet area on site. In the apartments, pets are only allowed in selected units — please check availability when booking.</span>
         </div></div>
       </div>
 

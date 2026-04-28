@@ -62,6 +62,11 @@
           <li><span class="es">Baños y duchas 24 h</span><span class="en">24 h bathrooms &amp; showers</span></li>
           <li><span class="es">Pet friendly</span><span class="en">Pet friendly</span></li>
         </ul>
+        <div class="fact-strip" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="fact"><span class="fact-num">5</span><span class="fact-label"><span class="es">Personas máx.</span><span class="en">Max guests</span></span></div>
+          <div class="fact"><span class="fact-num">12:00</span><span class="fact-label"><span class="es">Check-in</span><span class="en">Check-in</span></span></div>
+          <div class="fact"><span class="fact-num">11:30</span><span class="fact-label"><span class="es">Check-out</span><span class="en">Check-out</span></span></div>
+        </div>
         <div class="detail-cta-row">
           <a href="{{ route('home') }}#booking" class="detail-cta">
             <span class="es">Reservar parcela</span><span class="en">Book pitch</span>
@@ -99,8 +104,14 @@
           <li><span class="es">Agua potable</span><span class="en">Drinking water</span></li>
           <li><span class="es">Desagüe aguas grises</span><span class="en">Greywater drainage</span></li>
           <li><span class="es">Vaciado químico</span><span class="en">Chemical disposal</span></li>
+          <li><span class="es">Tamaño máximo del vehículo: 8 m</span><span class="en">Max. vehicle length: 8 m</span></li>
           <li><span class="es">WiFi en recepción</span><span class="en">WiFi at reception</span></li>
         </ul>
+        <div class="fact-strip" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="fact"><span class="fact-num">8 m</span><span class="fact-label"><span class="es">Vehículo máx.</span><span class="en">Max length</span></span></div>
+          <div class="fact"><span class="fact-num">12:00</span><span class="fact-label"><span class="es">Check-in</span><span class="en">Check-in</span></span></div>
+          <div class="fact"><span class="fact-num">11:30</span><span class="fact-label"><span class="es">Check-out</span><span class="en">Check-out</span></span></div>
+        </div>
         <div class="detail-cta-row">
           <a href="{{ route('home') }}#booking" class="detail-cta">
             <span class="es">Reservar plaza</span><span class="en">Book plot</span>
@@ -138,7 +149,13 @@
           <li><span class="es">Zona diferenciada</span><span class="en">Dedicated zone</span></li>
           <li><span class="es">Punto de agua cercano</span><span class="en">Nearby water point</span></li>
           <li><span class="es">Vaciado químico</span><span class="en">Chemical disposal</span></li>
+          <li><span class="es">Tamaño máximo del vehículo: 6 m</span><span class="en">Max. vehicle length: 6 m</span></li>
         </ul>
+        <div class="fact-strip" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="fact"><span class="fact-num">6 m</span><span class="fact-label"><span class="es">Vehículo máx.</span><span class="en">Max length</span></span></div>
+          <div class="fact"><span class="fact-num">12:00</span><span class="fact-label"><span class="es">Check-in</span><span class="en">Check-in</span></span></div>
+          <div class="fact"><span class="fact-num">11:30</span><span class="fact-label"><span class="es">Check-out</span><span class="en">Check-out</span></span></div>
+        </div>
       </div>
     </div>
   </div>
