@@ -436,7 +436,7 @@
       <span class="en">Explore our facilities through images. Filter by category to see what interests you most.</span>
     </p>
 
-    <div class="gallery-grid reveal" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: 200px 200px;">
+    <div class="gallery-grid home-preview reveal">
       <div class="gi t2">
         <div class="gi-bg"><img src="/images/Bung-salon1.webp" alt="Apartamento" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Apartamento con vistas</span><span class="en">Apartment with views</span></span></div>

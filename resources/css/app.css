@@ -4815,6 +4815,58 @@ footer#contacto, footer#contacto-footer {
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
+   HOME · Galería previa: 3×2 grid fijo (opt-out del masonry global)
+   El primer tile (.t2) ocupa la columna 1 a doble alto; los otros 4 rellenan
+   columnas 2-3, fila 1 y fila 2.
+   ═══════════════════════════════════════════════════════════════════════════ */
+.gallery-grid.home-preview {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-rows: 220px 220px !important;
+  gap: 1rem !important;
+  column-count: unset !important;
+}
+.gallery-grid.home-preview .gi {
+  break-inside: unset !important;
+  -webkit-column-break-inside: unset !important;
+  margin-bottom: 0 !important;
+  aspect-ratio: unset !important;
+  position: relative !important;
+  width: auto !important;
+  display: block !important;
+}
+.gallery-grid.home-preview .gi.t2 { grid-row: span 2 !important; }
+.gallery-grid.home-preview .gi.w2 { grid-column: span 2 !important; }
+.gallery-grid.home-preview .gi .gi-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.gallery-grid.home-preview .gi .gi-bg img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+@media (max-width: 768px) {
+  .gallery-grid.home-preview {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: repeat(3, 170px) !important;
+  }
+  .gallery-grid.home-preview .gi.t2 { grid-row: span 1 !important; }
+  .gallery-grid.home-preview .gi.w2 { grid-column: span 1 !important; }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid.home-preview {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: unset !important;
+    grid-auto-rows: 200px !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
    Botones que actúan como .psm-link (filtro de galería)
    Neutraliza estilos nativos de <button> y alinea con el submenú.
    ═══════════════════════════════════════════════════════════════════════════ */
