@@ -54,8 +54,7 @@
         </p>
         <ul class="feature-list">
           <li><span class="es">Cocina equipada</span><span class="en">Equipped kitchen</span></li>
-          <li><span class="es">Aire acondicionado</span><span class="en">Air conditioning</span></li>
-          <li><span class="es">Calefacción</span><span class="en">Heating</span></li>
+          <li><span class="es">Calefacción, aire acondicionado y estufa de leña</span><span class="en">Heating, air conditioning &amp; wood stove</span></li>
           <li><span class="es">Baño privado</span><span class="en">Private bathroom</span></li>
           <li><span class="es">WiFi gratuito en recepción</span><span class="en">Free WiFi at reception</span></li>
           <li><span class="es">Terraza con vistas</span><span class="en">Terrace with views</span></li>

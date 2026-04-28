@@ -4606,25 +4606,12 @@ body.has-submenu section[id] {
   grid-column: auto !important;
   grid-row: auto !important;
 }
-#fotosGrid .gi .gi-bg {
-  height: auto !important;
-  display: block;
-}
-#fotosGrid .gi .gi-bg img {
-  width: 100% !important;
-  height: auto !important;
-  display: block;
-  object-fit: cover;
-}
-/* Variación de altura "forzada" para un look más dinámico
-   Si todas las imágenes son más o menos cuadradas, damos alturas distintas
-   con aspect-ratio pseudo para simular masonry real */
-#fotosGrid .gi:nth-child(3n+1) .gi-bg { aspect-ratio: 4 / 5; }
-#fotosGrid .gi:nth-child(3n+2) .gi-bg { aspect-ratio: 1 / 1; }
-#fotosGrid .gi:nth-child(3n+3) .gi-bg { aspect-ratio: 3 / 4; }
-#fotosGrid .gi:nth-child(6n+4) .gi-bg { aspect-ratio: 4 / 3; }
-#fotosGrid .gi:nth-child(7n+5) .gi-bg { aspect-ratio: 5 / 4; }
-#fotosGrid .gi .gi-bg img { height: 100% !important; }
+/* La forma del placeholder y el llenado del .gi-bg los gestiona el masonry
+   global (.gallery-grid .gi:nth-child(...) define aspect-ratio en .gi, y
+   .gallery-grid .gi .gi-bg / img se posicionan absolute con object-fit:cover).
+   Antes había aquí reglas que ponían aspect-ratio en .gi-bg y height:auto,
+   lo que dejaba la imagen más baja que el placeholder cuando los ratios no
+   coincidían — eliminadas para que la imagen siempre rellene el hueco. */
 
 @media (max-width: 1024px) { #fotosGrid { column-count: 2; } }
 @media (max-width: 520px)  { #fotosGrid { column-count: 2; column-gap: 0.5rem; } #fotosGrid .gi { margin-bottom: 0.5rem; } }
