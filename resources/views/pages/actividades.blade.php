@@ -49,7 +49,7 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </div>
         <div class="at-ov">
-          <span class="at-tag"><span class="es">Patrimonio UNESCO</span><span class="en">UNESCO</span></span>
+          <span class="at-tag"><span class="es">Visita guiada</span><span class="en">Guided tour</span></span>
           <h3><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></h3>
         </div>
       </div>
@@ -361,18 +361,15 @@
         ]
       },
       {
-        tag: { es: 'Patrimonio UNESCO · ~8 km', en: 'UNESCO Heritage · ~8 km' },
+        tag: { es: 'Visita guiada · ~8 km', en: 'Guided tour · ~8 km' },
         sup: { es: 'Prehistoria viva', en: 'Living prehistory' },
         title: { es: 'Cueva de <em>Ardales</em>', en: 'Ardales <em>Cave</em>' },
         img: '/images/cueva-ardales.jpg',
         desc: {
-          es: 'Una de las cuevas prehistóricas más importantes de Andalucía, con pinturas rupestres del Paleolítico declaradas Patrimonio de la Humanidad. Visitas guiadas disponibles con reserva previa.',
-          en: 'One of the most important prehistoric caves in Andalusia, with Palaeolithic rock paintings declared UNESCO World Heritage. Guided visits available with prior booking.'
+          es: 'Una de las cuevas prehistóricas más importantes de Andalucía, con pinturas rupestres del Paleolítico. Visitas guiadas disponibles con reserva previa.',
+          en: 'One of the most important prehistoric caves in Andalusia, with Palaeolithic rock paintings. Guided visits available with prior booking.'
         },
-        facts: [
-          { num: '12:00', label: { es:'Apertura', en:'Opens' } },
-          { num: '19:30', label: { es:'Cierre', en:'Closes' } }
-        ],
+        facts: [],
         list: {
           es: ['Pinturas rupestres del Paleolítico', 'Visitas guiadas en español', 'Reserva previa recomendada', 'Formaciones kársticas únicas'],
           en: ['Palaeolithic rock paintings', 'Guided tours in Spanish', 'Advance booking recommended', 'Unique karst formations']
@@ -490,9 +487,15 @@
       sup.textContent = L(d.sup);
       title.innerHTML = L(d.title);
       desc.textContent = L(d.desc);
-      facts.innerHTML = d.facts.map(f =>
-        `<div class="am-fact"><span class="am-fact-num">${f.num}</span><span class="am-fact-label">${L(f.label)}</span></div>`
-      ).join('');
+      if (d.facts && d.facts.length) {
+        facts.style.display = '';
+        facts.innerHTML = d.facts.map(f =>
+          `<div class="am-fact"><span class="am-fact-num">${f.num}</span><span class="am-fact-label">${L(f.label)}</span></div>`
+        ).join('');
+      } else {
+        facts.style.display = 'none';
+        facts.innerHTML = '';
+      }
       list.innerHTML = L(d.list).map(x => `<li>${x}</li>`).join('');
       ctas.innerHTML = d.ctas.map(c =>
         `<a class="am-cta ${c.ghost?'ghost':''}" href="${c.href}" ${c.external?'target="_blank" rel="noopener"':''}>${L(c.label)} ${c.external

@@ -99,7 +99,7 @@
           <li><span class="es">Agua potable</span><span class="en">Drinking water</span></li>
           <li><span class="es">Desagüe aguas grises</span><span class="en">Greywater drainage</span></li>
           <li><span class="es">Vaciado químico</span><span class="en">Chemical disposal</span></li>
-          <li><span class="es">WiFi en zona común</span><span class="en">WiFi in common area</span></li>
+          <li><span class="es">WiFi en recepción</span><span class="en">WiFi at reception</span></li>
         </ul>
         <div class="detail-cta-row">
           <a href="{{ route('home') }}#booking" class="detail-cta">

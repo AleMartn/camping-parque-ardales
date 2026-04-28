@@ -116,9 +116,9 @@
       <div class="svc-card c-gold reveal reveal-d2" id="wifi">
         <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0114 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 016.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div>
         <h3>WiFi</h3>
-        <p><span class="es">Conexión WiFi gratuita en apartamentos, zona de recepción y áreas comunes del camping.</span><span class="en">Free WiFi in apartments, reception and common areas.</span></p>
+        <p><span class="es">Conexión WiFi gratuita disponible únicamente en la zona de recepción.</span><span class="en">Free WiFi available only in the reception area.</span></p>
         <div class="svc-info">
-          <strong><span class="es">Cobertura:</span><span class="en">Coverage:</span></strong> <span class="es">Apartamentos y zona común</span><span class="en">Apartments and common area</span></span>
+          <strong><span class="es">Cobertura:</span><span class="en">Coverage:</span></strong> <span class="es">Solo en recepción</span><span class="en">Reception only</span>
         </div>
       </div>
     </div>

@@ -178,8 +178,8 @@
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">Todas las parcelas incluyen punto de agua, acceso a baños y duchas con agua caliente, y WiFi en la zona del recinto. Las parcelas para caravanas y autocaravanas cuentan con toma eléctrica de 15 amperios y conexión de desagüe. Las parcelas de acampada con luz disponen de 10 amperios (unos 4.700 W). La potencia puede variar en algunas parcelas.</span>
-          <span class="en">All pitches include a water point, access to bathrooms and hot showers, and WiFi in the campsite area. Caravan and motorhome pitches have a 15-amp power supply and drainage connection. Tent pitches with electricity have 10 amps (around 4,700 W). Power may vary on some pitches.</span>
+          <span class="es">Todas las parcelas incluyen punto de agua y acceso a baños y duchas con agua caliente. Las parcelas para caravanas y autocaravanas cuentan con toma eléctrica de 15 amperios y conexión de desagüe. Las parcelas de acampada con luz disponen de 10 amperios (unos 4.700 W). La potencia puede variar en algunas parcelas. El WiFi está disponible únicamente en la zona de recepción.</span>
+          <span class="en">All pitches include a water point and access to bathrooms and hot showers. Caravan and motorhome pitches have a 15-amp power supply and drainage connection. Tent pitches with electricity have 10 amps (around 4,700 W). Power may vary on some pitches. WiFi is available only in the reception area.</span>
         </div></div>
       </div>
 
@@ -200,8 +200,8 @@
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">El horario de visita es de 12:00 a 19:30. Puedes comprar las entradas directamente en <a href="https://www.giglon.com/todos?idEvent=visitas-guiadas-a-la-cueva-de-ardales-malaga" target="_blank" rel="noopener">Giglon</a> o en taquilla.</span>
-          <span class="en">Opening hours are 12:00 to 19:30. You can buy tickets directly on <a href="https://www.giglon.com/todos?idEvent=visitas-guiadas-a-la-cueva-de-ardales-malaga" target="_blank" rel="noopener">Giglon</a> or at the ticket office.</span>
+          <span class="es">Puedes comprar las entradas directamente en <a href="https://www.giglon.com/todos?idEvent=visitas-guiadas-a-la-cueva-de-ardales-malaga" target="_blank" rel="noopener">Giglon</a> o en taquilla.</span>
+          <span class="en">You can buy tickets directly on <a href="https://www.giglon.com/todos?idEvent=visitas-guiadas-a-la-cueva-de-ardales-malaga" target="_blank" rel="noopener">Giglon</a> or at the ticket office.</span>
         </div></div>
       </div>
 
@@ -240,12 +240,23 @@
 
       <div class="faq-item">
         <div class="faq-q">
+          <h4><span class="es">¿Cómo puedo hacer una reserva de grupo?</span><span class="en">How can I make a group booking?</span></h4>
+          <div class="faq-chevron">+</div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          <span class="es">Debes hacer una reserva por parcela. Para grupos de scouts, colegios y similares, <a href="{{ route('contacto') }}">contacta con el camping</a> y te ayudamos a organizarlo.</span>
+          <span class="en">You need to make a separate booking for each pitch. For scout groups, school groups and similar, <a href="{{ route('contacto') }}">contact the campsite</a> and we'll help you organise it.</span>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
           <h4><span class="es">¿Hay WiFi en el camping?</span><span class="en">Is there WiFi at the campsite?</span></h4>
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">Sí, disponemos de WiFi en las instalaciones. La cobertura es buena en las zonas comunes y apartamentos. En algunas parcelas más alejadas la señal puede variar.</span>
-          <span class="en">Yes, we have WiFi throughout the facilities. Coverage is good in common areas and apartments. In some more distant pitches the signal may vary.</span>
+          <span class="es">Sí, ofrecemos WiFi gratuito únicamente en la zona de recepción. La cobertura no llega a las parcelas ni a los apartamentos.</span>
+          <span class="en">Yes, we offer free WiFi only in the reception area. Coverage does not reach the pitches or apartments.</span>
         </div></div>
       </div>
 

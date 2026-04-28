@@ -165,7 +165,6 @@
           <h3><span class="es">Apartamentos</span><span class="en">Apartments</span></h3>
           <p><span class="es">Apartamentos completamente equipados con vistas al embalse. Ideales para familias que buscan comodidad sin renunciar al entorno natural.</span><span class="en">Fully equipped apartments with views over the reservoir. Ideal for families seeking comfort without sacrificing the natural setting.</span></p>
           <div class="acc-tags">
-            <span class="tag">WiFi</span>
             <span class="tag"><span class="es">Cocina equipada</span><span class="en">Equipped kitchen</span></span>
             <span class="tag"><span class="es">Vistas al embalse</span><span class="en">Reservoir views</span></span>
             <span class="tag">A/C</span>
@@ -202,7 +201,6 @@
           <div class="acc-tags">
             <span class="tag">15A</span>
             <span class="tag"><span class="es">Agua y desagüe</span><span class="en">Water & drainage</span></span>
-            <span class="tag">WiFi</span>
             <span class="tag"><span class="es">Acceso autocaravana</span><span class="en">Motorhome access</span></span>
           </div>
           <a href="{{ route('camping') }}#caravanas" class="acc-link"><span class="es">Ver detalles y tarifas</span><span class="en">Details &amp; rates</span> <span class="arrow">→</span></a>
@@ -320,10 +318,7 @@
       <div class="svc-card c-green reveal reveal-d2">
         <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17c0-6 4-12 9-12s9 6 9 12"/><path d="M9 17v-3a3 3 0 016 0v3"/></svg></div>
         <h3><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></h3>
-        <p><span class="es">Una de las cuevas prehistóricas más importantes de Andalucía, con pinturas rupestres declaradas Patrimonio de la Humanidad.</span><span class="en">One of Andalusia's most important prehistoric caves, with rock paintings declared UNESCO World Heritage.</span></p>
-        <div class="svc-info">
-          <strong><span class="es">Horario:</span><span class="en">Opening times:</span></strong> 12:00 – 19:30
-        </div>
+        <p><span class="es">Una de las cuevas prehistóricas más importantes de Andalucía, con pinturas rupestres del Paleolítico.</span><span class="en">One of Andalusia's most important prehistoric caves, with Palaeolithic rock paintings.</span></p>
         <a href="https://www.giglon.com/todos?idEvent=visitas-guiadas-a-la-cueva-de-ardales-malaga" target="_blank" rel="noopener" class="svc-link"><span class="es">Comprar entradas</span><span class="en">Buy tickets</span> →</a>
       </div>
     </div>
@@ -367,7 +362,7 @@
         <div class="act-body">
           <h3><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></h3>
           <div class="act-tags">
-            <span class="act-tag"><span class="es">Patrimonio UNESCO</span><span class="en">UNESCO Heritage</span></span>
+            <span class="act-tag"><span class="es">Pinturas rupestres</span><span class="en">Rock paintings</span></span>
             <span class="act-tag"><span class="es">Visita guiada</span><span class="en">Guided tour</span></span>
           </div>
         </div>
@@ -519,8 +514,8 @@
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">Todas las parcelas incluyen punto de agua, acceso a baños y duchas con agua caliente, y WiFi en la zona del recinto. Las parcelas para caravanas y autocaravanas cuentan con toma eléctrica de 15 amperios y conexión de desagüe. Las parcelas de acampada con luz disponen de 10 amperios (unos 4.700 W). La potencia puede variar en algunas parcelas.</span>
-          <span class="en">All pitches include a water point, access to bathrooms and hot showers, and WiFi in the campsite area. Caravan and motorhome pitches have a 15-amp power supply and drainage connection. Tent pitches with electricity have 10 amps (around 4,700 W). Power may vary on some pitches.</span>
+          <span class="es">Todas las parcelas incluyen punto de agua y acceso a baños y duchas con agua caliente. Las parcelas para caravanas y autocaravanas cuentan con toma eléctrica de 15 amperios y conexión de desagüe. Las parcelas de acampada con luz disponen de 10 amperios (unos 4.700 W). La potencia puede variar en algunas parcelas. El WiFi está disponible únicamente en la zona de recepción.</span>
+          <span class="en">All pitches include a water point and access to bathrooms and hot showers. Caravan and motorhome pitches have a 15-amp power supply and drainage connection. Tent pitches with electricity have 10 amps (around 4,700 W). Power may vary on some pitches. WiFi is available only in the reception area.</span>
         </div></div>
       </div>
 
@@ -541,8 +536,8 @@
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">El horario de visita es de 12:00 a 19:30. Puedes comprar las entradas directamente en <a href="https://www.giglon.com/todos?idEvent=visitas-guiadas-a-la-cueva-de-ardales-malaga" target="_blank" rel="noopener">Giglon</a> o en taquilla.</span>
-          <span class="en">Opening hours are 12:00 to 19:30. You can buy tickets directly on <a href="https://www.giglon.com/todos?idEvent=visitas-guiadas-a-la-cueva-de-ardales-malaga" target="_blank" rel="noopener">Giglon</a> or at the ticket office.</span>
+          <span class="es">Puedes comprar las entradas directamente en <a href="https://www.giglon.com/todos?idEvent=visitas-guiadas-a-la-cueva-de-ardales-malaga" target="_blank" rel="noopener">Giglon</a> o en taquilla.</span>
+          <span class="en">You can buy tickets directly on <a href="https://www.giglon.com/todos?idEvent=visitas-guiadas-a-la-cueva-de-ardales-malaga" target="_blank" rel="noopener">Giglon</a> or at the ticket office.</span>
         </div></div>
       </div>
 
@@ -581,12 +576,23 @@
 
       <div class="faq-item">
         <div class="faq-q">
+          <h4><span class="es">¿Cómo puedo hacer una reserva de grupo?</span><span class="en">How can I make a group booking?</span></h4>
+          <div class="faq-chevron">+</div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          <span class="es">Debes hacer una reserva por parcela. Para grupos de scouts, colegios y similares, <a href="{{ route('contacto') }}">contacta con el camping</a> y te ayudamos a organizarlo.</span>
+          <span class="en">You need to make a separate booking for each pitch. For scout groups, school groups and similar, <a href="{{ route('contacto') }}">contact the campsite</a> and we'll help you organise it.</span>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
           <h4><span class="es">¿Hay WiFi en el camping?</span><span class="en">Is there WiFi at the campsite?</span></h4>
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">Sí, disponemos de WiFi en las instalaciones. La cobertura es buena en las zonas comunes y apartamentos. En algunas parcelas más alejadas la señal puede variar.</span>
-          <span class="en">Yes, we have WiFi throughout the facilities. Coverage is good in common areas and apartments. In some more distant pitches the signal may vary.</span>
+          <span class="es">Sí, ofrecemos WiFi gratuito únicamente en la zona de recepción. La cobertura no llega a las parcelas ni a los apartamentos.</span>
+          <span class="en">Yes, we offer free WiFi only in the reception area. Coverage does not reach the pitches or apartments.</span>
         </div></div>
       </div>
 
