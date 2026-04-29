@@ -62,7 +62,7 @@
         <h3><span class="es">Piscina infinita</span><span class="en">Infinity pool</span></h3>
         <p><span class="es">Refréscate en nuestra piscina infinita rodeada de naturaleza. El lugar perfecto para que toda la familia disfrute durante los meses de verano.</span><span class="en">Cool off in our infinity pool surrounded by nature. The perfect place for the whole family to enjoy during summer.</span></p>
         <div class="svc-info">
-          <strong><span class="es">Temporada:</span><span class="en">Season:</span></strong> <span class="es">Junio – Septiembre</span><span class="en">June – September</span>
+          <strong><span class="es">Temporada:</span><span class="en">Season:</span></strong> <span class="es">Mayo – 15 de octubre · según climatología</span><span class="en">May – 15 October · weather permitting</span>
         </div>
         <div class="svc-info">
           <strong><span class="es">Horario:</span><span class="en">Hours:</span></strong> 12:00 – 20:00

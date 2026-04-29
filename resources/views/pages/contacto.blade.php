@@ -189,8 +189,8 @@
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">La piscina está disponible durante la temporada de verano, generalmente de junio a septiembre, dependiendo de las condiciones climáticas. Se puede acceder tanto desde las parcelas como desde los apartamentos.</span>
-          <span class="en">The pool is available during the summer season, generally from June to September, depending on weather conditions. It can be accessed from both pitches and apartments.</span>
+          <span class="es">La piscina está abierta de mayo al 15 de octubre, dependiendo de la climatología. Se puede acceder tanto desde las parcelas como desde los apartamentos.</span>
+          <span class="en">The pool is open from May to 15 October, weather permitting. It can be accessed from both pitches and apartments.</span>
         </div></div>
       </div>
 

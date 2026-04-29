@@ -284,7 +284,7 @@
         <h3><span class="es">Piscina Infinita</span><span class="en">Infinity Pool</span></h3>
         <p><span class="es">Refréscate en nuestra piscina infinita rodeada de naturaleza. El lugar perfecto para que los niños disfruten durante los meses de verano.</span><span class="en">Cool off in our infinity pool surrounded by nature. The perfect place for children to enjoy during the summer months.</span></p>
         <div class="svc-info">
-          <strong><span class="es">Temporada:</span><span class="en">Season:</span></strong> <span class="es">Verano · Junio – Septiembre</span><span class="en">Summer · June – September</span>
+          <strong><span class="es">Temporada:</span><span class="en">Season:</span></strong> <span class="es">Mayo – 15 de octubre · según climatología</span><span class="en">May – 15 October · weather permitting</span>
         </div>
       </div>
 
@@ -525,8 +525,8 @@
           <div class="faq-chevron">+</div>
         </div>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="es">La piscina está disponible durante la temporada de verano, generalmente de junio a septiembre, dependiendo de las condiciones climáticas. Se puede acceder tanto desde las parcelas como desde los apartamentos.</span>
-          <span class="en">The pool is available during the summer season, generally from June to September, depending on weather conditions. It can be accessed from both pitches and apartments.</span>
+          <span class="es">La piscina está abierta de mayo al 15 de octubre, dependiendo de la climatología. Se puede acceder tanto desde las parcelas como desde los apartamentos.</span>
+          <span class="en">The pool is open from May to 15 October, weather permitting. It can be accessed from both pitches and apartments.</span>
         </div></div>
       </div>
 

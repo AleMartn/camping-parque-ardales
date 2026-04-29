@@ -174,6 +174,18 @@
         <div class="gi-bg"><img src="/images/Entorno 19.webp" alt="Atardecer" loading="lazy"></div>
         <div class="gi-ov"><span><span class="es">Atardecer en el embalse</span><span class="en">Sunset on the reservoir</span></span></div>
       </div>
+      <div class="gi" data-cat="entorno" data-label-es="Pueblo de Ardales" data-label-en="Ardales village">
+        <div class="gi-bg"><img src="/images/ardales.webp" alt="Pueblo de Ardales" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Pueblo de Ardales</span><span class="en">Ardales village</span></span></div>
+      </div>
+      <div class="gi" data-cat="entorno" data-label-es="Caminito del Rey" data-label-en="Caminito del Rey">
+        <div class="gi-bg"><img src="/images/caminito1.webp" alt="Caminito del Rey" loading="lazy"></div>
+        <div class="gi-ov"><span>Caminito del Rey</span></div>
+      </div>
+      <div class="gi" data-cat="entorno" data-label-es="Cueva de Ardales" data-label-en="Ardales Cave">
+        <div class="gi-bg"><img src="/images/cueva2.webp" alt="Cueva de Ardales" loading="lazy"></div>
+        <div class="gi-ov"><span><span class="es">Cueva de Ardales</span><span class="en">Ardales Cave</span></span></div>
+      </div>
 
       <!-- Actividades -->
       <div class="gi t2" data-cat="actividades" data-label-es="Caminito del Rey" data-label-en="Caminito del Rey">
@@ -211,8 +223,8 @@
     </div>
 
     <div class="gallery-count" id="galleryCount">
-      <span class="es">Mostrando <span id="gcNum">39</span> fotos</span>
-      <span class="en">Showing <span id="gcNumEn">39</span> photos</span>
+      <span class="es">Mostrando <span id="gcNum">42</span> fotos</span>
+      <span class="en">Showing <span id="gcNumEn">42</span> photos</span>
     </div>
   </div>
 </section>
